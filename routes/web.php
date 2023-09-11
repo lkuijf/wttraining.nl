@@ -26,7 +26,7 @@ Route::get('/admin', function () {return redirect('/_mcfu638b-cms/wp-admin');});
 
 Route::get('/', function () {
     // return view('welcome');
-    return redirect('https://www.wtgroup.nl/wtmediaevents/');
+    return redirect('https://www.wtgroup.nl/w-t-training/');
 });
 Route::get('/clear-response-cache-wt', function () {
     ResponseCache::clear();
