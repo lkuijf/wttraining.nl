@@ -1,0 +1,111 @@
+.headerOuter {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    
+    .headerInnerWrap {
+        height: $headerHeight;
+        transition: height 0.3s ease;
+        &.afterScroll {
+            height: $headerHeightAfterScroll;
+        }
+        padding: 0 40px;
+        background-color: $colorWhite;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        .mainLogoWrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            img {
+                height: 180px;
+                transition: height 0.3s ease;
+                &.afterScroll {
+                    height: 100px;
+                }
+            }
+        }
+        
+        .mainNav {
+            #burger-check, .burger-label {
+                display: none;
+            }
+            @media (max-width: $sbp3_tablet) {
+                @include burgerMenuAdapter;
+                #burger-check ~ ul {
+                    background-color: #EFEFEF;
+                    padding: 60px 0 20px 0;
+                    z-index: 1;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    top: 0;
+                    li {
+                        a {
+                            @include mainNavButton;
+                        }
+                        ul {
+                            padding-top: 10px;
+                            li {
+                                padding: 10px 0;
+                                a {
+                                    font-size: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+                #burger-check:checked ~ ul {
+                    width: 60%;
+                }
+                .burger-label {
+                    z-index: 2;
+                    &.afterScroll {
+                        top: 41px;
+                    }
+                }
+            }
+            @media (min-width: ($sbp3_tablet + 1)) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                ul {
+                    display: flex;
+                    gap: 40px;
+                    @media (max-width: $sbp1_desktop) {gap: 15px;}
+                    li {
+                        position: relative;
+                        a {
+                            @include mainNavButton;
+                            @media (max-width: $sbp1_desktop) {font-size: 1.1em;}
+                        }
+                        ul {
+                            display: none;
+                            left: 10px;
+                            white-space: nowrap;
+                            position: absolute;
+                            background-color: $colorWTMdark;
+                            @include borderRadius;
+                            padding: 20px;
+                            li {
+                                padding: 5px 0;
+                                a {
+                                    color: #FFF;
+                                    padding: 7px 16px 8px 16px;
+                                }
+                            }
+                        }
+                        &:hover {
+                            ul {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

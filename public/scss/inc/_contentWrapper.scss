@@ -1,0 +1,80 @@
+.contentWrapper {
+    .standardPage {
+        padding-top: $headerHeight;
+        > div {
+            margin-bottom: 40px;
+        }
+    }
+    h1,h3 {
+        font-weight: normal;
+        font-size: 2.5em;
+        hr {
+            display: inline-block;
+            width: 70px;
+            transform: translateY(5px);
+        }
+        em {
+            color: $colorWTM;
+            font-style: normal;
+            font-weight: bold;
+            text-shadow: -1px 0 $colorGrey, 0 1px $colorGrey, 1px 0 $colorGrey, 0 -1px $colorGrey;
+        }
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h1.servicePageHeader {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 3px solid #000;
+        position: relative;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        span {
+            background-color: #CCC;
+            padding: 0 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    a {
+        color: $colorCtaBtn;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .fullw, .twoColumns {
+        picture {
+            img {
+                width: 100%;
+                position: relative;
+                object-fit: cover;
+                @include borderRadius;
+                aspect-ratio: 4/3;
+            }
+        }
+    }
+    .ctaBtnWrap {
+        @media (max-width: $sbp3_tablet) {
+            text-align: center;
+        }
+        .ctaBtn {
+            @include borderRadius;
+            background-color: $colorCtaBtn;
+            color: $colorWhite;
+            text-decoration: none;
+            padding: 25px 100px;
+            display: inline-block;
+            box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
+            &:active {
+                transform: translate(5px, 5px);
+                box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+            }
+        }
+    }
+}

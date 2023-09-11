@@ -1,0 +1,75 @@
+@mixin borderRadius {
+    border-radius: 15px;
+}
+@mixin mainNavButton {
+    font-family: $fontFamilyButton;
+    color: $colorBlack;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-decoration: none;
+    &:hover {
+        color: #AAA;
+    }
+    &.active {
+        background-color: $colorWTM;
+        color: $colorWhite;
+        @include borderRadius;
+        padding: 7px 16px 8px 16px;
+        &:hover {
+            color: #EEE;
+        }
+    }
+}
+@mixin textPaddingOnMobile {
+    @media (max-width: $sbp3_tablet) {padding-left:30px;padding-right:30px;}
+    @media (max-width: $sbp4_mobile) {padding-left:20px;padding-right:20px;}
+}
+@mixin submitButton {
+    margin-top: 20px;
+    background-color: $colorWTM;
+    font-family: $fontFamily;
+    color: $colorWhite;
+    font-size: 1.5em;
+    border: 0;
+    @include borderRadius;
+    padding: 10px 50px;
+    display: inline-block;
+    box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
+    &:active {
+        transform: translate(5px, 5px);
+        box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+    }
+}
+@mixin caseOverlayText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: $colorWTMdark;
+    padding: 15px;
+    min-height: 105px;
+    @media (max-width: $sbp1_desktop) {
+        padding: 5px;
+        min-height: 80px;
+        bottom: 10px;
+    }
+    @media (max-width: $sbp3_tablet) {
+        min-height: 60px;
+    }
+    p {
+        font-size: 1.4em;
+        @media (max-width: $sbp1_desktop) {font-size: 1em;}
+        @media (max-width: $sbp2_laptop) {font-size: 1em;}
+        @media (max-width: $sbp3_tablet) {font-size: .8em;}
+        margin: 0;
+        color: #FFF;
+        &:last-child {
+            font-style: italic;
+            font-size: 1em;
+            @media (max-width: $sbp1_desktop) {font-size: .8em;}
+        }
+    }
+}

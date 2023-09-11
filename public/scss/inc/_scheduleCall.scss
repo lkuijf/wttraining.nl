@@ -1,0 +1,42 @@
+.scheduleCallContent {
+    @include textPaddingOnMobile;
+    form {
+        width: 100%;
+        background-color: $colorWTM;
+        @include borderRadius;
+        padding: 40px;
+        input, textarea {
+            font-family: $fontFamily;
+            font-size: 1.1em;
+            background-color: $colorWTM;
+            border: 0;
+            border-bottom: 1px solid #FFF;
+            color: $colorWhite;
+            margin-top: 15px;
+            line-height: 30px;
+            vertical-align: text-bottom;
+            padding: 0 5px;
+            width: 100%;
+            &::placeholder {
+                color: $colorWhite;
+                text-transform: uppercase;
+            }
+            &:focus {
+                outline: 0;
+                background-color: $colorWTMdark;
+            }
+        }
+        button {
+            @include submitButton;
+            color: $colorWTM;
+            background-color: $colorWhite;
+            box-shadow: $colorWTM 10px 10px 0px -2px, $colorWhite 10px 10px;
+            &:active {
+                box-shadow: $colorWTM 5px 5px 0px -2px, $colorWhite 5px 5px;
+            }
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

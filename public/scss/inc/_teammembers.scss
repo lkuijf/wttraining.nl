@@ -1,0 +1,28 @@
+.teammembersContent {
+    text-align: center;
+    .outerSwiperBox {
+        position: relative;
+        .teamMembersSwiper {
+            img {
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+                @include borderRadius;
+            }
+            p {
+                margin: 0;
+                &:first-of-type {
+                    font-weight: bold;
+                }
+            }
+        }
+        .swiper-scrollbar-team {
+            height: 5px;
+            margin-top: 10px;
+            > div {
+                background-color: $colorWTM;
+            }
+        }
+    }
+}
+

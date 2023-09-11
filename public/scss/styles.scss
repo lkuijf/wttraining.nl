@@ -1,0 +1,143 @@
+$sbp1_desktop: 1200px; // ScreenBreakpoint for Desktops
+$sbp2_laptop: 1024px; // ScreenBreakpoint for Laptops
+$sbp3_tablet: 768px; // // ScreenBreakpoint for iPads/Tablets
+$sbp4_mobile: 480px; // ScreenBreakpoint for Mobile devices
+$sbp_marketingTerms1: 1820px; // ScreenBreakpoint for Marketing Terms
+$sbp_marketingTerms2: 1420px; // ScreenBreakpoint for Marketing Terms
+
+// $contentWidth: 100%; // max contentwidht .inner
+$contentWidth: 1920px; // max contentwidht .inner
+// $contentWidthFooter: 1600px;
+$headerHeight: 200px;
+$headerHeightAfterScroll: 120px;
+
+$colorBlack: #222; // text
+$colorBlackLight: #555;
+$colorGrey: #555; // packages header background
+$colorGreyLight: #BBB; // package bullet splitters
+$colorWhite: #FFF;
+$colorWTM: #19b4b6; // logo color
+$colorWTMdark: #0c5a5b;
+$colorCtaBtn: #006878;
+
+$fontFamily: 'Inter', sans-serif;
+$fontFamilyButton: 'Karla', sans-serif;
+$fontSize: 16px;
+
+@import 'inc/mixins';
+
+@import 'inc/burger-menu.adapter';
+@import 'inc/contact-form';
+@import 'inc/totop-btn';
+@import 'inc/hero';
+@import 'inc/header';
+@import 'inc/detail-page';
+@import 'inc/packages';
+@import 'inc/workingWith';
+@import 'inc/teammembers';
+@import 'inc/cases';
+@import 'inc/reviews';
+@import 'inc/subscribe';
+@import 'inc/footer';
+@import 'inc/blog';
+@import 'inc/servicesBtns';
+@import 'inc/scheduleCall';
+@import 'inc/teamSpecialists';
+@import 'inc/marketingTerms';
+@import 'inc/contentWrapper';
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $colorBlack;
+    background-color: $colorWhite;
+    scroll-behavior: smooth;
+    background-image: url('../statics/bg_v3.jpg');
+    background-repeat: repeat;
+    background-size: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+img {
+    vertical-align: middle; // removes bottom 3px margin.
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: 'wt_media_events';
+    src: url('../fontello/font/wt_media_events.eot');
+    src: url('../fontello/font/wt_media_events.eot#iefix') format('embedded-opentype'),
+         url('../fontello/font/wt_media_events.woff2') format('woff2'),
+         url('../fontello/font/wt_media_events.woff') format('woff'),
+         url('../fontello/font/wt_media_events.ttf') format('truetype'),
+         url('../fontello/font/wt_media_events.svg#wt_media_events') format('svg');
+    font-weight: normal;                    
+    font-style: normal;
+    font-display: swap;
+}
+
+.inner {
+    max-width: $contentWidth;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    @media (max-width: $sbp1_desktop) {padding-left:80px;padding-right:80px;}
+    @media (max-width: $sbp2_laptop) {padding-left:60px;padding-right:60px;}
+    @media (max-width: $sbp3_tablet) {padding-left:0;padding-right:0;}
+    @media (max-width: $sbp4_mobile) {padding-left:0;padding-right:0;}
+}
+
+.columns {
+    display: flex;
+    gap: 100px;
+    @media (max-width: $sbp1_desktop) {gap: 80px;}
+    @media (max-width: $sbp2_laptop) {gap: 60px;}
+    @media (max-width: $sbp3_tablet) {gap: 30px;flex-direction: column;}
+    @media (max-width: $sbp4_mobile) {gap: 20px;}
+    align-items: flex-start;
+    > div {
+        flex: 1 1 50%;
+        @media (max-width: $sbp3_tablet) {width: 100%} // forcing full width, for forms e.d.
+        > :first-child {
+            margin-top: 0;
+        }
+    }
+    &.colReverse {
+        @media (max-width: $sbp3_tablet) {flex-direction: column-reverse;}
+    }
+}
+
+.textPadMobile {
+    @include textPaddingOnMobile;
+    *:first-child {
+        margin-top: 0;
+    }
+}
+
+.anchorPoint {
+    display: block;
+    padding-top: $headerHeightAfterScroll;
+    &:first-of-type {
+        padding-top: $headerHeight;
+    }
+}
+
+.toggleEvents {
+    @include textPaddingOnMobile;
+    text-align: right;
+}
+
+.servicePageHeaderWrap {
+    @include textPaddingOnMobile;
+}
