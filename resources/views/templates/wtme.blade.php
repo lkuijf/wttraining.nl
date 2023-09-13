@@ -57,7 +57,7 @@
 
     <header class="headerOuter">
         <div class="headerInnerWrap">
-            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wt-media-events-logo.png') }}" alt="WT Media & Events"></a></div>
+            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Training"></a></div>
             <nav class="mainNav">
                 <input type="checkbox" id="burger-check">
                 <label for="burger-check" class="burger-label">
@@ -79,7 +79,7 @@
         <div class="inner">
             <div class="ftr">
                 <div class="footerContact">
-                    <img src="{{ asset('statics/wt-media-events-logo.png') }}" alt="WT Media & Events">
+                    <img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Media & Events">
                     <a href="mailto:support@wtmedia-events.nl">CONTACT</a>
                 </div>
                 <nav>
