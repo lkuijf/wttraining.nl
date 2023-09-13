@@ -534,18 +534,18 @@ function crbRegisterFields($args) {
                 //         ),
                 //     ) )
                 // ) )
-                ->add_fields( 'packages', 'Price Packages', array(
-                    Field::make( 'separator', 'separator1', __( 'Prijs Pakketten' ) ),
-                    Field::make( 'checkbox', 'show_packages', __( 'Show Pricing Packages' ) ),
-                ) )
+                // ->add_fields( 'packages', 'Price Packages', array(
+                //     Field::make( 'separator', 'separator1', __( 'Prijs Pakketten' ) ),
+                //     Field::make( 'checkbox', 'show_packages', __( 'Show Pricing Packages' ) ),
+                // ) )
                 ->add_fields( 'working_with', 'Clients', array(
                     Field::make( 'separator', 'separator1', __( 'Clients' ) ),
                     Field::make( 'checkbox', 'show_working_with', __( 'Show "Clients" section' ) ),
                 ) )
-                ->add_fields( 'reviews', 'Reviews', array(
-                    Field::make( 'separator', 'separator1', __( 'Reviews' ) ),
-                    Field::make( 'checkbox', 'show_reviews', __( 'Show Reviews' ) ),
-                ) )
+                // ->add_fields( 'reviews', 'Reviews', array(
+                //     Field::make( 'separator', 'separator1', __( 'Reviews' ) ),
+                //     Field::make( 'checkbox', 'show_reviews', __( 'Show Reviews' ) ),
+                // ) )
                 ->add_fields( 'teammembers', 'Team members', array(
                     Field::make( 'separator', 'separator1', __( 'Team members' ) ),
                     Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
