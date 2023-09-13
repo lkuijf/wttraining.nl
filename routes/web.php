@@ -44,9 +44,9 @@ Route::get('/blog/{slug}', [PagesController::class, 'showPost'])->where([
     'slug' => '[a-z0-9_-]+',
 ]);
 
-Route::get('/diensten/online-marketing', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'online-marketing')->defaults('subpage', false)->middleware('doNotCacheResponse');
-Route::get('/diensten/webdevelopment', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'webdevelopment')->defaults('subpage', false)->middleware('doNotCacheResponse');
-Route::get('/diensten/events', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'events')->defaults('subpage', false)->middleware('doNotCacheResponse');
+// Route::get('/diensten/online-marketing', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'online-marketing')->defaults('subpage', false)->middleware('doNotCacheResponse');
+// Route::get('/diensten/webdevelopment', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'webdevelopment')->defaults('subpage', false)->middleware('doNotCacheResponse');
+// Route::get('/diensten/events', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'events')->defaults('subpage', false)->middleware('doNotCacheResponse');
 
 Route::get('/diensten/online-marketing/{slug}', [PagesController::class, 'showCase'])->where([
     'slug' => '[a-z0-9_-]+',

@@ -16,8 +16,8 @@ $colorBlackLight: #555;
 $colorGrey: #555; // packages header background
 $colorGreyLight: #BBB; // package bullet splitters
 $colorWhite: #FFF;
-$colorWTM: #19b4b6; // logo color
-$colorWTMdark: #0c5a5b;
+$colorWTM: #E9AD01; // logo color
+$colorWTMdark: #745600;
 $colorCtaBtn: #006878;
 
 $fontFamily: 'Inter', sans-serif;
@@ -57,9 +57,9 @@ html {
     color: $colorBlack;
     background-color: $colorWhite;
     scroll-behavior: smooth;
-    background-image: url('../statics/bg_v3.jpg');
+    background-image: url('../statics/wtt-back.jpg');
     background-repeat: repeat;
-    background-size: 100%;
+    // background-size: 100%;
 }
 *, *:before, *:after {
     box-sizing: inherit;

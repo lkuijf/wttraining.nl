@@ -18,17 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@200&display=swap" rel="stylesheet">
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-    <link rel='stylesheet' href='{{ asset('_mcfu638b-cms/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.1.5') }}' type='text/css' media='all' />
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <meta name="_token" content="{{ csrf_token() }}">
     @yield('extra_head')
     
-<!-- Leadinfo tracking code -->
-<script> (function(l,e,a,d,i,n,f,o){if(!l[i]){l.GlobalLeadinfoNamespace=l.GlobalLeadinfoNamespace||[];
-l.GlobalLeadinfoNamespace.push(i);l[i]=function(){(l[i].q=l[i].q||[]).push(arguments)};l[i].t=l[i].t||n;
-l[i].q=l[i].q||[];o=e.createElement(a);f=e.getElementsByTagName(a)[0];o.async=1;o.src=d;f.parentNode.insertBefore(o,f);}
-}(window,document,"script","https://cdn.leadinfo.net/ping.js","leadinfo","LI-6479E387ADE15")); </script>
-
 </head>
 <body>
     @yield('after_body_tag')
@@ -100,9 +93,6 @@ l[i].q=l[i].q||[];o=e.createElement(a);f=e.getElementsByTagName(a)[0];o.async=1;
                     <a href="https://www.facebook.com/profile.php?id=100083027634220" target="_blank" class="fb"><img src="{{ asset('statics/facebook.png') }}" alt="Facebook"></a>
                     <a href="https://www.linkedin.com/company/w-t-media-events/" target="_blank" class="li"><img src="{{ asset('statics/linkedin.png') }}" alt="LinkedIn"></a>
                 </p>
-                {{-- <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script><div class="elfsight-app-a6161f0f-1cc2-420f-9dc7-d19848614a67"></div> --}}
-                {{-- <div class="embedsocial-hashtag" data-ref="cb4f26c68a893f54158863a0aecf5a38c087439e"> <a class="feed-powered-by-es feed-powered-by-es-feed-new" href="https://embedsocial.com/social-media-aggregator/" target="_blank" title="Widget by EmbedSocial"> Widget by EmbedSocial<span>→</span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript")); </script> --}}
-                {!! $data['instagram_widget_code'] !!}
             </div>
         </div>
     </footer>
@@ -120,18 +110,6 @@ l[i].q=l[i].q||[];o=e.createElement(a);f=e.getElementsByTagName(a)[0];o.async=1;
         });
     </script>
     @endif
-    <!-- Instagram Feed JS -->
-    <script type="text/javascript">
-        var sbiajaxurl = "https://wtmedia-events.nl/_mcfu638b-cms/wp-admin/admin-ajax.php";
-    </script>
-    <script type='text/javascript' src='https://wtmedia-events.nl/_mcfu638b-cms/wp-includes/js/jquery/jquery.min.js?ver=3.6.4' id='jquery-core-js'></script>
-    <script type='text/javascript' src='https://wtmedia-events.nl/_mcfu638b-cms/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
-    <script type='text/javascript' id='sbi_scripts-js-extra'>
-    /* <![CDATA[ */
-    var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/wtmedia-events.nl\/_mcfu638b-cms\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/wtmedia-events.nl\/_mcfu638b-cms\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png","ajax_url":"https:\/\/wtmedia-events.nl\/_mcfu638b-cms\/wp-admin\/admin-ajax.php"};
-    /* ]]> */
-    </script>
-    <script type='text/javascript' src='https://wtmedia-events.nl/_mcfu638b-cms/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.1.5' id='sbi_scripts-js'></script>
     <script>
         setReviewsShowMoreToggleButtons();
     </script>

@@ -97,9 +97,9 @@ class PagesController extends Controller
         // $loggedInUserId = ShopController::getLoggedinUser();
 // dd($content->contentSections);
 
-        $instagramFeedPage = new PageApi(1067);
-        $instagramFeedPageData = $instagramFeedPage->get();
-        $instaCode = $instagramFeedPageData->content->rendered;
+        // $instagramFeedPage = new PageApi(1067);
+        // $instagramFeedPageData = $instagramFeedPage->get();
+        // $instaCode = $instagramFeedPageData->content->rendered;
 
         $data= [
             'head_title' => $content->pageTitle,
@@ -113,7 +113,7 @@ class PagesController extends Controller
             // 'news' => $news,
             // 'vessel' => $vessel,
             // 'newsItem' => $newsItem,
-            'instagram_widget_code' => $instaCode,
+            // 'instagram_widget_code' => $instaCode,
         ];
         if($vessel) {
             $data['head_title'] = $vessel->title->rendered . ' - ' . config('app_wt.metaTitle');
@@ -171,9 +171,9 @@ class PagesController extends Controller
 // dd($items);
 
 //$sec->crb_media_gallery = $this->getMediaGallery($sec->crb_media_gallery);
-        $instagramFeedPage = new PageApi(1067);
-        $instagramFeedPageData = $instagramFeedPage->get();
-        $instaCode = $instagramFeedPageData->content->rendered;
+        // $instagramFeedPage = new PageApi(1067);
+        // $instagramFeedPageData = $instagramFeedPage->get();
+        // $instaCode = $instagramFeedPageData->content->rendered;
 
         $data= [
             'head_title' => $content->pageTitle,
@@ -193,7 +193,7 @@ class PagesController extends Controller
             // 'news' => $news,
             // 'vessel' => $vessel,
             // 'newsItem' => $newsItem,
-            'instagram_widget_code' => $instaCode,
+            // 'instagram_widget_code' => $instaCode,
         ];
 
         return view('blog-overview-page')->with('data', $data);
@@ -213,9 +213,9 @@ class PagesController extends Controller
 
         $post[0]->gallery = $this->getMediaGallery($post[0]->gallery);
 // dd($post);
-        $instagramFeedPage = new PageApi(1067);
-        $instagramFeedPageData = $instagramFeedPage->get();
-        $instaCode = $instagramFeedPageData->content->rendered;
+        // $instagramFeedPage = new PageApi(1067);
+        // $instagramFeedPageData = $instagramFeedPage->get();
+        // $instaCode = $instagramFeedPageData->content->rendered;
 
         $data= [
             'head_title' => $post[0]->page_title,
@@ -233,7 +233,7 @@ class PagesController extends Controller
             // 'news' => $news,
             // 'vessel' => $vessel,
             // 'newsItem' => $newsItem,
-            'instagram_widget_code' => $instaCode,
+            // 'instagram_widget_code' => $instaCode,
         ];
 
         return view('blog-detail-page')->with('data', $data);
@@ -254,9 +254,9 @@ class PagesController extends Controller
 
         $post[0]->gallery = $this->getMediaGallery($post[0]->gallery);
 // dd($post);
-        $instagramFeedPage = new PageApi(1067);
-        $instagramFeedPageData = $instagramFeedPage->get();
-        $instaCode = $instagramFeedPageData->content->rendered;
+        // $instagramFeedPage = new PageApi(1067);
+        // $instagramFeedPageData = $instagramFeedPage->get();
+        // $instaCode = $instagramFeedPageData->content->rendered;
 
         $data= [
             'head_title' => $post[0]->page_title,
@@ -268,7 +268,7 @@ class PagesController extends Controller
             // 'hero_text' => $post[0]->hero_text,
             'gallery' => $post[0]->gallery,
             // 'blog_date' => date('d-m-Y', strtotime($post[0]->date)),
-            'instagram_widget_code' => $instaCode,
+            // 'instagram_widget_code' => $instaCode,
         ];
 
         return view('case-detail-page')->with('data', $data);
@@ -670,9 +670,9 @@ class PagesController extends Controller
 // dd($teamMembers);
 
 
-        $instagramFeedPage = new PageApi(1067);
-        $instagramFeedPageData = $instagramFeedPage->get();
-        $instaCode = $instagramFeedPageData->content->rendered;
+        // $instagramFeedPage = new PageApi(1067);
+        // $instagramFeedPageData = $instagramFeedPage->get();
+        // $instaCode = $instagramFeedPageData->content->rendered;
 // dd($instagramFeedPageData);
 
 
@@ -702,7 +702,7 @@ class PagesController extends Controller
             'cases_highlighted' => $homepageCases,
             'reviews' => $reviews,
             'team_members' => $teamMembers,
-            'instagram_widget_code' => $instaCode,
+            // 'instagram_widget_code' => $instaCode,
         ];
         return view('onepager')->with('data', $data);
     }

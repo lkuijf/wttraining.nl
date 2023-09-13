@@ -143,7 +143,7 @@ form .error span {
   bottom: 40px;
 }
 #toTop:hover:before {
-  color: #19b4b6;
+  color: #E9AD01;
 }
 
 .hero {
@@ -253,7 +253,7 @@ form .error span {
   border-radius: 20px;
 }
 .hero .heroOverlay .makeContact a.email {
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   color: #FFF;
   width: 500px;
 }
@@ -263,7 +263,7 @@ form .error span {
   }
 }
 .hero .heroOverlay .makeContact a.email:hover {
-  background-color: #0c5a5b;
+  background-color: #745600;
 }
 .hero .heroOverlay .makeContact a.phone {
   background-color: #FFF;
@@ -278,7 +278,7 @@ form .error span {
   width: 50px;
 }
 .hero .heroOverlay .makeContact a.phone:hover:before {
-  color: #19b4b6;
+  color: #E9AD01;
 }
 .hero .heroOverlay .makeContact a.phone span {
   visibility: hidden;
@@ -477,7 +477,7 @@ form .error span {
     color: #AAA;
   }
   .headerOuter .headerInnerWrap .mainNav #burger-check ~ ul li a.active {
-    background-color: #19b4b6;
+    background-color: #E9AD01;
     color: #FFF;
     border-radius: 15px;
     padding: 7px 16px 8px 16px;
@@ -535,7 +535,7 @@ form .error span {
     color: #AAA;
   }
   .headerOuter .headerInnerWrap .mainNav ul li a.active {
-    background-color: #19b4b6;
+    background-color: #E9AD01;
     color: #FFF;
     border-radius: 15px;
     padding: 7px 16px 8px 16px;
@@ -555,7 +555,7 @@ form .error span {
     left: 10px;
     white-space: nowrap;
     position: absolute;
-    background-color: #0c5a5b;
+    background-color: #745600;
     border-radius: 15px;
     padding: 20px;
   }
@@ -622,7 +622,7 @@ form .error span {
   border-radius: 15px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   padding: 10px;
   color: #FFF;
 }
@@ -645,7 +645,7 @@ form .error span {
 .pricing3Column article .packInfo div:last-child a {
   font-size: 1em;
   padding: 10px 20px;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   color: #FFF;
   text-decoration: none;
   border-radius: 15px;
@@ -720,7 +720,7 @@ form .error span {
   margin-top: 10px;
 }
 .teammembersContent .outerSwiperBox .swiper-scrollbar-team > div {
-  background-color: #19b4b6;
+  background-color: #E9AD01;
 }
 
 .casesContent {
@@ -761,7 +761,7 @@ form .error span {
   bottom: 20px;
   width: 100%;
   text-align: center;
-  background-color: #0c5a5b;
+  background-color: #745600;
   padding: 15px;
   min-height: 105px;
 }
@@ -852,7 +852,7 @@ form .error span {
   bottom: 20px;
   width: 100%;
   text-align: center;
-  background-color: #0c5a5b;
+  background-color: #745600;
   padding: 15px;
   min-height: 105px;
 }
@@ -1058,7 +1058,7 @@ form .error span {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   border-radius: 15px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1189,7 +1189,7 @@ form .error span {
 }
 .subscriptionForm button {
   margin-top: 20px;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   font-family: "Inter", sans-serif;
   color: #FFF;
   font-size: 1.5em;
@@ -1227,7 +1227,7 @@ footer .ftr .footerContact {
   align-items: center;
 }
 footer .ftr .footerContact a {
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   color: #FFF;
   font-size: 1.2em;
   text-decoration: none;
@@ -1290,7 +1290,7 @@ footer .btm a {
   color: #222;
 }
 footer .btm a:hover {
-  color: #19b4b6;
+  color: #E9AD01;
 }
 footer .btm .socials {
   display: flex;
@@ -1326,7 +1326,7 @@ footer .btm .socials a img {
 }
 .blogWrap article {
   background-color: #FFF;
-  border: 3px solid #19b4b6;
+  border: 3px solid #E9AD01;
   border-radius: 15px;
 }
 .blogWrap article img {
@@ -1353,14 +1353,14 @@ footer .btm .socials a img {
   margin-bottom: 0;
 }
 .blogWrap article > div h2 {
-  color: #0c5a5b;
+  color: #745600;
 }
 .blogWrap article > div .date:before {
   font-family: "wt_media_events";
   content: "\e804 ";
 }
 .blogWrap article a {
-  color: #19b4b6;
+  color: #E9AD01;
   font-weight: bold;
   text-decoration: none;
 }
@@ -1368,7 +1368,7 @@ footer .btm .socials a img {
   text-decoration: underline;
 }
 .blogWrap article:hover {
-  background-color: #0c5a5b;
+  background-color: #745600;
   color: #FFF;
   cursor: pointer;
 }
@@ -1429,14 +1429,14 @@ footer .btm .socials a img {
 }
 .scheduleCallContent form {
   width: 100%;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   border-radius: 15px;
   padding: 40px;
 }
 .scheduleCallContent form input, .scheduleCallContent form textarea {
   font-family: "Inter", sans-serif;
   font-size: 1.1em;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   border: 0;
   border-bottom: 1px solid #FFF;
   color: #FFF;
@@ -1456,11 +1456,11 @@ footer .btm .socials a img {
 }
 .scheduleCallContent form input:focus, .scheduleCallContent form textarea:focus {
   outline: 0;
-  background-color: #0c5a5b;
+  background-color: #745600;
 }
 .scheduleCallContent form button {
   margin-top: 20px;
-  background-color: #19b4b6;
+  background-color: #E9AD01;
   font-family: "Inter", sans-serif;
   color: #FFF;
   font-size: 1.5em;
@@ -1469,9 +1469,9 @@ footer .btm .socials a img {
   padding: 10px 50px;
   display: inline-block;
   box-shadow: #ccc 10px 10px 0px -2px, #006878 10px 10px;
-  color: #19b4b6;
+  color: #E9AD01;
   background-color: #FFF;
-  box-shadow: #19b4b6 10px 10px 0px -2px, #FFF 10px 10px;
+  box-shadow: #E9AD01 10px 10px 0px -2px, #FFF 10px 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1481,7 +1481,7 @@ footer .btm .socials a img {
   box-shadow: #ccc 5px 5px 0px -2px, #006878 5px 5px;
 }
 .scheduleCallContent form button:active {
-  box-shadow: #19b4b6 5px 5px 0px -2px, #FFF 5px 5px;
+  box-shadow: #E9AD01 5px 5px 0px -2px, #FFF 5px 5px;
 }
 
 @media (max-width: 768px) {
@@ -1876,7 +1876,7 @@ footer .btm .socials a img {
   transform: translateY(5px);
 }
 .contentWrapper h1 em, .contentWrapper h3 em {
-  color: #19b4b6;
+  color: #E9AD01;
   font-style: normal;
   font-weight: bold;
   text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
@@ -1948,9 +1948,8 @@ html {
   color: #222;
   background-color: #FFF;
   scroll-behavior: smooth;
-  background-image: url("../statics/bg_v3.jpg");
+  background-image: url("../statics/wtt-back.jpg");
   background-repeat: repeat;
-  background-size: 100%;
 }
 
 *, *:before, *:after {
