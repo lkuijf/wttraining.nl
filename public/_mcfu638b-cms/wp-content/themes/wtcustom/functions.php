@@ -420,6 +420,7 @@ function crbRegisterFields($args) {
                     Field::make( 'separator', 'separator1', __( 'Hero (big header)' ) ),
                     Field::make( 'media_gallery', 'crb_media_gallery', __( 'Media Gallery' ) )
                         ->set_type( array( 'image' ) )->set_duplicates_allowed( false ),
+                    Field::make( 'checkbox', 'center_text', __( 'Center text' ) ),
                     Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ) ),
                     // Field::make( 'text', 'small_header', __( 'Small header text (can use html-tags)' ) ),
                     Field::make( 'textarea', 'text', __( 'Text (can use html-tags)' ) ),
