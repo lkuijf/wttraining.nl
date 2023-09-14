@@ -664,7 +664,7 @@ form .error span {
   list-style-type: none;
 }
 .pricing3Column article .packInfo ul li {
-  border-bottom: 2px solid #BBB;
+  border-bottom: 2px solid #DDD;
   line-height: 3em;
 }
 .pricing3Column article .packInfo ul li:before {
@@ -1336,10 +1336,12 @@ footer .btm .socials a img {
   background-color: #FFF;
   border: 3px solid #E9AD01;
   border-radius: 15px;
+  position: relative;
+  overflow: hidden;
 }
 .blogWrap article img {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 11px;
@@ -1347,21 +1349,43 @@ footer .btm .socials a img {
   border-bottom-right-radius: 0;
 }
 .blogWrap article > div {
-  padding: 20px;
+  position: absolute;
+  width: 100%;
+  top: calc(100% - 50px);
+  background-color: #DDD;
+  border-top: 3px solid #E9AD01;
+  min-height: 100%;
+  transition: top 0.3s ease-out;
+  padding: 7px 20px;
 }
 .blogWrap article > div :first-child {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
+  margin-right: 15px;
+  float: left;
+  font-size: 1.3em;
+  line-height: 1.7em;
 }
 .blogWrap article > div :nth-child(2) {
   margin-top: 0;
-  font-size: 0.8em;
+  margin-bottom: 0;
+}
+.blogWrap article > div :nth-child(3) {
+  display: inline-block;
+  overflow: hidden;
 }
 .blogWrap article > div :last-child {
-  margin-bottom: 0;
+  position: absolute;
+  font-size: 1em;
+  width: 120px;
+  bottom: 35px;
+  right: 5px;
+  background-color: #DDD;
 }
 .blogWrap article > div h2 {
   color: #745600;
+  font-size: 1.3em;
+  line-height: 1.7em;
 }
 .blogWrap article > div .date:before {
   font-family: "wt_media_events";
@@ -1376,12 +1400,10 @@ footer .btm .socials a img {
   text-decoration: underline;
 }
 .blogWrap article:hover {
-  background-color: #745600;
-  color: #FFF;
   cursor: pointer;
 }
-.blogWrap article:hover h2 {
-  color: #FFF;
+.blogWrap article:hover > div {
+  top: 50px;
 }
 
 .servicesBtns {
