@@ -12,6 +12,7 @@
             'text' => $section->text,
             'email' => $section->btn_email,
             'phone' => $section->btn_phone,
+            'bCenterText' => $section->center_text,
             ])
     @endif
     {{-- @if($section->_type == 'text')

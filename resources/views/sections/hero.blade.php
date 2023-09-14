@@ -1,5 +1,5 @@
 <div class="hero">
-    <div class="heroOverlay">
+    <div class="heroOverlay @if($bCenterText){{ 'centerText' }}@endif">
         <div>
             <div class="heroText">
                 @if (isset($title) && $title)
