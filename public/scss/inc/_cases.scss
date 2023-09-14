@@ -1,8 +1,8 @@
 .casesContent {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(4, 1fr);}
-    @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(3, 1fr);padding-left:40px;padding-right:40px;}
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(3, 1fr);}
+    @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
     @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
     grid-gap: 5px;
     > article {
@@ -64,6 +64,10 @@
                     color: $colorWhite;
                     transform: rotateY(180deg);
                     padding: 20px;
+                    @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
+                    :first-child {
+                        margin-top: 0;
+                    }
                     p:last-child {
                         font-style: italic;
                     }

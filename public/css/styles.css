@@ -740,17 +740,17 @@ form .error span {
 
 .casesContent {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 @media (max-width: 1024px) {
   .casesContent {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
   .casesContent {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -866,6 +866,15 @@ form .error span {
   color: #FFF;
   transform: rotateY(180deg);
   padding: 20px;
+}
+@media (max-width: 480px) {
+  .casesContent > article .outerFlip .innerFlip .flipBack {
+    padding: 10px;
+    font-size: 0.8em;
+  }
+}
+.casesContent > article .outerFlip .innerFlip .flipBack :first-child {
+  margin-top: 0;
 }
 .casesContent > article .outerFlip .innerFlip .flipBack p:last-child {
   font-style: italic;
