@@ -382,7 +382,20 @@ form .error span {
   }
 }
 .heroTextBlog {
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .heroTextBlog {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+}
+@media (max-width: 480px) {
+  .heroTextBlog {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
 .heroTextBlog h1 {
   font-weight: bold !important;
@@ -955,14 +968,14 @@ form .error span {
 }
 @media (max-width: 768px) {
   .subscribeContent .getUpdatesText {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .subscribeContent .getUpdatesText {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -971,14 +984,14 @@ form .error span {
 }
 @media (max-width: 768px) {
   .subscriptionForm {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .subscriptionForm {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 .subscriptionForm input {
@@ -1075,14 +1088,14 @@ footer .btm {
 }
 @media (max-width: 768px) {
   footer .btm {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   footer .btm {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 @media (max-width: 768px) {
@@ -1249,14 +1262,14 @@ footer .btm .socials a img {
 
 @media (max-width: 768px) {
   .scheduleCallContent {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .scheduleCallContent {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 .scheduleCallContent form {
@@ -1318,14 +1331,14 @@ footer .btm .socials a img {
 
 @media (max-width: 768px) {
   .teamSpecialistsContent {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .teamSpecialistsContent {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 .teamSpecialistsContent article {
@@ -1391,14 +1404,14 @@ footer .btm .socials a img {
 }
 @media (max-width: 768px) {
   .marketingTermsContent .marketingTermsGrid {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .marketingTermsContent .marketingTermsGrid {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 @media (max-width: 1820px) {
@@ -1881,14 +1894,14 @@ nav ul {
 
 @media (max-width: 768px) {
   .textPadMobile {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .textPadMobile {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 .textPadMobile *:first-child {
@@ -1908,26 +1921,26 @@ nav ul {
 }
 @media (max-width: 768px) {
   .toggleEvents {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .toggleEvents {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
 @media (max-width: 768px) {
   .servicePageHeaderWrap {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
   }
 }
 @media (max-width: 480px) {
   .servicePageHeaderWrap {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }/*# sourceMappingURL=styles.css.map */

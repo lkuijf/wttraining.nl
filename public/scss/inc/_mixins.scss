@@ -21,8 +21,8 @@
     }
 }
 @mixin textPaddingOnMobile {
-    @media (max-width: $sbp3_tablet) {padding-left:30px;padding-right:30px;}
-    @media (max-width: $sbp4_mobile) {padding-left:20px;padding-right:20px;}
+    @media (max-width: $sbp3_tablet) {padding-left:30px !important;padding-right:30px !important;}
+    @media (max-width: $sbp4_mobile) {padding-left:20px !important;padding-right:20px !important;}
 }
 @mixin submitButton {
     margin-top: 20px;

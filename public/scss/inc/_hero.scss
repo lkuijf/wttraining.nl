@@ -170,7 +170,9 @@
     }
 }
 .heroTextBlog {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include textPaddingOnMobile;
     h1 {
         font-weight: bold !important;
     }
