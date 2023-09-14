@@ -14,7 +14,7 @@
             <article class="detailArticle">
                 {{-- <p class="date"><span>{{ $data['blog_date'] }}</span></p> --}}
                 {!! $data['text'] !!}
-                <div class="casesContentDiensten">
+                <div class="caseDetailImageWrapper">
                     @foreach ($data['gallery'] as $image)
                         @if (isset($image['sizes']))
                             {{-- <a data-fslightbox="first-lightbox" href="{{ str_replace('https://wtmedia-events.nl', '', $image['sizes']['large']) }}"><img src="{{ $image['sizes']['medium_large'] }}" alt="{{ $image['alt'] }}"></a> --}}

@@ -130,19 +130,19 @@
         @endif
         @if($section->_type == 'cases')
             @if ($section->show_cases_highlighted)
-                @include('sections.events', ['cases' => $data['cases_highlighted']])
+                @include('sections.events', ['cases' => $data['cases_highlighted'], 'showCaseCat' => true])
             @endif
             @if ($section->show_cases_learning_en_development)
-                @include('sections.cases_events', ['cases' => $section->cases])
+                @include('sections.events', ['cases' => $section->cases])
             @endif
             @if ($section->show_cases_academy_en_lms)
-                @include('sections.cases_events', ['cases' => $section->cases])
+                @include('sections.events', ['cases' => $section->cases])
             @endif
             @if ($section->show_cases_trainingen)
-                @include('sections.cases_events', ['cases' => $section->cases])
+                @include('sections.events', ['cases' => $section->cases])
             @endif
             @if ($section->show_cases_implementatie_ondersteuning)
-                @include('sections.cases_events', ['cases' => $section->cases])
+                @include('sections.events', ['cases' => $section->cases])
             @endif
         @endif
         @if ($section->_type == '1column')

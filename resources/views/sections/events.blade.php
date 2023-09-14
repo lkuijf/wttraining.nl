@@ -7,10 +7,6 @@
                         <div class="innerFlip">
                             <div class="flipFront">
                                 <a href="{{ url('diensten/' . $case->categories[0]->slug . '/' . $case->slug) }}">
-                                    {{-- <div>
-                                        <p>{{ $case->title }}</p>
-                                        <p>{{ $case->categories[0]->name }}</p>
-                                    </div> --}}
                                     @if (isset($case->gallery[0]) && isset($case->gallery[0]['sizes']))
                                         <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
                                     @else
@@ -20,6 +16,9 @@
                             </div>
                             <div class="flipBack">
                                 <p>{{ $case->card_text }}</p>
+                                @if (isset($showCaseCat) && $showCaseCat)
+                                    <p>{{ $case->categories[0]->name }}</p>
+                                @endif
                             </div>
                         </div>
                     </div>

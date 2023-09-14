@@ -867,279 +867,31 @@ form .error span {
   transform: rotateY(180deg);
   padding: 20px;
 }
-
-.casesContentDiensten {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.casesContent > article .outerFlip .innerFlip .flipBack p:last-child {
+  font-style: italic;
 }
-@media (max-width: 1024px) {
-  .casesContentDiensten {
-    grid-template-columns: repeat(4, 1fr);
+
+.caseDetailImageWrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 1200px) {
+  .caseDetailImageWrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 768px) {
-  .casesContentDiensten {
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media (max-width: 480px) {
-  .casesContentDiensten {
+  .caseDetailImageWrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.casesContentDiensten a {
-  position: relative;
-  transition: transform 0.2s ease;
-}
-.casesContentDiensten a div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 20px;
+.caseDetailImageWrapper img {
   width: 100%;
-  text-align: center;
-  background-color: #745600;
-  padding: 15px;
-  min-height: 105px;
-}
-@media (max-width: 1200px) {
-  .casesContentDiensten a div {
-    padding: 5px;
-    min-height: 80px;
-    bottom: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .casesContentDiensten a div {
-    min-height: 60px;
-  }
-}
-.casesContentDiensten a div p {
-  font-size: 1.4em;
-  margin: 0;
-  color: #FFF;
-}
-@media (max-width: 1200px) {
-  .casesContentDiensten a div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 1024px) {
-  .casesContentDiensten a div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 768px) {
-  .casesContentDiensten a div p {
-    font-size: 0.8em;
-  }
-}
-.casesContentDiensten a div p:last-child {
-  font-style: italic;
-  font-size: 1em;
-}
-@media (max-width: 1200px) {
-  .casesContentDiensten a div p:last-child {
-    font-size: 0.8em;
-  }
-}
-.casesContentDiensten a:hover {
-  border-radius: 15px;
-  z-index: 1;
-  transform: scale(1.2);
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
-}
-.casesContentDiensten a:hover img {
-  border-radius: 15px;
-}
-.casesContentDiensten a img {
   cursor: pointer;
-  width: 100%;
-  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.casesContentDiensten a.hoverEffectFullList {
-  background-color: #000;
-}
-.casesContentDiensten a.hoverEffectFullList:hover div {
-  display: block;
-}
-.casesContentDiensten a.hoverEffectFullList img:hover {
-  transform: none;
-  border-radius: 0;
-  opacity: 0.3;
-}
-
-.webDevCasesContent {
-  display: flex;
-  gap: 80px;
-}
-@media (max-width: 768px) {
-  .webDevCasesContent {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media (max-width: 480px) {
-  .webDevCasesContent {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-@media (max-width: 1200px) {
-  .webDevCasesContent {
-    gap: 60px;
-  }
-}
-@media (max-width: 1024px) {
-  .webDevCasesContent {
-    gap: 50px;
-  }
-}
-@media (max-width: 768px) {
-  .webDevCasesContent {
-    gap: 40px;
-  }
-}
-@media (max-width: 480px) {
-  .webDevCasesContent {
-    gap: 30px;
-    flex-direction: column;
-  }
-}
-.webDevCasesContent .webDevNumbers {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  flex-basis: 33%;
-}
-@media (max-width: 1200px) {
-  .webDevCasesContent .webDevNumbers {
-    gap: 60px;
-  }
-}
-@media (max-width: 1024px) {
-  .webDevCasesContent .webDevNumbers {
-    gap: 50px;
-  }
-}
-@media (max-width: 768px) {
-  .webDevCasesContent .webDevNumbers {
-    gap: 40px;
-  }
-}
-@media (max-width: 480px) {
-  .webDevCasesContent .webDevNumbers {
-    gap: 30px;
-  }
-}
-.webDevCasesContent .webDevNumbers div {
-  background-color: #006878;
-  border-radius: 15px;
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.webDevCasesContent .webDevNumbers div:last-child {
-  background-color: #19B4B6;
-}
-@media (max-width: 480px) {
-  .webDevCasesContent .webDevNumbers div {
-    padding: 60px 0;
-  }
-}
-.webDevCasesContent .webDevNumbers div span {
-  text-align: center;
-  font-size: 4em;
-  color: #FFF;
-  line-height: 1em;
-}
-@media (max-width: 1200px) {
-  .webDevCasesContent .webDevNumbers div span {
-    font-size: 3em;
-  }
-}
-@media (max-width: 768px) {
-  .webDevCasesContent .webDevNumbers div span {
-    font-size: 2em;
-  }
-}
-@media (max-width: 480px) {
-  .webDevCasesContent .webDevNumbers div span {
-    font-size: 3em;
-  }
-}
-.webDevCasesContent .webDevNumbers div span:last-child {
-  font-size: 2em;
-}
-@media (max-width: 1200px) {
-  .webDevCasesContent .webDevNumbers div span:last-child {
-    font-size: 1.5em;
-  }
-}
-@media (max-width: 768px) {
-  .webDevCasesContent .webDevNumbers div span:last-child {
-    font-size: 1em;
-  }
-}
-@media (max-width: 480px) {
-  .webDevCasesContent .webDevNumbers div span:last-child {
-    font-size: 1.5em;
-  }
-}
-.webDevCasesContent .webDevGallery {
-  flex-basis: 64%;
-  position: relative;
-}
-.webDevCasesContent .webDevGallery a img {
-  width: 100%;
-  border-radius: 15px;
-}
-.webDevCasesContent .webDevGallery .hiddenWebDevCases {
-  display: none;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #E9AD01;
-  border-radius: 15px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  color: #FFF;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate a {
-  color: #FFF;
-  text-decoration: none;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate a:hover {
-  color: #222;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate .wdnTitle {
-  font-size: 1.5em;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate .wdnBtns {
-  width: 100px;
-  display: flex;
-  justify-content: space-between;
-}
-.webDevCasesContent .webDevGallery .webDevNavigate .wdnBtns .wdnPref:before {
-  font-family: "wt_media_events";
-  font-size: 2em;
-  content: "\f177";
-}
-.webDevCasesContent .webDevGallery .webDevNavigate .wdnBtns .wdnNext:before {
-  font-family: "wt_media_events";
-  font-size: 2em;
-  content: "\f178";
+  aspect-ratio: 1/1;
 }
 
 .reviewsContent {
