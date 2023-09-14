@@ -8,6 +8,7 @@
             'images' => $data['blog_hero_gallery'],
             'title' => $data['blog_hero_title'],
             'text' => $data['blog_hero_text'],
+            'isBlogHero' => true,
             // 'email' => $section->btn_email,
             // 'phone' => $section->btn_phone,
             ])

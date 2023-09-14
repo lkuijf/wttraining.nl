@@ -1,5 +1,16 @@
+@if (isset($isBlogHero) && $isBlogHero)
+<div class="inner heroTextBlog">
+    @if (isset($title) && $title)
+        <h1>{!! $title !!}</h1>
+    @endif
+    @if (isset($text) && $text)
+        <p>{!! $text !!}</p>
+    @endif
+</div>
+@endif
 <div class="hero">
-    <div class="heroOverlay @if($bCenterText){{ 'centerText' }}@endif">
+    @if (!isset($isBlogHero) || !$isBlogHero)
+    <div class="heroOverlay @if(isset($bCenterText) && $bCenterText){{ 'centerText' }}@endif">
         <div>
             <div class="heroText">
                 @if (isset($title) && $title)
@@ -21,6 +32,7 @@
             @endif
         </div>
     </div>
+    @endif
     <div class="heroImages zoom">
         <div>
             @if (isset($images))
