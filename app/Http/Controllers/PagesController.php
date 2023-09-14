@@ -174,7 +174,7 @@ class PagesController extends Controller
         // $instagramFeedPage = new PageApi(1067);
         // $instagramFeedPageData = $instagramFeedPage->get();
         // $instaCode = $instagramFeedPageData->content->rendered;
-
+// dd($content->contentSections);
         $data= [
             'head_title' => $content->pageTitle,
             'meta_description' => $content->pageMetaDescription,
@@ -182,7 +182,8 @@ class PagesController extends Controller
             'website_options' => $options,
             // 'cart_total' => $cartTotalItems,
             // 'user_logged_in' => $loggedInUserId,
-            'content_sections' => $content->contentSections,
+            // 'content_sections' => $content->contentSections,
+            'content_sections' => [],
             'blog_items' => $items,
             // 'blog_text' => $post[0]->text,
             // 'blog_hero_title' => $post[0]->hero_title,
@@ -678,7 +679,7 @@ class PagesController extends Controller
 
         $allCrbSections = array();
         foreach($spages[0] as $sPage) {
-            if($sPage->title == 'Blog') continue;
+            // if($sPage->title == 'Blog') continue;
             if($sPage->title == 'Privacy policy') continue;
             $pageA = new \stdClass;
             $pageA->_type = '_anchor';
@@ -782,6 +783,22 @@ class PagesController extends Controller
                     }
                 }
             }
+
+
+            if($sec->_type == 'blog_items' && count($sec->blog_associations)) {
+                foreach($sec->blog_associations as &$blogItem) {
+                    $cBlog = new CustomPostApi('blog', $blogItem->id, false);
+                    $blog = $cBlog->get();
+                    $blogItem = $blog;
+
+                    if(isset($blogItem->gallery) && $blogItem->gallery) {
+                        $blogItem->gallery = $this->getMediaGallery($blogItem->gallery);
+                    }
+                }
+            }
+
+
+
             if($sec->_type == 'marketing_terms') {
                 $sec->image1 = $this->getMediaGallery($sec->image1);
                 $sec->image2 = $this->getMediaGallery($sec->image2);

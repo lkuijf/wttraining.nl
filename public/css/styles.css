@@ -1954,23 +1954,21 @@ footer .btm .socials a img {
   border-radius: 15px;
   aspect-ratio: 4/3;
 }
-@media (max-width: 768px) {
-  .contentWrapper .ctaBtnWrap {
-    text-align: center;
-  }
+.contentWrapper .ctaBtnWrap {
+  text-align: center;
 }
 .contentWrapper .ctaBtnWrap .ctaBtn {
   border-radius: 15px;
-  background-color: #006878;
-  color: #FFF;
+  background-color: #FFF;
+  color: #E9AD01;
   text-decoration: none;
-  padding: 25px 100px;
+  padding: 8px 80px;
   display: inline-block;
-  box-shadow: #ccc 10px 10px 0px -2px, #006878 10px 10px;
+  border: 3px solid #E9AD01;
 }
-.contentWrapper .ctaBtnWrap .ctaBtn:active {
-  transform: translate(5px, 5px);
-  box-shadow: #ccc 5px 5px 0px -2px, #006878 5px 5px;
+.contentWrapper .ctaBtnWrap .ctaBtn:hover {
+  background-color: #E9AD01;
+  color: #FFF;
 }
 
 html, body {

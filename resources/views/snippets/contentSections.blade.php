@@ -85,6 +85,10 @@
         @if($section->_type == 'team_specialists')
             @include('sections.team_specialists', ['specialists' => $section->team_specialists_associations])
         @endif
+        @if($section->_type == 'blog_items')
+            @include('sections.blog_items', ['blog_items' => $section->blog_associations])
+            @include('sections.button', ['url' => url('blog'), 'title' => 'Bekijk alle items'])
+        @endif
         @if($section->_type == 'service_page_text_header')
             @include('sections.service_page_text_header', ['title' => $section->title])
         @endif

@@ -60,21 +60,26 @@
         }
     }
     .ctaBtnWrap {
-        @media (max-width: $sbp3_tablet) {
+        // @media (max-width: $sbp3_tablet) {
             text-align: center;
-        }
+        // }
         .ctaBtn {
             @include borderRadius;
-            background-color: $colorCtaBtn;
-            color: $colorWhite;
+            background-color: $colorWhite;
+            color: $colorWTM;
             text-decoration: none;
-            padding: 25px 100px;
+            padding: 8px 80px;
             display: inline-block;
-            box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
-            &:active {
-                transform: translate(5px, 5px);
-                box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+            border: 3px solid $colorWTM;
+            &:hover {
+                background-color: $colorWTM;
+                color: $colorWhite;
             }
+            // box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
+            // &:active {
+            //     transform: translate(5px, 5px);
+            //     box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+            // }
         }
     }
 }

@@ -25,6 +25,7 @@ class Menu {
             $href = $pageUrl;
             if(isset($page->alt_url) && $page->alt_url) $href = $page->alt_url; // mironmarine.nl
             $active = false;
+            $aRequestPath = explode('/', request()->path());
             if('/' . request()->path() == $pageUrl) $active = true;
             if(substr_count($pageUrl, '/') == 2) {
                 // $this->html .= '<a href="#">'; // only for Miron Marine Service
@@ -32,12 +33,14 @@ class Menu {
             } else {
                 // if($page->title == 'Home') $href = '/';
                 // $this->html .= '<a itemprop="url" href="' . $href . '">';
-                if($page->title == 'Blog') {
+
+                if($page->title == 'Blog' && $aRequestPath[0] == 'blog') {
                     $href = '/blog';
-                    $this->html .= '<a itemprop="url" href="' . $href . '"' . ($active?' class="active"':'') . '>'; // rotterdamsehorecawandeling.nl (onepager)
+                    $this->html .= '<a itemprop="url" href="' . $href . '"' . ' class="active"' . '>'; // rotterdamsehorecawandeling.nl (onepager)
                 } else {
                     $this->html .= '<a itemprop="url" href="' . route('home') . '#' . substr($href, 1) . '"' . ($active?' class="active"':'') . '>'; // rotterdamsehorecawandeling.nl (onepager)
                 }
+
             }
 
             $this->html .= $page->title;
