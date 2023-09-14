@@ -16,7 +16,7 @@
                 {!! $data['text'] !!}
                 <div class="caseDetailImageWrapper">
                     @foreach ($data['gallery'] as $image)
-                        @if (isset($image['sizes']))
+                        @if (isset($image['sizes']) && $image['sizes'])
                             {{-- <a data-fslightbox="first-lightbox" href="{{ str_replace('https://wtmedia-events.nl', '', $image['sizes']['large']) }}"><img src="{{ $image['sizes']['medium_large'] }}" alt="{{ $image['alt'] }}"></a> --}}
                             <img class="gallery_image" src="{{ $image['sizes']['medium_large'] }}" alt="{{ $image['alt'] }}" data-description="{{ $image['alt'] }}" data-large="{{ $image['sizes']['large'] }}">
                         @endif
