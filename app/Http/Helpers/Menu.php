@@ -36,7 +36,9 @@ class Menu {
 
                 if($page->title == 'Blog' && $aRequestPath[0] == 'blog') {
                     $href = '/blog';
-                    $this->html .= '<a itemprop="url" href="' . $href . '"' . ' class="active"' . '>'; // rotterdamsehorecawandeling.nl (onepager)
+                    $this->html .= '<a itemprop="url" href="' . $href . '"' . ' class="active"' . '>';
+                } elseif($page->title == 'Diensten' && $aRequestPath[0] == 'diensten') {
+                    $this->html .= '<a itemprop="url" href="' . $href . '"' . ' class="active"' . '>';
                 } else {
                     $this->html .= '<a itemprop="url" href="' . route('home') . '#' . substr($href, 1) . '"' . ($active?' class="active"':'') . '>'; // rotterdamsehorecawandeling.nl (onepager)
                 }
