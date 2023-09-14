@@ -132,13 +132,16 @@
             @if ($section->show_cases_highlighted)
                 @include('sections.events', ['cases' => $data['cases_highlighted']])
             @endif
-            @if ($section->show_cases_online_marketing)
-                @include('sections.cases_online_marketing', ['cases' => $section->cases])
+            @if ($section->show_cases_learning_en_development)
+                @include('sections.cases_events', ['cases' => $section->cases])
             @endif
-            @if ($section->show_cases_web_development)
-                @include('sections.cases_web_development', ['cases' => $section->cases])
+            @if ($section->show_cases_academy_en_lms)
+                @include('sections.cases_events', ['cases' => $section->cases])
             @endif
-            @if ($section->show_cases_events)
+            @if ($section->show_cases_trainingen)
+                @include('sections.cases_events', ['cases' => $section->cases])
+            @endif
+            @if ($section->show_cases_implementatie_ondersteuning)
                 @include('sections.cases_events', ['cases' => $section->cases])
             @endif
         @endif
