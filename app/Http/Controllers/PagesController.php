@@ -752,9 +752,10 @@ class PagesController extends Controller
 
                 $caseItems = new SimpleCustomPostsApi('case');
 
-                if($sec->show_cases_online_marketing) $caseItems->parameters['category'] = 'online-marketing';
-                if($sec->show_cases_web_development) $caseItems->parameters['category'] = 'webdevelopment';
-                if($sec->show_cases_events) $caseItems->parameters['category'] = 'events';
+                if($sec->show_cases_learning_en_development) $caseItems->parameters['category'] = 'learning-en-development';
+                if($sec->show_cases_academy_en_lms) $caseItems->parameters['category'] = 'academy-en-lms';
+                if($sec->show_cases_trainingen) $caseItems->parameters['category'] = 'trainingen';
+                if($sec->show_cases_implementatie_ondersteuning) $caseItems->parameters['category'] = 'implementatie-ondersteuning';
                 
                 $caseItems->get();
                 $cases = $caseItems->getItems();

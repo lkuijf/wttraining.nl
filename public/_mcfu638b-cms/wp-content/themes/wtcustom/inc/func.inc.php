@@ -98,7 +98,7 @@ function customBackendScriptsEditorRol() {
             // jQuery('#page_template').remove();
             jQuery('#post-preview').remove();
 
-            let pagesToProtect = ['[HOMEPAGE]', 'Blog', 'Online Marketing', 'Webdevelopment', 'Events', 'Instagram feed'];
+            let pagesToProtect = ['[HOMEPAGE]', 'Blog', 'Learning en Development', 'Academy en LMS', 'Trainingen', 'Implementatie ondersteuning', 'Instagram feed'];
             pagesToProtect.forEach(page => {
                 jQuery('input[value="' + page + '"]').attr('disabled', 'disabled').parent().next().find('button').remove();
                 jQuery('input[value="' + page + '"]').closest('#post-body').find('#major-publishing-actions #delete-action').remove();

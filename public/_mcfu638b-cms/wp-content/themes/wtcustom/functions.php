@@ -597,9 +597,10 @@ function crbRegisterFields($args) {
                 ->add_fields( 'cases', 'Cases', array(
                     Field::make( 'separator', 'separator1', __( 'Cases' ) ),
                     Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_online_marketing', __( 'Show online marketing cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_web_development', __( 'Show web development cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_events', __( 'Show event cases' ) ),
+                    Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development cases' ) ),
+                    Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS cases' ) ),
+                    Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen cases' ) ),
+                    Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning cases' ) ),
                 ) )
                 ->add_fields( 'schedule_call', 'Schedule a call Form', array(
                     Field::make( 'separator', 'separator1', __( 'Schedule a call' ) ),
