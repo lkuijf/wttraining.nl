@@ -611,21 +611,50 @@ form .error span {
     padding-right: 20px;
   }
 }
-.detailArticle .date {
-  font-size: 1.5em;
-}
-.detailArticle .date span {
-  text-decoration: underline;
-}
-.detailArticle .date:before {
-  font-family: "wt_media_events";
-  content: "\e804 ";
-}
 .detailArticle img {
   max-width: 100%;
   height: auto;
 }
-
+.detailArticle .training {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .detailArticle .training {
+    flex-direction: column;
+  }
+}
+.detailArticle .training .trainingSpecs {
+  border-radius: 15px;
+  border: 3px solid #E9AD01;
+  flex: 0 0 500px;
+  padding: 30px;
+}
+@media (max-width: 1200px) {
+  .detailArticle .training .trainingSpecs {
+    flex-basis: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .detailArticle .training .trainingSpecs {
+    flex-basis: 300px;
+  }
+}
+.detailArticle .training .trainingSpecs > div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.detailArticle .training .trainingSpecs > div > div {
+  color: #E9AD01;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.detailArticle .training .trainingSpecs > div > div:first-child {
+  flex: 0 0 60px;
+}
 .pricing3Column {
   display: flex;
   flex-wrap: wrap;

@@ -268,6 +268,10 @@ class PagesController extends Controller
             'hero_title' => $post[0]->title->rendered,
             // 'hero_text' => $post[0]->hero_text,
             'gallery' => $post[0]->gallery,
+            't_location' => $post[0]->training_location,
+            't_participants' => $post[0]->training_participants,
+            't_time' => $post[0]->training_time,
+            't_requirements' => $post[0]->training_requirements,
             // 'blog_date' => date('d-m-Y', strtotime($post[0]->date)),
             // 'instagram_widget_code' => $instaCode,
         ];
