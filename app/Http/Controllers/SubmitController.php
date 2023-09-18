@@ -145,15 +145,15 @@ class SubmitController extends Controller
         }
 
         if(!count($res->errors)) {
-            $to_email = 'leon@wtmedia-events.nl';
-            $subjectCompany = 'Ingevuld aanmeld-formulier vanaf wtmedia-events.nl';
-            $subjectVisitor = 'Kopie van uw bericht aan wtmedia-events.nl';
+            $to_email = 'support@wttraining.nl';
+            $subjectCompany = 'Ingevuld aanmeld-formulier vanaf wttraining.nl';
+            $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
             $messages = $this->getHtmlEmails($request->all(), url('statics/email/logo.png'), 'De volgende gegevens zijn achtergelaten door de bezoeker.', 'Bedankt voor uw bericht. De volgende informatie hebben we ontvangen:');
             $headers = array(
                 "MIME-Version: 1.0",
                 "Content-Type: text/html; charset=ISO-8859-1",
-                "From: WT Media & Events <aanmeld-formulier@wtmedia-events.nl>",
-                "Reply-To: support@wtmedia-events.nl",
+                "From: WT Media & Events <aanmeld-formulier@wttraining.nl>",
+                "Reply-To: support@wttraining.nl",
                 // "X-Priority: 1",
             );
             $headers = implode("\r\n", $headers);
@@ -200,16 +200,16 @@ class SubmitController extends Controller
         // $to_email = 'leon@wtmedia-events.nl';
         $to_email = Crypt::decryptString($request->get('email_to'));
         // $to_email = 'frans@tamatta.org, rense@tamatta.org';
-        $subjectCompany = 'Ingevuld schedule-call-formulier vanaf wtmedia-events.nl';
-        $subjectVisitor = 'Kopie van uw bericht aan wtmedia-events.nl';
+        $subjectCompany = 'Ingevuld schedule-call-formulier vanaf wttraining.nl';
+        $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
         
         $messages = $this->getHtmlEmails($request->all(), url('statics/email/logo.png'), 'De volgende gegevens zijn achtergelaten door de bezoeker.', 'Bedankt voor uw bericht. De volgende informatie hebben we ontvangen:');
 
         $headers = array(
             "MIME-Version: 1.0",
             "Content-Type: text/html; charset=ISO-8859-1",
-            "From: WT Media & Events <schedule-call-form@wtmedia-events.nl>",
-            "Reply-To: support@wtmedia-events.nl",
+            "From: WT Media & Events <schedule-call-form@wttraining.nl>",
+            "Reply-To: support@wttraining.nl",
             // "X-Priority: 1",
         );
         $headers = implode("\r\n", $headers);
