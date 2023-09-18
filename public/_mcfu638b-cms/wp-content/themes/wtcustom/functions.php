@@ -66,37 +66,38 @@ add_action('init', 'remove_editor_init'); // put this in comment when using a pl
 
 add_action( 'init', 'create_posttype_blog' );
 add_action( 'init', 'create_posttype_case' );
+add_action( 'init', 'create_posttype_training' );
 // add_action( 'init', 'create_posttype_review' );
 add_action( 'init', 'create_posttype_teammember' );
 // add_action( 'init', 'create_posttype_professionals' );
 // add_action( 'init', 'create_posttype_vessels' );
 // add_action( 'init', 'register_taxonomy_vessel_type' );
-add_action( 'init', 'register_taxonomy_case_category' );
+add_action( 'init', 'register_taxonomy_training_service_page' );
 
-add_filter( 'manage_case_posts_columns', 'set_custom_case_columns' );
-add_action( 'manage_case_posts_custom_column' , 'custom_case_column', 10, 2 );
+// add_filter( 'manage_case_posts_columns', 'set_custom_case_columns' );
+// add_action( 'manage_case_posts_custom_column' , 'custom_case_column', 10, 2 );
 
 
 
-function set_custom_case_columns($columns) {
-    // unset( $columns['author'] );
-    $columns['highlighted_on_homepage'] = __( 'Highlighted', 'highlighted' );
-    // $columns['publisher'] = __( 'Publisher', 'your_text_domain' );
-    return $columns;
-}
-function custom_case_column( $column, $post_id ) {
-    switch ( $column ) {
-        case 'highlighted_on_homepage' :
-            // $terms = get_the_term_list( $post_id , 'book_author' , '' , ',' , '' );
-            $highlighted = carbon_get_post_meta( $post_id, 'highlighted' );
-            // if ( is_string( $terms ) )
-                echo ($highlighted?'Yes':'');
-            // else
-                // _e( 'Unable to get author(s)', 'your_text_domain' );
-            break;
+// function set_custom_case_columns($columns) {
+//     // unset( $columns['author'] );
+//     $columns['highlighted_on_homepage'] = __( 'Highlighted', 'highlighted' );
+//     // $columns['publisher'] = __( 'Publisher', 'your_text_domain' );
+//     return $columns;
+// }
+// function custom_case_column( $column, $post_id ) {
+//     switch ( $column ) {
+//         case 'highlighted_on_homepage' :
+//             // $terms = get_the_term_list( $post_id , 'book_author' , '' , ',' , '' );
+//             $highlighted = carbon_get_post_meta( $post_id, 'highlighted' );
+//             // if ( is_string( $terms ) )
+//                 echo ($highlighted?'Yes':'');
+//             // else
+//                 // _e( 'Unable to get author(s)', 'your_text_domain' );
+//             break;
 
-    }
-}
+//     }
+// }
 
 // Our custom post type function
 function create_posttype_blog() {
@@ -123,7 +124,27 @@ function create_posttype_case() {
     register_post_type( 'case',
         array(
             'labels' => array(
-                'name' => __( 'Trainingen' ),
+                'name' => __( 'Cases' ),
+                'singular_name' => __( 'Case' ),
+                'add_new_item' => __( 'Add New Case' ),
+                'add_new' => __( 'Add New Case' ),
+                'edit_item' => __( 'Edit Case' ),
+                'update_item' => __( 'Update Case' ),
+            ),
+            'public' => true,
+            // 'has_archive' => true,
+            // 'rewrite' => array('slug' => 'movies'),
+            'show_in_rest' => true,
+            // 'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'supports'            => array( 'title'),
+            )
+    );
+}
+function create_posttype_training() {
+    register_post_type( 'training',
+        array(
+            'labels' => array(
+                'name' => __( 'Trainings' ),
                 'singular_name' => __( 'Training' ),
                 'add_new_item' => __( 'Add New Training' ),
                 'add_new' => __( 'Add New Training' ),
@@ -264,19 +285,19 @@ function create_posttype_teammember() {
 //     );
 //     register_taxonomy( 'vessel_type', [ 'vessel' ], $args );
 // }
-function register_taxonomy_case_category() {
+function register_taxonomy_training_service_page() {
     $labels = array(
-        'name'              => _x( 'Categories', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Categories' ),
-        'all_items'         => __( 'All Categories' ),
-        'parent_item'       => __( 'Parent Category' ),
-        'parent_item_colon' => __( 'Parent Category:' ),
-        'edit_item'         => __( 'Edit Category' ),
-        'update_item'       => __( 'Update Category' ),
-        'add_new_item'      => __( 'Add New Category' ),
-        'new_item_name'     => __( 'New Category Name' ),
-        'menu_name'         => __( 'Category' ),
+        'name'              => _x( 'Service pages', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Service page', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Service pages' ),
+        'all_items'         => __( 'All Service pages' ),
+        'parent_item'       => __( 'Parent Service page' ),
+        'parent_item_colon' => __( 'Parent Service page:' ),
+        'edit_item'         => __( 'Edit Service page' ),
+        'update_item'       => __( 'Update Service page' ),
+        'add_new_item'      => __( 'Add New Service page' ),
+        'new_item_name'     => __( 'New Service page Name' ),
+        'menu_name'         => __( 'Service page' ),
     );
     $args   = array(
         'hierarchical'      => true, // make it hierarchical (like categories)
@@ -287,7 +308,7 @@ function register_taxonomy_case_category() {
         'query_var'         => true,
         // 'rewrite'           => [ 'slug' => 'case_category' ],
     );
-    register_taxonomy( 'case_category', [ 'case' ], $args );
+    register_taxonomy( 'training_service_page', [ 'training' ], $args );
 }
 
 $editor = get_role('editor');
@@ -609,14 +630,14 @@ function crbRegisterFields($args) {
                             Field::make( 'rich_text', 'approach_rich_text', __( 'Approach text (When display style: List)' ) ),
                         ) ),
                 ) )
-                ->add_fields( 'cases', 'Trainingen', array(
-                    Field::make( 'separator', 'separator1', __( 'Trainingen' ) ),
-                    Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted trainingen' ) ),
-                    Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development trainingen' ) ),
-                    Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS trainingen' ) ),
-                    Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen trainingen' ) ),
-                    Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning trainingen' ) ),
-                ) )
+                // ->add_fields( 'cases', 'Cases', array(
+                //     Field::make( 'separator', 'separator1', __( 'Cases' ) ),
+                //     Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted cases' ) ),
+                //     Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development cases' ) ),
+                //     Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS cases' ) ),
+                //     Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen cases' ) ),
+                //     Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning cases' ) ),
+                // ) )
                 ->add_fields( 'schedule_call', 'Schedule a call Form', array(
                     Field::make( 'separator', 'separator1', __( 'Schedule a call' ) ),
                     Field::make( 'text', 'title', __( 'Title' ) ),
@@ -779,6 +800,23 @@ function crbRegisterFields($args) {
             Field::make( 'media_gallery', 'gallery', __( 'Images' ) )->set_visible_in_rest_api($visible = true),
             // Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             // Field::make( 'textarea', 'hero_text', __( 'Hero text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'separator', 'separator2', __( 'Case text' ) ),
+            Field::make( 'rich_text', 'text', __( 'Text' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'textarea', 'card_text', __( 'Card text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'separator', 'separator3', __( 'SEO information' ) ),
+            Field::make( 'text', 'page_title', __( 'Case title (shown in browser tab)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'page_meta_description', __( 'Case meta description (shown in search engines)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'separator', 'separator4', __( 'Extra options' ) ),
+            Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
+            )
+        );
+    Container::make( 'post_meta', __( 'Information' ) )
+        ->where( 'post_type', '=', 'training' )
+        ->add_fields(array(
+            // Field::make( 'separator', 'separator1', __( 'Images' ) ),
+            Field::make( 'media_gallery', 'gallery', __( 'Images' ) )->set_visible_in_rest_api($visible = true),
+            // Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
+            // Field::make( 'textarea', 'hero_text', __( 'Hero text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator2', __( 'Training text' ) ),
 
             Field::make( 'text', 'training_location', __( 'Training Location' ))->set_visible_in_rest_api($visible = true),
@@ -792,7 +830,7 @@ function crbRegisterFields($args) {
             Field::make( 'text', 'page_title', __( 'Training title (shown in browser tab)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'text', 'page_meta_description', __( 'Training meta description (shown in search engines)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator4', __( 'Extra options' ) ),
-            Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
+            // Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
             )
         );
     Container::make( 'post_meta', __( 'Information' ) )
