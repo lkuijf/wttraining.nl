@@ -1766,15 +1766,18 @@ footer .btm .socials a img {
 .approachTilesContent.displayAs_tiles > article .outerFlip .innerFlip .flipFront h3 {
   font-size: clamp(14px, 1.3vw, 24px);
   margin: 10px;
+  margin-top: 25px;
 }
 @media (max-width: 1024px) {
   .approachTilesContent.displayAs_tiles > article .outerFlip .innerFlip .flipFront h3 {
     font-size: 1.3em;
+    margin-top: 15px;
   }
 }
 @media (max-width: 768px) {
   .approachTilesContent.displayAs_tiles > article .outerFlip .innerFlip .flipFront h3 {
     font-size: 1em;
+    margin-top: 10px;
   }
 }
 @media (max-width: 480px) {
@@ -1811,6 +1814,15 @@ footer .btm .socials a img {
     font-size: 0.8em;
   }
 }
+.approachTilesContent.displayAs_tiles > article .outerFlip .innerFlip .flipBack .listText {
+  display: none;
+}
+@media (max-width: 768px) {
+  .approachTilesContent.displayAs_list {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 .approachTilesContent.displayAs_list article {
   margin-bottom: 40px;
   border-radius: 15px;
@@ -1822,6 +1834,11 @@ footer .btm .socials a img {
   align-items: center;
   text-align: center;
 }
+@media (max-width: 480px) {
+  .approachTilesContent.displayAs_list article .flipFront {
+    flex-direction: column;
+  }
+}
 .approachTilesContent.displayAs_list article .flipFront img {
   width: 150px;
   aspect-ratio: 1/1;
@@ -1830,10 +1847,21 @@ footer .btm .socials a img {
   margin: 20px;
 }
 .approachTilesContent.displayAs_list article .flipFront h3 {
-  width: 80%;
+  width: 70%;
+}
+@media (max-width: 480px) {
+  .approachTilesContent.displayAs_list article .flipFront h3 {
+    width: 100%;
+  }
 }
 .approachTilesContent.displayAs_list article .flipBack {
   padding: 40px;
+}
+.approachTilesContent.displayAs_list article .flipBack :first-child {
+  margin-top: 0;
+}
+.approachTilesContent.displayAs_list article .flipBack .tileText {
+  display: none;
 }
 
 .contentWrapper .standardPage {

@@ -20,7 +20,8 @@
                         @if (isset($showCaseCat) && $showCaseCat)
                             <p>{{ $case->categories[0]->name }}</p>
                         @endif --}}
-                        <p>{{ $approach->approach_text }}</p>
+                        <div class="tileText"><p>{{ $approach->approach_text }}</p></div>
+                        <div class="listText">{!! $approach->approach_rich_text !!}</div>
                     </div>
                 </div>
             </div>
