@@ -1,0 +1,109 @@
+.approachTilesContent {
+    &.displayAs_tiles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(2, 1fr);}
+        @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
+        @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
+        // grid-row-gap: 150px;
+        grid-row-gap: 8vw;
+        > article {
+            // margin-left: 100px;
+            // margin-right: 100px;
+            margin-left: 5vw;
+            margin-right: 5vw;
+            > p {
+                text-align: center;
+            }
+            .outerFlip {
+                background-color: transparent;
+                perspective: 1000px;
+                @include borderRadius;
+                aspect-ratio: 1/1;
+                &:hover {
+                    .innerFlip {
+                        transform: rotateY(180deg);
+                        cursor: pointer;
+                    }
+                }
+                .innerFlip {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.5s;
+                    transform-style: preserve-3d;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+                    @include borderRadius;
+                    .flipFront {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        background-color: $colorGreyLight;
+                        color: $colorBlack;
+                        text-align: center;
+                        @include borderRadius;
+                        h3 {
+                            font-size: clamp(14px, 1.3vw, 24px);
+                            // @media (max-width: $sbp1_desktop) {font-size: 1.3em;}
+                            @media (max-width: $sbp2_laptop) {font-size: 1.3em;}
+                            @media (max-width: $sbp3_tablet) {font-size: 1em;}
+                            @media (max-width: $sbp4_mobile) {font-size: .8em;}
+                            margin: 10px;
+                        }
+                        img {
+                            width: 50%;
+                            margin-top: 18%;
+                            aspect-ratio: 1/1;
+                            object-fit: cover;
+                            fill: red;
+                        }
+                    }
+                    .flipBack {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                        @include borderRadius;
+                        background-color: $colorWTM;
+                        color: $colorWhite;
+                        transform: rotateY(180deg);
+                        padding: 20px;
+                        @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+    &.displayAs_list {
+        article {
+            margin-bottom: 40px;
+            @include borderRadius;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+            background-color: $colorGreyLight;
+            .flipFront {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                img {
+                    width: 150px;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    margin: 20px;
+                }
+                h3 {
+                    width: 80%;
+                }
+            }
+            .flipBack{
+                padding: 40px;
+            }
+        }
+    }
+}

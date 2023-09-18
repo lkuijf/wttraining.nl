@@ -798,8 +798,6 @@ class PagesController extends Controller
                 }
             }
 
-
-
             if($sec->_type == 'marketing_terms') {
                 $sec->image1 = $this->getMediaGallery($sec->image1);
                 $sec->image2 = $this->getMediaGallery($sec->image2);
@@ -809,6 +807,14 @@ class PagesController extends Controller
                 $sec->image6 = $this->getMediaGallery($sec->image6);
                 $sec->image7 = $this->getMediaGallery($sec->image7);
                 $sec->image8 = $this->getMediaGallery($sec->image8);
+            }
+            if($sec->_type == 'approach_tiles' && count($sec->approach)) {
+                foreach($sec->approach as &$approachItem) {
+                    if(isset($approachItem->image) && $approachItem->image) {
+                        $approachItem->image = $this->getMediaGallery($approachItem->image);
+                    }
+                }
+// dd($sec);
             }
             $secs[] = $sec;
         }

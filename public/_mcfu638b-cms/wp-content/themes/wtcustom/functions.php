@@ -605,12 +605,9 @@ function crbRegisterFields($args) {
                         ->add_fields( array(
                             Field::make( 'image', 'image', __( 'Approach image' ) ),
                             Field::make( 'text', 'approach_title', __( 'Approach title' ) ),
-                            Field::make( 'text', 'approach_text', __( 'Approach text' ) ),
+                            Field::make( 'text', 'approach_text', __( 'Approach text (When display style: Tiles)' ) ),
+                            Field::make( 'rich_text', 'approach_rich_text', __( 'Approach text (When display style: List)' ) ),
                         ) ),
-
-                    // Field::make( 'image', 'image1', __( 'Term 1 image' ) ),
-                    // Field::make( 'text', 'term1', __( 'Term 1 title' ) ),
-                    // Field::make( 'text', 'term1_text', __( 'Term 1 text' ) ),
                 ) )
                 ->add_fields( 'cases', 'Trainingen', array(
                     Field::make( 'separator', 'separator1', __( 'Trainingen' ) ),
