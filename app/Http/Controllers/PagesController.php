@@ -279,6 +279,41 @@ class PagesController extends Controller
         return view('case-detail-page')->with('data', $data);
 
     }
+    public function showTraining($slug) {
+        $simplePages = new SimplePagesApi();
+        $htmlMenu = new Menu($simplePages->get());
+        $htmlMenu->generateUlMenu();
+        $options = $this->getWebsiteOptions();
+        $simpleMedia = new SimpleMediaApi();
+        $simpleMedia->get();
+        $this->allMediaById = $simpleMedia->makeListById();
+
+        $cPost = new CustomPostApi('training', false, $slug);
+        $post = $cPost->get();
+        if(!count($post)) return abort(404);
+
+        $post[0]->gallery = $this->getMediaGallery($post[0]->gallery);
+
+        $data= [
+            'head_title' => $post[0]->page_title,
+            'meta_description' => $post[0]->page_meta_description,
+            'html_menu' => $htmlMenu->html,
+            'website_options' => $options,
+            'text' => $post[0]->text,
+            'hero_title' => $post[0]->title->rendered,
+            // 'hero_text' => $post[0]->hero_text,
+            'gallery' => $post[0]->gallery,
+            't_location' => $post[0]->training_location,
+            't_participants' => $post[0]->training_participants,
+            't_time' => $post[0]->training_time,
+            't_requirements' => $post[0]->training_requirements,
+            // 'blog_date' => date('d-m-Y', strtotime($post[0]->date)),
+            // 'instagram_widget_code' => $instaCode,
+        ];
+
+        return view('training-detail-page')->with('data', $data);
+
+    }
     public function showVacature($slug, $apply) {
         $simplePages = new SimplePagesApi();
         $htmlMenu = new Menu($simplePages->get());
@@ -774,7 +809,7 @@ class PagesController extends Controller
                 // $trainingItems->parameters['service_page'] = str_replace('_', '-', $sec->trainings_type);
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
-dd($trainings);
+// dd($trainings);
                 foreach($trainings as &$training) {
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }
@@ -833,7 +868,7 @@ dd($trainings);
             }
             $secs[] = $sec;
         }
-dd($secs);
+// dd($secs);
         return $secs;
     }
 }

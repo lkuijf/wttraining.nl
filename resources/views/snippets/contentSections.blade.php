@@ -145,6 +145,9 @@
                 @include('sections.events', ['cases' => $section->cases])
             @endif
         @endif
+        @if($section->_type == 'trainings')
+            @include('sections.trainings', ['trainings' => $section->trainings])
+        @endif
         @if($section->_type == 'approach_tiles')
             @include('sections.approach_tiles', ['displayType' => $section->approuch_style, 'approaches' => $section->approach])
         @endif

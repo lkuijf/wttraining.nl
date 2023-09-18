@@ -48,18 +48,21 @@ Route::get('/blog/{slug}', [PagesController::class, 'showPost'])->where([
 // Route::get('/diensten/webdevelopment', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'webdevelopment')->defaults('subpage', false)->middleware('doNotCacheResponse');
 // Route::get('/diensten/events', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'events')->defaults('subpage', false)->middleware('doNotCacheResponse');
 
-Route::get('/diensten/learning-en-development/{slug}', [PagesController::class, 'showCase'])->where([
+Route::get('/training/{slug}', [PagesController::class, 'showTraining'])->where([
     'slug' => '[a-z0-9_-]+',
 ]);
-Route::get('/diensten/academy-en-lms/{slug}', [PagesController::class, 'showCase'])->where([
-    'slug' => '[a-z0-9_-]+',
-]);
-Route::get('/diensten/trainingen/{slug}', [PagesController::class, 'showCase'])->where([
-    'slug' => '[a-z0-9_-]+',
-]);
-Route::get('/diensten/implementatie-ondersteuning/{slug}', [PagesController::class, 'showCase'])->where([
-    'slug' => '[a-z0-9_-]+',
-]);
+// Route::get('/diensten/learning-en-development/{slug}', [PagesController::class, 'showCase'])->where([
+//     'slug' => '[a-z0-9_-]+',
+// ]);
+// Route::get('/diensten/academy-en-lms/{slug}', [PagesController::class, 'showCase'])->where([
+//     'slug' => '[a-z0-9_-]+',
+// ]);
+// Route::get('/diensten/trainingen/{slug}', [PagesController::class, 'showCase'])->where([
+//     'slug' => '[a-z0-9_-]+',
+// ]);
+// Route::get('/diensten/implementatie-ondersteuning/{slug}', [PagesController::class, 'showCase'])->where([
+//     'slug' => '[a-z0-9_-]+',
+// ]);
 
 
 // When no matches, check for regular (nested) pages

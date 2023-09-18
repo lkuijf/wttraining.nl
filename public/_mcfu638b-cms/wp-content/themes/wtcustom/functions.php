@@ -546,6 +546,16 @@ function crbRegisterFields($args) {
                         ),
                     ) )
                 ) )
+                ->add_fields( 'case_items', 'Case items', array(
+                    Field::make( 'separator', 'separator1', __( 'Case items' ) ),
+                    Field::make( 'association', 'case_associations', __( 'Select case items' ))
+                    ->set_types( array(
+                        array(
+                            'type' => 'post',
+                            'post_type' => 'case',
+                        ),
+                    ) )
+                ) )
                 // ->add_fields( 'news_boxes', 'News', array(
                 //     Field::make( 'separator', 'separator1', __( 'News' ) ),
                 //     Field::make( 'association', 'news_associations', __( 'Select news (max 3)' ))
