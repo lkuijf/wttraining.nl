@@ -66,7 +66,7 @@ add_action('init', 'remove_editor_init'); // put this in comment when using a pl
 
 add_action( 'init', 'create_posttype_blog' );
 add_action( 'init', 'create_posttype_case' );
-add_action( 'init', 'create_posttype_review' );
+// add_action( 'init', 'create_posttype_review' );
 add_action( 'init', 'create_posttype_teammember' );
 // add_action( 'init', 'create_posttype_professionals' );
 // add_action( 'init', 'create_posttype_vessels' );
