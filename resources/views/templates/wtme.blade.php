@@ -76,7 +76,7 @@
     </div>
     
     <footer>
-        <div class="inner">
+        {{-- <div class="inner"> --}}
             <div class="ftr">
                 <div class="footerContact">
                     <img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Media & Events">
@@ -87,14 +87,14 @@
                 </nav>
             </div>
             <div class="btm">
-                <p>&copy; W.T. Media &amp; Events | <a href="{{ url('privacy-policy') }}">Privacy Policy</a> | {{ date('Y') }} All Rights Reserved</p>
+                <p>&copy; W.T. Training | <a href="{{ url('privacy-policy') }}">Privacy Policy</a> | {{ date('Y') }} All Rights Reserved</p>
                 <p class="socials">
                     <a href="https://www.instagram.com/wtmedia_events/" target="_blank" class="ig"><img src="{{ asset('statics/instagram.png') }}" alt="Instagram"></a>
                     <a href="https://www.facebook.com/profile.php?id=100083027634220" target="_blank" class="fb"><img src="{{ asset('statics/facebook.png') }}" alt="Facebook"></a>
                     <a href="https://www.linkedin.com/company/w-t-media-events/" target="_blank" class="li"><img src="{{ asset('statics/linkedin.png') }}" alt="LinkedIn"></a>
                 </p>
             </div>
-        </div>
+        {{-- </div> --}}
     </footer>
 
     <a href="" id="toTop"></a>

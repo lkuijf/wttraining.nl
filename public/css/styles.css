@@ -1057,13 +1057,17 @@ form .error span {
 }
 
 footer {
-  padding: 50px 0;
-  min-height: 700px;
+  padding: 50px 0 0 0;
 }
 footer .ftr {
+  background-color: #FFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 @media (max-width: 1024px) {
   footer .ftr {
@@ -1109,10 +1113,12 @@ footer .ftr ul li ul {
   display: none;
 }
 footer .btm {
-  padding-top: 20px;
+  padding: 20px;
+  background-color: #ABA8A8;
+  color: #FFF;
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 768px) {

@@ -8,8 +8,8 @@ require('inc/callbacks.inc.php');
 // require('inc/filterproducts.inc.php');
 // require('inc/filter-job-offers.inc.php');
 
-$editorCanAddAndRemovePages = true; // !!! may take 2 reloads for changes to take effect !!!
-$editorCanAddAndRemovePosts = true; // !!! may take 2 reloads for changes to take effect !!!
+$editorCanAddAndRemovePages = false; // !!! may take 2 reloads for changes to take effect !!!
+$editorCanAddAndRemovePosts = false; // !!! may take 2 reloads for changes to take effect !!!
 
 $carbonFieldsArgs = array();
 $websiteOptions = array();
