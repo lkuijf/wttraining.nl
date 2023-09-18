@@ -594,13 +594,13 @@ function crbRegisterFields($args) {
                     Field::make( 'text', 'term8', __( 'Term 8 title' ) ),
                     Field::make( 'text', 'term8_text', __( 'Term 8 text' ) ),
                 ) )
-                ->add_fields( 'cases', 'Cases', array(
-                    Field::make( 'separator', 'separator1', __( 'Cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen cases' ) ),
-                    Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning cases' ) ),
+                ->add_fields( 'cases', 'Trainingen', array(
+                    Field::make( 'separator', 'separator1', __( 'Trainingen' ) ),
+                    Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted trainingen' ) ),
+                    Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development trainingen' ) ),
+                    Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS trainingen' ) ),
+                    Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen trainingen' ) ),
+                    Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning trainingen' ) ),
                 ) )
                 ->add_fields( 'schedule_call', 'Schedule a call Form', array(
                     Field::make( 'separator', 'separator1', __( 'Schedule a call' ) ),
