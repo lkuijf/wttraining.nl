@@ -779,12 +779,18 @@ function crbRegisterFields($args) {
             Field::make( 'media_gallery', 'gallery', __( 'Images' ) )->set_visible_in_rest_api($visible = true),
             // Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             // Field::make( 'textarea', 'hero_text', __( 'Hero text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
-            Field::make( 'separator', 'separator2', __( 'Case text' ) ),
+            Field::make( 'separator', 'separator2', __( 'Training text' ) ),
+
+            Field::make( 'text', 'training_location', __( 'Training Location' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'training_participants', __( 'Training participants' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'training_time', __( 'Training time' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'rich_text', 'training_requirements', __( 'Training requirements' ))->set_visible_in_rest_api($visible = true),
+
             Field::make( 'rich_text', 'text', __( 'Text' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'textarea', 'card_text', __( 'Card text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator3', __( 'SEO information' ) ),
-            Field::make( 'text', 'page_title', __( 'Blog title (shown in browser tab)' ))->set_visible_in_rest_api($visible = true),
-            Field::make( 'text', 'page_meta_description', __( 'Blog meta description (shown in search engines)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'page_title', __( 'Training title (shown in browser tab)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'page_meta_description', __( 'Training meta description (shown in search engines)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator4', __( 'Extra options' ) ),
             Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
             )
