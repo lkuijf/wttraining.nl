@@ -6,13 +6,11 @@
                     <div class="outerFlip">
                         <div class="innerFlip">
                             <div class="flipFront">
-                                <a href="{{ url('diensten/' . $case->categories[0]->slug . '/' . $case->slug) }}">
-                                    @if (isset($case->gallery[0]) && isset($case->gallery[0]['sizes']))
-                                        <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
-                                    @else
-                                        <img src="{{ $case->gallery[0]['url'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
-                                    @endif
-                                </a>
+                                @if (isset($case->gallery[0]) && isset($case->gallery[0]['sizes']))
+                                    <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
+                                @else
+                                    <img src="{{ $case->gallery[0]['url'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
+                                @endif
                             </div>
                             <div class="flipBack">
                                 <p>{{ $case->card_text }}</p>
@@ -22,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <p>{{ $case->title }}</p>
+                    <p><a href="{{ url('diensten/' . $case->categories[0]->slug . '/' . $case->slug) }}">{{ $case->title }}</a></p>
                 </article>
             @endforeach
         @endif

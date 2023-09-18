@@ -11,13 +11,14 @@
     padding: 20px;
     article {
         background-color: $colorWhite;
-        border: 3px solid $colorWTM;
+        // border: 3px solid $colorWTM;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
         @include borderRadius;
         position: relative;
         overflow: hidden;
         img {
             width: 100%;
-            aspect-ratio: 1/1;
+            aspect-ratio: 5/6;
             object-fit: cover;
             border-radius: 11px;
             border-bottom-left-radius: 0;

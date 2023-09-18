@@ -4,16 +4,25 @@
     @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(3, 1fr);}
     @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
     @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
-    grid-gap: 5px;
+    grid-gap: 40px;
     > article {
+        background-color: $colorGreyLight;
+        @include borderRadius;
         > p {
             text-align: center;
+        }
+        a {
+            color: $colorBlack;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
         .outerFlip {
             background-color: transparent;
             perspective: 1000px;
             @include borderRadius;
-            aspect-ratio: 1/1;
+            aspect-ratio: 10/11;
             &:hover {
                 .innerFlip {
                     transform: rotateY(180deg);
@@ -35,10 +44,10 @@
                     -webkit-backface-visibility: hidden;
                     backface-visibility: hidden;
                     @include borderRadius;
-                    a {
-                        position: relative;
-                        display: block;
-                        color: $colorBlack;
+                    // a {
+                    //     position: relative;
+                    //     display: block;
+                    //     color: $colorBlack;
                         div {
                             @include caseOverlayText;
                         }
@@ -48,10 +57,10 @@
                         img {
                             @include borderRadius;
                             width: 100%;
-                            aspect-ratio: 1/1;
+                            aspect-ratio: 10/11;
                             object-fit: cover;
                         }
-                    }
+                    // }
                 }
                 .flipBack {
                     position: absolute;
