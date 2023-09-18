@@ -19,7 +19,8 @@ let anchorsInViewport = [];
 
 const heroSlideshowImages = document.querySelectorAll('.heroImages div img');
 
-setArticlesClickable();
+// setArticlesClickable();
+
 // upCountNumbers();
 
 setAfterScrollAttributes(); // when page is loaded at some scroll position. scroll event will not fire.
@@ -248,6 +249,44 @@ var swiperTeam = new Swiper(".teamMembersSwiper", {
           },
         }
 });
+
+var swiperCases = new Swiper(".casesSwiper", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    // loop: true, // not compatible with slidesPerView
+    // pagination: {
+    //     el: '.swiper-pagination-team',
+    //     clickable: true,
+    //     type: 'bullets',
+    // },
+    scrollbar: {
+        el: '.swiper-scrollbar-cases',
+        draggable: true,
+      },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1120: {
+            slidesPerView: 3,
+          },
+            1460: {
+            slidesPerView: 4,
+          },
+          1760: {
+            slidesPerView: 4,
+          },
+        }
+});
+
 
 function setArticlesClickable() {
     if(articles.length) {

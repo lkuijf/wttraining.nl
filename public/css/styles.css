@@ -780,52 +780,36 @@ form .error span {
   background-color: #E9AD01;
 }
 
-.casesContent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
+.casesContent div.swiper-slide > div {
+  padding-left: 60px;
+  padding-right: 60px;
 }
-@media (max-width: 1024px) {
-  .casesContent {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .casesContent {
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media (max-width: 480px) {
-  .casesContent {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.casesContent > article {
+.casesContent div.swiper-slide > div article {
+  background-color: #DDD;
   border-radius: 15px;
 }
-.casesContent > article > p {
+.casesContent div.swiper-slide > div article > p {
   text-align: center;
+  padding-bottom: 20px;
 }
-.casesContent > article a {
+.casesContent div.swiper-slide > div article a {
   color: #222;
   text-decoration: none;
 }
-.casesContent > article a:hover {
+.casesContent div.swiper-slide > div article a:hover {
   text-decoration: underline;
 }
-.casesContent > article .outerFlip {
+.casesContent div.swiper-slide > div article .outerFlip {
   background-color: transparent;
   perspective: 1000px;
   border-radius: 15px;
   aspect-ratio: 10/11;
 }
-.casesContent > article .outerFlip:hover .innerFlip {
+.casesContent div.swiper-slide > div article .outerFlip:hover .innerFlip {
   transform: rotateY(180deg);
   cursor: pointer;
 }
-.casesContent > article .outerFlip .innerFlip {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip {
   position: relative;
   width: 100%;
   height: 100%;
@@ -833,14 +817,14 @@ form .error span {
   transform-style: preserve-3d;
   border-radius: 15px;
 }
-.casesContent > article .outerFlip .innerFlip .flipFront {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px;
 }
-.casesContent > article .outerFlip .innerFlip .flipFront div {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -853,57 +837,57 @@ form .error span {
   min-height: 105px;
 }
 @media (max-width: 1200px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
     padding: 5px;
     min-height: 80px;
     bottom: 10px;
   }
 }
 @media (max-width: 768px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
     min-height: 60px;
   }
 }
-.casesContent > article .outerFlip .innerFlip .flipFront div p {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
   font-size: 1.4em;
   margin: 0;
   color: #FFF;
 }
 @media (max-width: 1200px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div p {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
     font-size: 1em;
   }
 }
 @media (max-width: 1024px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div p {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
     font-size: 1em;
   }
 }
 @media (max-width: 768px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div p {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
     font-size: 0.8em;
   }
 }
-.casesContent > article .outerFlip .innerFlip .flipFront div p:last-child {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p:last-child {
   font-style: italic;
   font-size: 1em;
 }
 @media (max-width: 1200px) {
-  .casesContent > article .outerFlip .innerFlip .flipFront div p:last-child {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p:last-child {
     font-size: 0.8em;
   }
 }
-.casesContent > article .outerFlip .innerFlip .flipFront p {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront p {
   text-align: center;
 }
-.casesContent > article .outerFlip .innerFlip .flipFront img {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront img {
   border-radius: 15px;
   width: 100%;
   aspect-ratio: 10/11;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.casesContent > article .outerFlip .innerFlip .flipBack {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -912,18 +896,20 @@ form .error span {
   background-color: #E9AD01;
   color: #FFF;
   transform: rotateY(180deg);
-  padding: 20px;
 }
 @media (max-width: 480px) {
-  .casesContent > article .outerFlip .innerFlip .flipBack {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack {
     padding: 10px;
     font-size: 0.8em;
   }
 }
-.casesContent > article .outerFlip .innerFlip .flipBack :first-child {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
+  padding: 20px;
+}
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack :first-child {
   margin-top: 0;
 }
-.casesContent > article .outerFlip .innerFlip .flipBack p:last-child {
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack p:last-child {
   font-style: italic;
 }
 
