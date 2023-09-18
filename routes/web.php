@@ -51,6 +51,9 @@ Route::get('/blog/{slug}', [PagesController::class, 'showPost'])->where([
 Route::get('/training/{slug}', [PagesController::class, 'showTraining'])->where([
     'slug' => '[a-z0-9_-]+',
 ]);
+Route::get('/case/{slug}', [PagesController::class, 'showCase'])->where([
+    'slug' => '[a-z0-9_-]+',
+]);
 // Route::get('/diensten/learning-en-development/{slug}', [PagesController::class, 'showCase'])->where([
 //     'slug' => '[a-z0-9_-]+',
 // ]);

@@ -89,6 +89,9 @@
             @include('sections.blog_items', ['blog_items' => $section->blog_associations])
             @include('sections.button', ['url' => url('blog'), 'title' => 'Bekijk alle items'])
         @endif
+        @if($section->_type == 'case_items')
+            @include('sections.events', ['cases' => $section->case_associations])
+        @endif
         @if($section->_type == 'service_page_text_header')
             @include('sections.service_page_text_header', ['title' => $section->title])
         @endif

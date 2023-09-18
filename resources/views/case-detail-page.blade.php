@@ -12,37 +12,7 @@
             ])
         <div class="inner">
             <article class="detailArticle">
-                <div class="training">
-                    @if ($data['t_location'] || $data['t_participants'] || $data['t_time'] || $data['t_requirements'])
-                    <div class="trainingSpecs">
-                        @if ($data['t_location'])
-                        <div>
-                            <div><img src="{{ asset('statics/study-type.png') }}" alt="Study type"></div>
-                            <div><p>{{ $data['t_location'] }}</p></div>
-                        </div>
-                        @endif
-                        @if ($data['t_participants'])
-                        <div>
-                            <div><img src="{{ asset('statics/study-capacity.png') }}" alt="Study capacity"></div>
-                            <div><p>{{ $data['t_participants'] }}</p></div>
-                        </div>
-                        @endif
-                        @if ($data['t_time'])
-                        <div>
-                            <div><img src="{{ asset('statics/study-time.png') }}" alt="Study time"></div>
-                            <div><p>{{ $data['t_time'] }}</p></div>
-                        </div>
-                        @endif
-                        @if ($data['t_requirements'])
-                        <div>
-                            <div><img src="{{ asset('statics/study-requirements.png') }}" alt="Study requirements"></div>
-                            <div>{!! $data['t_requirements'] !!}</div>
-                        </div>
-                        @endif
-                    </div>
-                    @endif
-                    <div>{!! $data['text'] !!}</div>
-                </div>
+                {!! $data['text'] !!}
                 <div class="caseDetailImageWrapper">
                     @foreach ($data['gallery'] as $image)
                         @if (isset($image['sizes']) && $image['sizes'])

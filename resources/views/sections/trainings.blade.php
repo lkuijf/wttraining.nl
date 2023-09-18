@@ -1,5 +1,5 @@
 <div class="inner">
-    <div class="casesContent">
+    <div class="trainingsContent">
         @if($trainings && count($trainings))
             @foreach ($trainings as $case)
                 <article>

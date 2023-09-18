@@ -20,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-                    <p><a href="{{ url('diensten/' . $case->categories[0]->slug . '/' . $case->slug) }}">{{ $case->title }}</a></p>
+                    <p><a href="{{ url('case/' . $case->slug) }}">{{ $case->title->rendered }}</a></p>
                 </article>
             @endforeach
         @endif
