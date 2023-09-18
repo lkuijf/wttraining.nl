@@ -89,6 +89,7 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
     $order = 'DESC';
     $postType = 'post';
     $category = false;
+    $service_page = false;
     $highlighted = false;
     $ids = false;
     if (isset($parameters['orderby'])) {
@@ -102,6 +103,9 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
     }
     if (isset($parameters['category'])) {
         $category = $parameters['category'];
+    }
+    if (isset($parameters['service_page'])) {
+        $service_page = $parameters['service_page'];
     }
     if (isset($parameters['highlighted'])) {
         $highlighted = $parameters['highlighted'];
@@ -121,6 +125,13 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
             'taxonomy' => 'case_category',
             'field'    => 'slug',
             'terms'    => array( $category )
+            )
+        );
+    if($service_page) $postParams['tax_query'] = array(
+        array(
+            'taxonomy' => 'training_service_page',
+            'field'    => 'slug',
+            'terms'    => array( $service_page )
             )
         );
     if($highlighted) $postParams['meta_query'] = array(

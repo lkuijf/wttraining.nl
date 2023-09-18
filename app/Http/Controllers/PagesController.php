@@ -649,13 +649,13 @@ class PagesController extends Controller
         if(isset($options->working_with)) $options->working_with = $this->getMediaGallery($options->working_with);
         if(isset($options->events)) $options->events = $this->getMediaGallery($options->events);
 
-        $casesHighlighted = new SimpleCustomPostsApi('case');
-        $casesHighlighted->parameters['highlighted'] = '1';
-        $casesHighlighted->get();
-        $homepageCases = $casesHighlighted->getItems();
-        foreach($homepageCases as &$case) {
-            $case->gallery = $this->getMediaGallery($case->gallery);
-        }
+        // $casesHighlighted = new SimpleCustomPostsApi('case');
+        // $casesHighlighted->parameters['highlighted'] = '1';
+        // $casesHighlighted->get();
+        // $homepageCases = $casesHighlighted->getItems();
+        // foreach($homepageCases as &$case) {
+        //     $case->gallery = $this->getMediaGallery($case->gallery);
+        // }
         $reviewPosts = new SimpleCustomPostsApi('review');
         $reviewPosts->get();
         $reviews = $reviewPosts->getItems();
@@ -704,7 +704,7 @@ class PagesController extends Controller
             'html_menu' => $htmlMenu->html,
             'website_options' => $options,
             'content_sections' => $allCrbSections,
-            'cases_highlighted' => $homepageCases,
+            // 'cases_highlighted' => $homepageCases,
             'reviews' => $reviews,
             'team_members' => $teamMembers,
             // 'instagram_widget_code' => $instaCode,
@@ -769,6 +769,16 @@ class PagesController extends Controller
                 $sec->cases = $cases;
 // dd($cases);
             }
+            if($sec->_type == 'trainings') {
+                $trainingItems = new SimpleCustomPostsApi('training');
+                $trainingItems->parameters['service_page'] = str_replace('_', '-', $sec->trainings_type);
+                $trainingItems->get();
+                $trainings = $trainingItems->getItems();
+                foreach($trainings as &$training) {
+                    $training->gallery = $this->getMediaGallery($training->gallery);
+                }
+                $sec->trainings = $trainings;
+            }
             if($sec->_type == 'schedule_call') {
                 $sec->email_to = Crypt::encryptString($sec->email_to);
                 $sec->success_text = Crypt::encryptString($sec->success_text);
@@ -822,7 +832,7 @@ class PagesController extends Controller
             }
             $secs[] = $sec;
         }
-// dd($secs);
+dd($secs);
         return $secs;
     }
 }
