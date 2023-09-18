@@ -771,9 +771,10 @@ class PagesController extends Controller
             }
             if($sec->_type == 'trainings') {
                 $trainingItems = new SimpleCustomPostsApi('training');
-                $trainingItems->parameters['service_page'] = str_replace('_', '-', $sec->trainings_type);
+                // $trainingItems->parameters['service_page'] = str_replace('_', '-', $sec->trainings_type);
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
+dd($trainings);
                 foreach($trainings as &$training) {
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }

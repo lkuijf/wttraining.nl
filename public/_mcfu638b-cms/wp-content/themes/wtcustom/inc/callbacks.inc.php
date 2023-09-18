@@ -306,14 +306,24 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
             // $oP->leading_title = carbon_get_post_meta( $item->ID, 'leading_title' );
             $aRes[] = $oP;
         } else {
-            $cats = [];
-            $catTerms = get_the_terms( $item->ID, 'case_category' );
-            if($catTerms && count($catTerms)) {
-                foreach($catTerms as $term) {
-                    $sCat = [];
-                    $sCat['slug'] = $term->slug;
-                    $sCat['name'] = $term->name;
-                    $cats[] = $sCat;
+            // $cats = [];
+            // $catTerms = get_the_terms( $item->ID, 'case_category' );
+            // if($catTerms && count($catTerms)) {
+            //     foreach($catTerms as $term) {
+            //         $sCat = [];
+            //         $sCat['slug'] = $term->slug;
+            //         $sCat['name'] = $term->name;
+            //         $cats[] = $sCat;
+            //     }
+            // }
+            $spages = [];
+            $spTerms = get_the_terms( $item->ID, 'training_service_page' );
+            if($spTerms && count($spTerms)) {
+                foreach($spTerms as $term) {
+                    $sPage = [];
+                    $sPage['slug'] = $term->slug;
+                    $sPage['name'] = $term->name;
+                    $spages[] = $sPage;
                 }
             }
     
@@ -331,7 +341,8 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
             // $oP->category = get_the_category($item->ID)[0]->name;
             // $oP->tags = $aTags;
             // $oP->topics = $topics;
-            $oP->categories = $cats;
+            // $oP->categories = $cats;
+            $oP->service_pages = $spages;
             $aRes[] = $oP;
         }
        
