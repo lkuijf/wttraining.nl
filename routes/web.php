@@ -22,6 +22,7 @@ Route::get('/wp-json/carbon-fields/v1/attachment', function () {return redirect(
 Route::get('/wp-json/carbon-fields/v1/association', function () {return redirect(str_replace('/wp-json/carbon-fields/v1/association', '/_mcfu638b-cms/index.php/wp-json/carbon-fields/v1/association', Request::fullUrl()));}); // redirect for Carbon Fields -bug
 Route::get('/wp-json/carbon-fields/v1/association/options', function () {return redirect(str_replace('/wp-json/carbon-fields/v1/association/options', '/_mcfu638b-cms/index.php/wp-json/carbon-fields/v1/association/options', Request::fullUrl()));}); // redirect for Carbon Fields -bug
 Route::get('/admin', function () {return redirect('/_mcfu638b-cms/wp-admin');}); // redirect /admin to wp-cms
+/*** TIP: Check the Web Application Firewall when a route is not picked up by a rule above *********************************************************/
 /***************************************************************************************************************************************************/
 
 Route::get('/', function () {
