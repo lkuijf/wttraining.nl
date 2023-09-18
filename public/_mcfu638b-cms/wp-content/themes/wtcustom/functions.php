@@ -594,6 +594,24 @@ function crbRegisterFields($args) {
                     Field::make( 'text', 'term8', __( 'Term 8 title' ) ),
                     Field::make( 'text', 'term8_text', __( 'Term 8 text' ) ),
                 ) )
+                ->add_fields( 'approach_tiles', 'Approach tiles', array(
+                    Field::make( 'separator', 'separator1', __( 'Our Approach tiles / list' ) ),
+                    Field::make( 'select', 'approuch_style', __( 'Select display style of approaches' ) )
+                    ->set_options( array(
+                        'tiles' => __( 'Tiles' ),
+                        'list' => __( 'List' ),
+                    ) ),
+                    Field::make( 'complex', 'approach', __( 'Add Approach' ) )
+                        ->add_fields( array(
+                            Field::make( 'image', 'image', __( 'Approach image' ) ),
+                            Field::make( 'text', 'approach_title', __( 'Approach title' ) ),
+                            Field::make( 'text', 'approach_text', __( 'Approach text' ) ),
+                        ) ),
+
+                    // Field::make( 'image', 'image1', __( 'Term 1 image' ) ),
+                    // Field::make( 'text', 'term1', __( 'Term 1 title' ) ),
+                    // Field::make( 'text', 'term1_text', __( 'Term 1 text' ) ),
+                ) )
                 ->add_fields( 'cases', 'Trainingen', array(
                     Field::make( 'separator', 'separator1', __( 'Trainingen' ) ),
                     Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted trainingen' ) ),
