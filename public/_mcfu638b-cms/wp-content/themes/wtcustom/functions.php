@@ -123,12 +123,12 @@ function create_posttype_case() {
     register_post_type( 'case',
         array(
             'labels' => array(
-                'name' => __( 'Cases' ),
-                'singular_name' => __( 'Case' ),
-                'add_new_item' => __( 'Add New Case' ),
-                'add_new' => __( 'Add New Case' ),
-                'edit_item' => __( 'Edit Case' ),
-                'update_item' => __( 'Update Case' ),
+                'name' => __( 'Trainingen' ),
+                'singular_name' => __( 'Training' ),
+                'add_new_item' => __( 'Add New Training' ),
+                'add_new' => __( 'Add New Training' ),
+                'edit_item' => __( 'Edit Training' ),
+                'update_item' => __( 'Update Training' ),
             ),
             'public' => true,
             // 'has_archive' => true,
