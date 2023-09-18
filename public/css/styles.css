@@ -784,13 +784,19 @@ form .error span {
   padding-left: 60px;
   padding-right: 60px;
 }
+@media (max-width: 768px) {
+  .casesContent div.swiper-slide > div {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 .casesContent div.swiper-slide > div article {
   background-color: #DDD;
   border-radius: 15px;
 }
 .casesContent div.swiper-slide > div article > p {
   text-align: center;
-  padding-bottom: 20px;
+  padding: 0 10px 20px 10px;
 }
 .casesContent div.swiper-slide > div article a {
   color: #222;
@@ -2080,7 +2086,6 @@ footer .btm .socials a img {
   color: #E9AD01;
   font-style: normal;
   font-weight: bold;
-  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
 }
 .contentWrapper h3 {
   font-size: 2em;

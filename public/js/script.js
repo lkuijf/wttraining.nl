@@ -19,7 +19,7 @@ let anchorsInViewport = [];
 
 const heroSlideshowImages = document.querySelectorAll('.heroImages div img');
 
-// setArticlesClickable();
+setArticlesClickable();
 
 // upCountNumbers();
 

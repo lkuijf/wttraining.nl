@@ -12,12 +12,16 @@
         > div {
             padding-left: 60px;
             padding-right: 60px;
+            @media (max-width: $sbp3_tablet) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
             article {
                 background-color: $colorGreyLight;
                 @include borderRadius;
                 > p {
                     text-align: center;
-                    padding-bottom: 20px;
+                    padding: 0 10px 20px 10px;
                 }
                 a {
                     color: $colorBlack;
