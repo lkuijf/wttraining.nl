@@ -630,14 +630,20 @@ function crbRegisterFields($args) {
                             Field::make( 'rich_text', 'approach_rich_text', __( 'Approach text (When display style: List)' ) ),
                         ) ),
                 ) )
-                // ->add_fields( 'cases', 'Cases', array(
-                //     Field::make( 'separator', 'separator1', __( 'Cases' ) ),
-                //     Field::make( 'checkbox', 'show_cases_highlighted', __( 'Show highlighted cases' ) ),
-                //     Field::make( 'checkbox', 'show_cases_learning_en_development', __( 'Show learning en development cases' ) ),
-                //     Field::make( 'checkbox', 'show_cases_academy_en_lms', __( 'Show academy en LMS cases' ) ),
-                //     Field::make( 'checkbox', 'show_cases_trainingen', __( 'Show trainingen cases' ) ),
-                //     Field::make( 'checkbox', 'show_cases_implementatie_ondersteuning', __( 'Show implementatie ondersteuning cases' ) ),
-                // ) )
+                ->add_fields( 'trainings', 'Trainings', array(
+                    Field::make( 'separator', 'separator1', __( 'Trainings' ) ),
+                    Field::make( 'select', 'trainings_type', __( 'Show trainings' ) )
+                    ->set_options( array(
+                        'learning_en_development' => __( 'Show learning en development trainings' ),
+                        'academy_en_lms' => __( 'Show academy en LMS trainings' ),
+                        'trainingen' => __( 'Show trainingen trainings' ),
+                        'implementatie_ondersteuning' => __( 'Show implementatie ondersteuning trainings' ),
+                    ) ),
+                    // Field::make( 'checkbox', 'show_trainings_learning_en_development', __( 'Show learning en development trainings' ) ),
+                    // Field::make( 'checkbox', 'show_trainings_academy_en_lms', __( 'Show academy en LMS trainings' ) ),
+                    // Field::make( 'checkbox', 'show_trainings_trainingen', __( 'Show trainingen trainings' ) ),
+                    // Field::make( 'checkbox', 'show_trainings_implementatie_ondersteuning', __( 'Show implementatie ondersteuning trainings' ) ),
+                ) )
                 ->add_fields( 'schedule_call', 'Schedule a call Form', array(
                     Field::make( 'separator', 'separator1', __( 'Schedule a call' ) ),
                     Field::make( 'text', 'title', __( 'Title' ) ),
