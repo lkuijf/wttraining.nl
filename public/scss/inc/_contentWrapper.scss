@@ -25,6 +25,11 @@
     }
     h1.servicePageHeader {
         font-size: 2em;
+    }
+    h2.servicePageHeader {
+        font-size: 1.7em;
+    }
+    .servicePageHeader {
         font-weight: bold;
         &.sphColor_black {
             color: $colorBlack;

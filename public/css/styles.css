@@ -2117,18 +2117,23 @@ footer .btm .socials a img {
 }
 .contentWrapper h1.servicePageHeader {
   font-size: 2em;
+}
+.contentWrapper h2.servicePageHeader {
+  font-size: 1.7em;
+}
+.contentWrapper .servicePageHeader {
   font-weight: bold;
 }
-.contentWrapper h1.servicePageHeader.sphColor_black {
+.contentWrapper .servicePageHeader.sphColor_black {
   color: #222;
 }
-.contentWrapper h1.servicePageHeader.sphColor_yellow {
+.contentWrapper .servicePageHeader.sphColor_yellow {
   color: #E9AD01;
 }
-.contentWrapper h1.servicePageHeader.sphAlign_center {
+.contentWrapper .servicePageHeader.sphAlign_center {
   text-align: center;
 }
-.contentWrapper h1.servicePageHeader.sphAlign_left {
+.contentWrapper .servicePageHeader.sphAlign_left {
   text-align: left;
 }
 .contentWrapper a {
