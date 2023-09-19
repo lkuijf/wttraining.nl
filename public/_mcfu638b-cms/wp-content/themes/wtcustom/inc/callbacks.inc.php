@@ -131,21 +131,21 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
             'terms'    => array( $category )
             )
         );
-        if($service_page) $postParams['tax_query'] = array(
-            array(
-                'taxonomy' => 'training_service_page',
-                'field'    => 'slug',
-                'terms'    => array( $service_page )
-                )
-            );
-        if($training_category) $postParams['tax_query'] = array(
-            array(
-                'taxonomy' => 'training_category',
-                'field'    => 'term_id',
-                'terms'    => $training_category
-                )
-            );
-        if($highlighted) $postParams['meta_query'] = array(
+    if($service_page) $postParams['tax_query'] = array(
+        array(
+            'taxonomy' => 'training_service_page',
+            'field'    => 'slug',
+            'terms'    => array( $service_page )
+            )
+        );
+    if($training_category) $postParams['tax_query'] = array(
+        array(
+            'taxonomy' => 'training_category',
+            'field'    => 'term_id',
+            'terms'    => $training_category
+            )
+        );
+    if($highlighted) $postParams['meta_query'] = array(
         array(
             'key' => '_highlighted',
             'value'    => 'yes'
@@ -327,6 +327,8 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
             //         $cats[] = $sCat;
             //     }
             // }
+
+            /*
             $spages = [];
             $spTerms = get_the_terms( $item->ID, 'training_service_page' );
             if($spTerms && count($spTerms)) {
@@ -337,7 +339,8 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
                     $spages[] = $sPage;
                 }
             }
-    
+            */
+
             $oP->id = $item->ID;
             $oP->title = $item->post_title;
             $oP->slug = $item->post_name;
@@ -353,7 +356,7 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
             // $oP->tags = $aTags;
             // $oP->topics = $topics;
             // $oP->categories = $cats;
-            $oP->service_pages = $spages;
+            // $oP->service_pages = $spages;
             $aRes[] = $oP;
         }
        

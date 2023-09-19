@@ -810,7 +810,7 @@ class PagesController extends Controller
                     }
                 }
 // dd($aTermIds);
-                $trainingItems->parameters['training_category'] = $aTermIds;
+                // $trainingItems->parameters['training_category'] = $aTermIds;
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
 dd($trainings);
