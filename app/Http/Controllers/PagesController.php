@@ -798,7 +798,6 @@ class PagesController extends Controller
                     $case->gallery = $this->getMediaGallery($case->gallery);
                 }
                 $sec->cases = $cases;
-// dd($cases);
             }
             if($sec->_type == 'trainings') {
 // dd($sec);
@@ -809,11 +808,10 @@ class PagesController extends Controller
                         $aTermIds[] = $tcAssoc->id;
                     }
                 }
-// dd($aTermIds);
-                // $trainingItems->parameters['training_category'] = $aTermIds;
+                $trainingItems->parameters['training_category'] = $aTermIds;
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
-dd($trainings);
+// dd($trainings);
                 foreach($trainings as &$training) {
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }

@@ -295,6 +295,47 @@ var swiperCases = new Swiper(".casesSwiper", {
         }
 });
 
+var swiperCases = new Swiper(".trainingsSwiper", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    // loop: true, // not compatible with slidesPerView
+    // pagination: {
+    //     el: '.swiper-pagination-team',
+    //     clickable: true,
+    //     type: 'bullets',
+    // },
+    navigation: {
+        nextEl: '.swiperBtnNextTrainings',
+        prevEl: '.swiperBtnPrevTrainings',
+    },
+    // scrollbar: {
+    //     el: '.swiper-scrollbar-cases',
+    //     draggable: true,
+    //   },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+          },
+          640: {
+            slidesPerView: 2,
+          },
+          1120: {
+            slidesPerView: 3,
+          },
+            1460: {
+            slidesPerView: 3,
+          },
+          1760: {
+            slidesPerView: 3,
+          },
+        }
+});
+
 
 function setArticlesClickable() {
     if(articles.length) {

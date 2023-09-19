@@ -1,89 +1,149 @@
 .trainingsContent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(3, 1fr);}
-    @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
-    @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
-    grid-gap: 40px;
-    > article {
-        background-color: $colorGreyLight;
-        @include borderRadius;
-        > p {
-            text-align: center;
+
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(3, 1fr);}
+    // @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
+    // @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
+    // grid-gap: 40px;
+
+    .outerSwiperBox {
+        position: relative;
+
+        padding: 0 60px; // giving next/prev buttons some space
+
+        .swiper-button-prev {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            &:after {
+                content: '\f177';
+            }
         }
-        a {
-            color: $colorBlack;
+        .swiper-button-next {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            &:after {
+                content: '\f178';
+            }
+        }
+        .swiperBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             text-decoration: none;
-            &:hover {
-                text-decoration: underline;
+            &:after {
+                font-family: "wt_media_events";
+                font-size: 50px;
+                color: $colorWTM;
+            }
+            &:hover:after {
+                color: $colorWTM;
             }
         }
-        .outerFlip {
-            background-color: transparent;
-            perspective: 1000px;
-            @include borderRadius;
-            aspect-ratio: 10/11;
-            &:hover {
-                .innerFlip {
-                    transform: rotateY(180deg);
-                    cursor: pointer;
-                }
+    }
+
+
+    div.swiper-slide {
+        > div {
+            padding-left: 60px;
+            padding-right: 60px;
+            @media (max-width: $sbp1_desktop) {
+                padding-left: 50px;
+                padding-right: 50px;
             }
-            .innerFlip {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                transition: transform 0.5s;
-                transform-style: preserve-3d;
-                // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            @media (max-width: $sbp2_laptop) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @media (max-width: $sbp3_tablet) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+            @media (max-width: $sbp4_mobile) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            article {
+                background-color: $colorGreyLight;
                 @include borderRadius;
-                .flipFront {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    @include borderRadius;
-                    // a {
-                    //     position: relative;
-                    //     display: block;
-                    //     color: $colorBlack;
-                        // div {
-                        //     @include caseOverlayText;
-                        // }
-                        p {
-                            text-align: center;
-                        }
-                        img {
-                            @include borderRadius;
-                            width: 100%;
-                            aspect-ratio: 10/11;
-                            object-fit: cover;
-                        }
-                    // }
+                > p {
+                    text-align: center;
+                    padding: 0 10px 20px 10px;
+                    @media (max-width: $sbp4_mobile) {font-size:.8em;}
                 }
-                .flipBack {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    @include borderRadius;
-                    background-color: $colorWTM;
-                    color: $colorWhite;
-                    transform: rotateY(180deg);
-                    padding: 20px;
-                    @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
-                    :first-child {
-                        margin-top: 0;
+                a {
+                    color: $colorBlack;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
                     }
-                    p:last-child {
-                        font-style: italic;
+                }
+                .outerFlip {
+                    background-color: transparent;
+                    perspective: 1000px;
+                    @include borderRadius;
+                    aspect-ratio: 10/11;
+                    &:hover {
+                        .innerFlip {
+                            transform: rotateY(180deg);
+                            cursor: pointer;
+                        }
+                    }
+                    .innerFlip {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        transition: transform 0.5s;
+                        transform-style: preserve-3d;
+                        // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                        @include borderRadius;
+                        .flipFront {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            -webkit-backface-visibility: hidden;
+                            backface-visibility: hidden;
+                            @include borderRadius;
+                            img {
+                                @include borderRadius;
+                                width: 100%;
+                                aspect-ratio: 10/11;
+                                object-fit: cover;
+                            }
+                        }
+                        .flipBack {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            -webkit-backface-visibility: hidden;
+                            backface-visibility: hidden;
+                            @include borderRadius;
+                            background-color: $colorWTM;
+                            color: $colorWhite;
+                            transform: rotateY(180deg);
+                            > div {
+                                padding: 20px;
+                                @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
+                            }
+                            :first-child {
+                                margin-top: 0;
+                            }
+                            p:last-child {
+                                font-style: italic;
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
+
 }
 .caseDetailImageWrapper {
     display: grid;

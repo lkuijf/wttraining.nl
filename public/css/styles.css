@@ -873,7 +873,6 @@ form .error span {
   }
 }
 .casesContent div.swiper-slide > div article {
-  background-color: #DDD;
   border-radius: 15px;
 }
 .casesContent div.swiper-slide > div article > p {
@@ -973,53 +972,102 @@ form .error span {
   aspect-ratio: 1/1;
 }
 
-.trainingsContent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
+.trainingsContent .outerSwiperBox {
+  position: relative;
+  padding: 0 60px;
 }
-@media (max-width: 1024px) {
-  .trainingsContent {
-    grid-template-columns: repeat(3, 1fr);
+.trainingsContent .outerSwiperBox .swiper-button-prev {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.trainingsContent .outerSwiperBox .swiper-button-prev:after {
+  content: "\f177";
+}
+.trainingsContent .outerSwiperBox .swiper-button-next {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.trainingsContent .outerSwiperBox .swiper-button-next:after {
+  content: "\f178";
+}
+.trainingsContent .outerSwiperBox .swiperBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.trainingsContent .outerSwiperBox .swiperBtn:after {
+  font-family: "wt_media_events";
+  font-size: 50px;
+  color: #E9AD01;
+}
+.trainingsContent .outerSwiperBox .swiperBtn:hover:after {
+  color: #E9AD01;
+}
+.trainingsContent div.swiper-slide > div {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+@media (max-width: 1200px) {
+  .trainingsContent div.swiper-slide > div {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
-@media (max-width: 768px) {
-  .trainingsContent {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) {
+  .trainingsContent div.swiper-slide > div {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media (max-width: 480px) {
-  .trainingsContent {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .trainingsContent div.swiper-slide > div {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
-.trainingsContent > article {
+@media (max-width: 480px) {
+  .trainingsContent div.swiper-slide > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.trainingsContent div.swiper-slide > div article {
   background-color: #DDD;
   border-radius: 15px;
 }
-.trainingsContent > article > p {
+.trainingsContent div.swiper-slide > div article > p {
   text-align: center;
+  padding: 0 10px 20px 10px;
 }
-.trainingsContent > article a {
+@media (max-width: 480px) {
+  .trainingsContent div.swiper-slide > div article > p {
+    font-size: 0.8em;
+  }
+}
+.trainingsContent div.swiper-slide > div article a {
   color: #222;
   text-decoration: none;
 }
-.trainingsContent > article a:hover {
+.trainingsContent div.swiper-slide > div article a:hover {
   text-decoration: underline;
 }
-.trainingsContent > article .outerFlip {
+.trainingsContent div.swiper-slide > div article .outerFlip {
   background-color: transparent;
   perspective: 1000px;
   border-radius: 15px;
   aspect-ratio: 10/11;
 }
-.trainingsContent > article .outerFlip:hover .innerFlip {
+.trainingsContent div.swiper-slide > div article .outerFlip:hover .innerFlip {
   transform: rotateY(180deg);
   cursor: pointer;
 }
-.trainingsContent > article .outerFlip .innerFlip {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1027,24 +1075,21 @@ form .error span {
   transform-style: preserve-3d;
   border-radius: 15px;
 }
-.trainingsContent > article .outerFlip .innerFlip .flipFront {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px;
 }
-.trainingsContent > article .outerFlip .innerFlip .flipFront p {
-  text-align: center;
-}
-.trainingsContent > article .outerFlip .innerFlip .flipFront img {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront img {
   border-radius: 15px;
   width: 100%;
   aspect-ratio: 10/11;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.trainingsContent > article .outerFlip .innerFlip .flipBack {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1053,18 +1098,20 @@ form .error span {
   background-color: #E9AD01;
   color: #FFF;
   transform: rotateY(180deg);
+}
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
   padding: 20px;
 }
 @media (max-width: 480px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipBack {
+  .trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
     padding: 10px;
     font-size: 0.8em;
   }
 }
-.trainingsContent > article .outerFlip .innerFlip .flipBack :first-child {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack :first-child {
   margin-top: 0;
 }
-.trainingsContent > article .outerFlip .innerFlip .flipBack p:last-child {
+.trainingsContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack p:last-child {
   font-style: italic;
 }
 
@@ -2072,18 +2119,6 @@ footer .btm .socials a img {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
-  border-bottom: 3px solid #000;
-  position: relative;
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-.contentWrapper h1.servicePageHeader span {
-  background-color: #FFF;
-  padding: 0 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .contentWrapper a {
   color: #006878;
@@ -2126,7 +2161,7 @@ html, body {
 html {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #222;
   background-color: #FFF;
   scroll-behavior: smooth;
@@ -2160,19 +2195,19 @@ nav ul {
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 140px;
+  padding-right: 140px;
 }
 @media (max-width: 1200px) {
   .inner {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 @media (max-width: 1024px) {
   .inner {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 @media (max-width: 768px) {

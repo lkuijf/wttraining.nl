@@ -22,7 +22,7 @@ $colorCtaBtn: #006878;
 
 $fontFamily: 'Inter', sans-serif;
 $fontFamilyButton: 'Karla', sans-serif;
-$fontSize: 16px;
+$fontSize: 18px;
 
 @import 'inc/mixins';
 
@@ -92,10 +92,10 @@ nav ul {
     max-width: $contentWidth;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 100px;
-    padding-right: 100px;
-    @media (max-width: $sbp1_desktop) {padding-left:80px;padding-right:80px;}
-    @media (max-width: $sbp2_laptop) {padding-left:60px;padding-right:60px;}
+    padding-left: 140px;
+    padding-right: 140px;
+    @media (max-width: $sbp1_desktop) {padding-left:100px;padding-right:100px;}
+    @media (max-width: $sbp2_laptop) {padding-left:80px;padding-right:80px;}
     @media (max-width: $sbp3_tablet) {padding-left:0;padding-right:0;}
     @media (max-width: $sbp4_mobile) {padding-left:0;padding-right:0;}
 }

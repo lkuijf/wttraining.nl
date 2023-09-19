@@ -1,34 +1,12 @@
 <div class="inner">
     <div class="casesContent">
 
-
         <div class="outerSwiperBox">
             <div class="swiper casesSwiper">
                 <div class="swiper-wrapper">
 
-
                     @if($cases && count($cases))
                         @foreach ($cases as $case)
-
-                            {{-- <article class="swiper-slide">
-                                111111111
-                            </article>
-                            <article class="swiper-slide">
-                                22222222
-                            </article>
-                            <article class="swiper-slide">
-                                33333333333
-                            </article>
-                            <article class="swiper-slide">
-                                444444444
-                            </article>
-                            <article class="swiper-slide">
-                                5555555555
-                            </article>
-                            <article class="swiper-slide">
-                                666666666
-                            </article> --}}
-
                             <div class="swiper-slide">
                                 <div>
                                     <article>
@@ -58,7 +36,6 @@
                         @endforeach
                     @endif
 
-
                 </div>
             </div>
 
@@ -67,8 +44,6 @@
 
             {{-- <div class="swiper-scrollbar-cases"></div> --}}
         </div>
-
-
 
     </div>
 </div>
