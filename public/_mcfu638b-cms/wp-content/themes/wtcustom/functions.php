@@ -592,8 +592,8 @@ function crbRegisterFields($args) {
                     Field::make( 'separator', 'separator1', __( 'Team members' ) ),
                     Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
                 ) )
-                ->add_fields( 'service_page_text_header', 'Service page text header', array(
-                    Field::make( 'separator', 'separator1', __( 'Service page text header (H1)' ) ),
+                ->add_fields( 'service_page_text_header', 'Text header h1/h2', array(
+                    Field::make( 'separator', 'separator1', __( 'Text header (H1 / H2)' ) ),
                     // Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
                     Field::make( 'text', 'title', __( 'Header text' ) ),
                     Field::make( 'select', 'header_style', __( 'Color of header' ) )
