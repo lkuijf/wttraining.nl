@@ -56,14 +56,6 @@
         background-image: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8));
         color: $colorWhite;
         z-index: 1;
-        &.centerText {
-            background-image: linear-gradient(to left, rgba(0,0,0,0.0), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.0));
-            > div {
-                padding: 0;
-                justify-content: center;
-                text-align: center;
-            }
-        }
         h1 {
             margin: 0;
             line-height: 1.2em;
@@ -121,6 +113,18 @@
                         visibility: hidden;
                     }
                 }
+            }
+        }
+        &.centerText {
+            background-image: linear-gradient(to left, rgba(0,0,0,0.0), rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.0));
+            > div {
+                padding: 0;
+                justify-content: center;
+                text-align: center;
+            }
+            .makeContact {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

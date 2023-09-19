@@ -230,14 +230,6 @@ form .error span {
     height: 650px;
   }
 }
-.hero .heroOverlay.centerText {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0));
-}
-.hero .heroOverlay.centerText > div {
-  padding: 0;
-  justify-content: center;
-  text-align: center;
-}
 .hero .heroOverlay h1 {
   margin: 0;
   line-height: 1.2em;
@@ -302,6 +294,18 @@ form .error span {
 }
 .hero .heroOverlay .makeContact a.phone span {
   visibility: hidden;
+}
+.hero .heroOverlay.centerText {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0));
+}
+.hero .heroOverlay.centerText > div {
+  padding: 0;
+  justify-content: center;
+  text-align: center;
+}
+.hero .heroOverlay.centerText .makeContact {
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero .heroImages > div {
   display: block;
@@ -535,7 +539,7 @@ form .error span {
     font-size: 1em;
   }
   .headerOuter .headerInnerWrap .mainNav #burger-check:checked ~ ul {
-    width: 60%;
+    width: 80%;
   }
   .headerOuter .headerInnerWrap .mainNav .burger-label {
     z-index: 2;
@@ -748,6 +752,7 @@ form .error span {
 
 .workingWithContent {
   text-align: center;
+  margin: 50px 0;
 }
 .workingWithContent .outerSwiperBox {
   position: relative;
@@ -762,7 +767,17 @@ form .error span {
      object-fit: contain;
 }
 .workingWithContent .outerSwiperBox .swiper-pagination {
-  bottom: -10px !important;
+  bottom: -20px !important;
+}
+.workingWithContent .outerSwiperBox .swiper-pagination .swiper-pagination-bullet {
+  border: 3px solid #E9AD01;
+  background-color: #FFF !important;
+  height: 18px;
+  width: 18px;
+  opacity: 1;
+}
+.workingWithContent .outerSwiperBox .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #E9AD01 !important;
 }
 
 .teammembersContent {
@@ -1557,13 +1572,9 @@ footer .btm .socials a img {
   cursor: pointer;
   color: #E9AD01;
   background-color: #FFF;
-  box-shadow: #E9AD01 10px 10px 0px -2px, #FFF 10px 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.scheduleCallContent form button:active {
-  box-shadow: #E9AD01 5px 5px 0px -2px, #FFF 5px 5px;
 }
 
 @media (max-width: 768px) {
@@ -2132,6 +2143,7 @@ footer .btm .socials a img {
 }
 .contentWrapper .servicePageHeaderWrap .servicePageHeader {
   font-weight: bold;
+  max-width: 850px;
 }
 .contentWrapper .servicePageHeaderWrap .servicePageHeader.sphColor_black {
   color: #222;
@@ -2141,6 +2153,8 @@ footer .btm .socials a img {
 }
 .contentWrapper .servicePageHeaderWrap .servicePageHeader.sphAlign_center {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contentWrapper .servicePageHeaderWrap .servicePageHeader.sphAlign_left {
   text-align: left;

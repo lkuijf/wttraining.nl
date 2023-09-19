@@ -32,10 +32,10 @@
             @include submitButton;
             color: $colorWTM;
             background-color: $colorWhite;
-            box-shadow: $colorWTM 10px 10px 0px -2px, $colorWhite 10px 10px;
-            &:active {
-                box-shadow: $colorWTM 5px 5px 0px -2px, $colorWhite 5px 5px;
-            }
+            // box-shadow: $colorWTM 10px 10px 0px -2px, $colorWhite 10px 10px;
+            // &:active {
+                // box-shadow: $colorWTM 5px 5px 0px -2px, $colorWhite 5px 5px;
+            // }
             display: block;
             margin-left: auto;
             margin-right: auto;

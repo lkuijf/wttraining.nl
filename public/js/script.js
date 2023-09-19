@@ -17,7 +17,7 @@ const xhrSuccessAlert = document.querySelector('.hideXhrSuccess');
 
 let anchorsInViewport = [];
 
-const heroSlideshowImages = document.querySelectorAll('.heroImages div img');
+const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero:first-of-type .heroImages div img');
 
 setArticlesClickable();
 

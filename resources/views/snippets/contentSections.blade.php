@@ -11,6 +11,7 @@
             'title' => $section->hero_title,
             'text' => $section->text,
             'email' => $section->btn_email,
+            'email_text' => $section->btn_email_text,
             'phone' => $section->btn_phone,
             'bCenterText' => $section->center_text,
             ])

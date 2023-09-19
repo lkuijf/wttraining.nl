@@ -20,10 +20,10 @@
                     <p>{!! $text !!}</p>
                 @endif
             </div>
-            @if (isset($email) && $email && isset($phone) && $phone)
+            @if ((isset($email) && $email) || (isset($phone) && $phone))
             <div class="makeContact">
                 @if (isset($email) && $email)
-                    <a href="mailto:{{ $email }}" class="email">Stuur een e-mail</a>
+                    <a href="mailto:{{ $email }}" class="email">@if($email_text){{ $email_text }}@else{{ 'Stuur een e-mail' }}@endif</a>
                 @endif
                 @if (isset($phone) && $phone)
                     <a href="tel:{{ $phone }}" class="phone"><span>Bel ons</span></a>
