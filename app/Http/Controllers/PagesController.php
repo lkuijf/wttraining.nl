@@ -813,8 +813,9 @@ class PagesController extends Controller
                 $trainingItems->parameters['training_category'] = $aTermIds;
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
-dd($trainings);
+// dd($trainings);
                 foreach($trainings as &$training) {
+                    $training->card_logo = $this->getMediaGallery($training->card_logo);
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }
 // dd($trainings);
