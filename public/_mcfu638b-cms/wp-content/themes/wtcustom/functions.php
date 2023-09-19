@@ -642,6 +642,18 @@ function crbRegisterFields($args) {
                 ) )
                 ->add_fields( 'trainings', 'Trainings', array(
                     Field::make( 'separator', 'separator1', __( 'Trainings' ) ),
+
+
+                    Field::make( 'association', 'training_cat_associations', __( 'Select training categories' ))
+                    ->set_types( array(
+                        array(
+                            'type' => 'term',
+                            'taxonomy' => 'training_service_page',
+                        ),
+                    ) ),
+
+
+
                     Field::make( 'select', 'trainings_type', __( 'Show trainings' ) )
                     ->set_options( array(
                         'learning_en_development' => __( 'Show learning en development trainings' ),
@@ -649,6 +661,8 @@ function crbRegisterFields($args) {
                         'trainingen' => __( 'Show trainingen trainings' ),
                         'implementatie_ondersteuning' => __( 'Show implementatie ondersteuning trainings' ),
                     ) ),
+
+
                     // Field::make( 'checkbox', 'show_trainings_learning_en_development', __( 'Show learning en development trainings' ) ),
                     // Field::make( 'checkbox', 'show_trainings_academy_en_lms', __( 'Show academy en LMS trainings' ) ),
                     // Field::make( 'checkbox', 'show_trainings_trainingen', __( 'Show trainingen trainings' ) ),
