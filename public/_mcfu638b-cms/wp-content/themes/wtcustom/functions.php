@@ -72,7 +72,7 @@ add_action( 'init', 'create_posttype_teammember' );
 // add_action( 'init', 'create_posttype_professionals' );
 // add_action( 'init', 'create_posttype_vessels' );
 // add_action( 'init', 'register_taxonomy_vessel_type' );
-add_action( 'init', 'register_taxonomy_training_service_page' );
+add_action( 'init', 'register_taxonomy_training_category' );
 
 // add_filter( 'manage_case_posts_columns', 'set_custom_case_columns' );
 // add_action( 'manage_case_posts_custom_column' , 'custom_case_column', 10, 2 );
@@ -285,19 +285,19 @@ function create_posttype_teammember() {
 //     );
 //     register_taxonomy( 'vessel_type', [ 'vessel' ], $args );
 // }
-function register_taxonomy_training_service_page() {
+function register_taxonomy_training_category() {
     $labels = array(
-        'name'              => _x( 'Service pages', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Service page', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Service pages' ),
-        'all_items'         => __( 'All Service pages' ),
-        'parent_item'       => __( 'Parent Service page' ),
-        'parent_item_colon' => __( 'Parent Service page:' ),
-        'edit_item'         => __( 'Edit Service page' ),
-        'update_item'       => __( 'Update Service page' ),
-        'add_new_item'      => __( 'Add New Service page' ),
-        'new_item_name'     => __( 'New Service page Name' ),
-        'menu_name'         => __( 'Service page' ),
+        'name'              => _x( 'Categories', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Categories' ),
+        'all_items'         => __( 'All Categories' ),
+        'parent_item'       => __( 'Parent Category' ),
+        'parent_item_colon' => __( 'Parent Category:' ),
+        'edit_item'         => __( 'Edit Category' ),
+        'update_item'       => __( 'Update Category' ),
+        'add_new_item'      => __( 'Add New Category' ),
+        'new_item_name'     => __( 'New Category Name' ),
+        'menu_name'         => __( 'Categories' ),
     );
     $args   = array(
         'hierarchical'      => true, // make it hierarchical (like categories)
@@ -308,7 +308,7 @@ function register_taxonomy_training_service_page() {
         'query_var'         => true,
         // 'rewrite'           => [ 'slug' => 'case_category' ],
     );
-    register_taxonomy( 'training_service_page', [ 'training' ], $args );
+    register_taxonomy( 'training_category', [ 'training' ], $args );
 }
 
 $editor = get_role('editor');
@@ -648,19 +648,19 @@ function crbRegisterFields($args) {
                     ->set_types( array(
                         array(
                             'type' => 'term',
-                            'taxonomy' => 'training_service_page',
+                            'taxonomy' => 'training_category',
                         ),
                     ) ),
 
 
 
-                    Field::make( 'select', 'trainings_type', __( 'Show trainings' ) )
-                    ->set_options( array(
-                        'learning_en_development' => __( 'Show learning en development trainings' ),
-                        'academy_en_lms' => __( 'Show academy en LMS trainings' ),
-                        'trainingen' => __( 'Show trainingen trainings' ),
-                        'implementatie_ondersteuning' => __( 'Show implementatie ondersteuning trainings' ),
-                    ) ),
+                    // Field::make( 'select', 'trainings_type', __( 'Show trainings' ) )
+                    // ->set_options( array(
+                    //     'learning_en_development' => __( 'Show learning en development trainings' ),
+                    //     'academy_en_lms' => __( 'Show academy en LMS trainings' ),
+                    //     'trainingen' => __( 'Show trainingen trainings' ),
+                    //     'implementatie_ondersteuning' => __( 'Show implementatie ondersteuning trainings' ),
+                    // ) ),
 
 
                     // Field::make( 'checkbox', 'show_trainings_learning_en_development', __( 'Show learning en development trainings' ) ),
