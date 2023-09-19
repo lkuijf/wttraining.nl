@@ -601,6 +601,11 @@ function crbRegisterFields($args) {
                         'black' => __( 'Black' ),
                         'yellow' => __( 'Yellow' ),
                     ) ),
+                    Field::make( 'select', 'header_align', __( 'Alignment of header' ) )
+                    ->set_options( array(
+                        'center' => __( 'Center' ),
+                        'left' => __( 'Left' ),
+                    ) ),
                 ) )
                 ->add_fields( 'marketing_terms', 'Marketing terms', array(
                     Field::make( 'separator', 'separator1', __( 'Marketing page terms' ) ),

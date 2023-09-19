@@ -2118,13 +2118,18 @@ footer .btm .socials a img {
 .contentWrapper h1.servicePageHeader {
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
 }
 .contentWrapper h1.servicePageHeader.sphColor_black {
   color: #222;
 }
 .contentWrapper h1.servicePageHeader.sphColor_yellow {
   color: #E9AD01;
+}
+.contentWrapper h1.servicePageHeader.sphAlign_center {
+  text-align: center;
+}
+.contentWrapper h1.servicePageHeader.sphAlign_left {
+  text-align: left;
 }
 .contentWrapper a {
   color: #006878;
