@@ -17,8 +17,8 @@
                 
             </div>
 
-            <div class="swiperBtn swiper-button-prev"></div>
-            <div class="swiperBtn swiper-button-next"></div>
+            <div class="swiperBtn swiper-button-prev swiperBtnPrevTeam"></div>
+            <div class="swiperBtn swiper-button-next swiperBtnNextTeam"></div>
 
             {{-- <div class="swiper-scrollbar-team"></div> --}}
             {{-- <div class="swiper-pagination-team"></div> --}}

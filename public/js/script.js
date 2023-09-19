@@ -228,8 +228,8 @@ var swiperTeam = new Swiper(".teamMembersSwiper", {
     //     draggable: true,
     // },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiperBtnNextTeam',
+        prevEl: '.swiperBtnPrevTeam',
     },
     autoplay: {
         delay: 2500,
@@ -265,8 +265,8 @@ var swiperCases = new Swiper(".casesSwiper", {
     //     type: 'bullets',
     // },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiperBtnNextCases',
+        prevEl: '.swiperBtnPrevCases',
     },
     // scrollbar: {
     //     el: '.swiper-scrollbar-cases',
