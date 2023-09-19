@@ -758,36 +758,118 @@ form .error span {
 }
 .teammembersContent .outerSwiperBox {
   position: relative;
+  padding: 0 60px;
 }
-.teammembersContent .outerSwiperBox .teamMembersSwiper img {
+.teammembersContent .outerSwiperBox .swiper-button-prev {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.teammembersContent .outerSwiperBox .swiper-button-prev:after {
+  content: "\f177";
+}
+.teammembersContent .outerSwiperBox .swiper-button-next {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.teammembersContent .outerSwiperBox .swiper-button-next:after {
+  content: "\f178";
+}
+.teammembersContent .outerSwiperBox .swiperBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.teammembersContent .outerSwiperBox .swiperBtn:after {
+  font-family: "wt_media_events";
+  font-size: 50px;
+  color: #E9AD01;
+}
+.teammembersContent .outerSwiperBox .swiperBtn:hover:after {
+  color: #E9AD01;
+}
+.teammembersContent .teamMembersSwiper img {
   height: 300px;
   width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
 }
-.teammembersContent .outerSwiperBox .teamMembersSwiper p {
+.teammembersContent .teamMembersSwiper p {
   margin: 0;
 }
-.teammembersContent .outerSwiperBox .teamMembersSwiper p:first-of-type {
+.teammembersContent .teamMembersSwiper p:first-of-type {
   font-weight: bold;
 }
-.teammembersContent .outerSwiperBox .swiper-scrollbar-team {
-  height: 5px;
-  margin-top: 10px;
-}
-.teammembersContent .outerSwiperBox .swiper-scrollbar-team > div {
-  background-color: #E9AD01;
-}
 
+.casesContent .outerSwiperBox {
+  position: relative;
+  padding: 0 60px;
+}
+.casesContent .outerSwiperBox .swiper-button-prev {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.casesContent .outerSwiperBox .swiper-button-prev:after {
+  content: "\f177";
+}
+.casesContent .outerSwiperBox .swiper-button-next {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.casesContent .outerSwiperBox .swiper-button-next:after {
+  content: "\f178";
+}
+.casesContent .outerSwiperBox .swiperBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+.casesContent .outerSwiperBox .swiperBtn:after {
+  font-family: "wt_media_events";
+  font-size: 50px;
+  color: #E9AD01;
+}
+.casesContent .outerSwiperBox .swiperBtn:hover:after {
+  color: #E9AD01;
+}
 .casesContent div.swiper-slide > div {
   padding-left: 60px;
   padding-right: 60px;
+}
+@media (max-width: 1200px) {
+  .casesContent div.swiper-slide > div {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .casesContent div.swiper-slide > div {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 @media (max-width: 768px) {
   .casesContent div.swiper-slide > div {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .casesContent div.swiper-slide > div {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .casesContent div.swiper-slide > div article {
@@ -797,6 +879,11 @@ form .error span {
 .casesContent div.swiper-slide > div article > p {
   text-align: center;
   padding: 0 10px 20px 10px;
+}
+@media (max-width: 480px) {
+  .casesContent div.swiper-slide > div article > p {
+    font-size: 0.8em;
+  }
 }
 .casesContent div.swiper-slide > div article a {
   color: #222;
@@ -830,62 +917,6 @@ form .error span {
   backface-visibility: hidden;
   border-radius: 15px;
 }
-.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  background-color: #745600;
-  padding: 15px;
-  min-height: 105px;
-}
-@media (max-width: 1200px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
-    padding: 5px;
-    min-height: 80px;
-    bottom: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div {
-    min-height: 60px;
-  }
-}
-.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
-  font-size: 1.4em;
-  margin: 0;
-  color: #FFF;
-}
-@media (max-width: 1200px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 1024px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 768px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p {
-    font-size: 0.8em;
-  }
-}
-.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p:last-child {
-  font-style: italic;
-  font-size: 1em;
-}
-@media (max-width: 1200px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront div p:last-child {
-    font-size: 0.8em;
-  }
-}
-.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront p {
-  text-align: center;
-}
 .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipFront img {
   border-radius: 15px;
   width: 100%;
@@ -903,14 +934,14 @@ form .error span {
   color: #FFF;
   transform: rotateY(180deg);
 }
+.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
+  padding: 20px;
+}
 @media (max-width: 480px) {
-  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack {
+  .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
     padding: 10px;
     font-size: 0.8em;
   }
-}
-.casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack > div {
-  padding: 20px;
 }
 .casesContent div.swiper-slide > div article .outerFlip .innerFlip .flipBack :first-child {
   margin-top: 0;
@@ -1002,59 +1033,6 @@ form .error span {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 15px;
-}
-.trainingsContent > article .outerFlip .innerFlip .flipFront div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  background-color: #745600;
-  padding: 15px;
-  min-height: 105px;
-}
-@media (max-width: 1200px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div {
-    padding: 5px;
-    min-height: 80px;
-    bottom: 10px;
-  }
-}
-@media (max-width: 768px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div {
-    min-height: 60px;
-  }
-}
-.trainingsContent > article .outerFlip .innerFlip .flipFront div p {
-  font-size: 1.4em;
-  margin: 0;
-  color: #FFF;
-}
-@media (max-width: 1200px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 1024px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div p {
-    font-size: 1em;
-  }
-}
-@media (max-width: 768px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div p {
-    font-size: 0.8em;
-  }
-}
-.trainingsContent > article .outerFlip .innerFlip .flipFront div p:last-child {
-  font-style: italic;
-  font-size: 1em;
-}
-@media (max-width: 1200px) {
-  .trainingsContent > article .outerFlip .innerFlip .flipFront div p:last-child {
-    font-size: 0.8em;
-  }
 }
 .trainingsContent > article .outerFlip .innerFlip .flipFront p {
   text-align: center;

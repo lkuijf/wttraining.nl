@@ -223,10 +223,14 @@ var swiperTeam = new Swiper(".teamMembersSwiper", {
     //     clickable: true,
     //     type: 'bullets',
     // },
-    scrollbar: {
-        el: '.swiper-scrollbar-team',
-        draggable: true,
-      },
+    // scrollbar: {
+    //     el: '.swiper-scrollbar-team',
+    //     draggable: true,
+    // },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -236,16 +240,16 @@ var swiperTeam = new Swiper(".teamMembersSwiper", {
             slidesPerView: 1,
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           1120: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
             1460: {
-            slidesPerView: 4,
+            slidesPerView: 3,
           },
           1760: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
         }
 });
@@ -260,10 +264,14 @@ var swiperCases = new Swiper(".casesSwiper", {
     //     clickable: true,
     //     type: 'bullets',
     // },
-    scrollbar: {
-        el: '.swiper-scrollbar-cases',
-        draggable: true,
-      },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // scrollbar: {
+    //     el: '.swiper-scrollbar-cases',
+    //     draggable: true,
+    //   },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,

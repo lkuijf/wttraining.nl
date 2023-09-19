@@ -8,13 +8,73 @@
     // @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
     // grid-gap: 40px;
 
+    .outerSwiperBox {
+        position: relative;
+
+        padding: 0 60px; // giving next/prev buttons some space
+
+        // .swiper-scrollbar-cases {
+        //     height: 5px;
+        //     margin-top: 10px;
+        //     > div {
+        //         background-color: $colorWTM;
+        //     }
+        // }
+        .swiper-button-prev {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            &:after {
+                content: '\f177';
+            }
+        }
+        .swiper-button-next {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            &:after {
+                content: '\f178';
+            }
+        }
+        .swiperBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            &:after {
+                font-family: "wt_media_events";
+                font-size: 50px;
+                color: $colorWTM;
+            }
+            &:hover:after {
+                color: $colorWTM;
+            }
+        }
+    }
+
+
     div.swiper-slide {
         > div {
             padding-left: 60px;
             padding-right: 60px;
+            @media (max-width: $sbp1_desktop) {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            @media (max-width: $sbp2_laptop) {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
             @media (max-width: $sbp3_tablet) {
                 padding-left: 30px;
                 padding-right: 30px;
+            }
+            @media (max-width: $sbp4_mobile) {
+                padding-left: 10px;
+                padding-right: 10px;
             }
             article {
                 background-color: $colorGreyLight;
@@ -22,6 +82,7 @@
                 > p {
                     text-align: center;
                     padding: 0 10px 20px 10px;
+                    @media (max-width: $sbp4_mobile) {font-size:.8em;}
                 }
                 a {
                     color: $colorBlack;
@@ -56,23 +117,12 @@
                             -webkit-backface-visibility: hidden;
                             backface-visibility: hidden;
                             @include borderRadius;
-                            // a {
-                            //     position: relative;
-                            //     display: block;
-                            //     color: $colorBlack;
-                                div {
-                                    @include caseOverlayText;
-                                }
-                                p {
-                                    text-align: center;
-                                }
-                                img {
-                                    @include borderRadius;
-                                    width: 100%;
-                                    aspect-ratio: 10/11;
-                                    object-fit: cover;
-                                }
-                            // }
+                            img {
+                                @include borderRadius;
+                                width: 100%;
+                                aspect-ratio: 10/11;
+                                object-fit: cover;
+                            }
                         }
                         .flipBack {
                             position: absolute;
@@ -84,9 +134,9 @@
                             background-color: $colorWTM;
                             color: $colorWhite;
                             transform: rotateY(180deg);
-                            @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
                             > div {
                                 padding: 20px;
+                                @media (max-width: $sbp4_mobile) {padding: 10px;font-size:.8em;}
                             }
                             :first-child {
                                 margin-top: 0;

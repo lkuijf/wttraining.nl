@@ -61,7 +61,11 @@
 
                 </div>
             </div>
-            <div class="swiper-scrollbar-cases"></div>
+
+            <div class="swiperBtn swiper-button-prev"></div>
+            <div class="swiperBtn swiper-button-next"></div>
+
+            {{-- <div class="swiper-scrollbar-cases"></div> --}}
         </div>
 
 
