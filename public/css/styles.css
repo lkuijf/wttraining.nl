@@ -1231,13 +1231,14 @@ form .error span {
 .subscriptionForm input {
   font-family: "Inter", sans-serif;
   font-size: 1.5em;
-  background-color: #222;
-  color: #FFF;
-  border: 0;
+  background-color: #FFF;
+  color: #222;
+  border: 3px solid #E9AD01;
   border-radius: 15px;
   height: 50px;
   padding: 0 20px;
-  width: 350px;
+  width: 100%;
+  max-width: 550px;
 }
 @media (max-width: 480px) {
   .subscriptionForm input {
@@ -1254,11 +1255,7 @@ form .error span {
   border-radius: 15px;
   padding: 10px 50px;
   display: inline-block;
-  box-shadow: #ccc 10px 10px 0px -2px, #006878 10px 10px;
-}
-.subscriptionForm button:active {
-  transform: translate(5px, 5px);
-  box-shadow: #ccc 5px 5px 0px -2px, #006878 5px 5px;
+  cursor: pointer;
 }
 
 footer {
@@ -1366,7 +1363,7 @@ footer .btm .socials a img {
 .blogWrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1500,6 +1497,10 @@ footer .btm .socials a img {
   box-shadow: #ccc 5px 5px 0px -2px, #006878 5px 5px;
 }
 
+.scheduleCallContent {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 @media (max-width: 768px) {
   .scheduleCallContent {
     padding-left: 30px !important;
@@ -1553,17 +1554,13 @@ footer .btm .socials a img {
   border-radius: 15px;
   padding: 10px 50px;
   display: inline-block;
-  box-shadow: #ccc 10px 10px 0px -2px, #006878 10px 10px;
+  cursor: pointer;
   color: #E9AD01;
   background-color: #FFF;
   box-shadow: #E9AD01 10px 10px 0px -2px, #FFF 10px 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.scheduleCallContent form button:active {
-  transform: translate(5px, 5px);
-  box-shadow: #ccc 5px 5px 0px -2px, #006878 5px 5px;
 }
 .scheduleCallContent form button:active {
   box-shadow: #E9AD01 5px 5px 0px -2px, #FFF 5px 5px;
@@ -1957,14 +1954,14 @@ footer .btm .socials a img {
 }
 @media (max-width: 768px) {
   .approachTilesContent.displayAs_tiles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     padding-left: 40px;
     padding-right: 40px;
   }
 }
 @media (max-width: 480px) {
   .approachTilesContent.displayAs_tiles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .approachTilesContent.displayAs_tiles > article {
@@ -2067,7 +2064,7 @@ footer .btm .socials a img {
   margin-bottom: 40px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  background-color: #DDD;
+  background-color: #EFEFEF;
 }
 .approachTilesContent.displayAs_list article .flipFront {
   display: flex;
@@ -2084,7 +2081,7 @@ footer .btm .socials a img {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
-  margin: 20px;
+  margin: 40px;
 }
 .approachTilesContent.displayAs_list article .flipFront h3 {
   width: 70%;

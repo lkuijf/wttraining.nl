@@ -446,6 +446,7 @@ function crbRegisterFields($args) {
                     // Field::make( 'text', 'small_header', __( 'Small header text (can use html-tags)' ) ),
                     Field::make( 'textarea', 'text', __( 'Text (can use html-tags)' ) ),
                     Field::make( 'text', 'btn_email', __( 'E-mail address (leave blank to remove the button)' ) ),
+                    Field::make( 'text', 'btn_email_text', __( 'Text of the e-mail button' ) ),
                     Field::make( 'text', 'btn_phone', __( 'Phone number (leave blank to remove the button)' ) ),
                     // Field::make( 'checkbox', 'show_logo', __('Show Glomar Offshore logo') ),
 

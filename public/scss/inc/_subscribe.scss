@@ -13,13 +13,14 @@
     input {
         font-family: $fontFamily;
         font-size: 1.5em;
-        background-color: $colorBlack;
-        color: $colorWhite;
-        border: 0;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        border: 3px solid $colorWTM;
         @include borderRadius;
         height: 50px;
         padding: 0 20px;
-        width: 350px;
+        width: 100%;
+        max-width: 550px;
         @media (max-width: $sbp4_mobile) {width: 100%;}
     }
     button {

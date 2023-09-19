@@ -1,5 +1,7 @@
 .scheduleCallContent {
     @include textPaddingOnMobile;
+    margin-top: 100px;
+    margin-bottom: 100px;
     form {
         width: 100%;
         background-color: $colorWTM;

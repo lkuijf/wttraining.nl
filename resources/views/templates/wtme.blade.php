@@ -72,7 +72,8 @@
 
     <div class="contentWrapper">
         @yield('content')
-        @include('snippets.subscription-form')
+        @yield('subscriptionForm');
+        {{-- @include('snippets.subscription-form') --}}
     </div>
     
     <footer>

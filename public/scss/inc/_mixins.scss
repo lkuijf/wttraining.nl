@@ -34,11 +34,12 @@
     @include borderRadius;
     padding: 10px 50px;
     display: inline-block;
-    box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
-    &:active {
-        transform: translate(5px, 5px);
-        box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
-    }
+    cursor: pointer;
+    // box-shadow: #fff 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
+    // &:active {
+        // transform: translate(5px, 5px);
+        // box-shadow: #fff 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+    // }
 }
 @mixin caseOverlayText {
     display: flex;

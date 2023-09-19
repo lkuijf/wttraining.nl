@@ -4,3 +4,6 @@
 @section('content')
     @include('snippets.contentSections')
 @endsection
+@section('subscriptionForm')
+    @include('snippets.subscription-form')
+@endsection
