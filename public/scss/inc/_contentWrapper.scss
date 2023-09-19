@@ -27,6 +27,12 @@
         font-size: 2em;
         font-weight: bold;
         text-align: center;
+        &.sphColor_black {
+            color: $colorBlack;
+        }
+        &.sphColor_yellow {
+            color: $colorWTM;
+        }
         // border-bottom: 3px solid #000;
         // position: relative;
         // margin-top: 80px;

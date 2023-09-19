@@ -2120,6 +2120,12 @@ footer .btm .socials a img {
   font-weight: bold;
   text-align: center;
 }
+.contentWrapper h1.servicePageHeader.sphColor_black {
+  color: #222;
+}
+.contentWrapper h1.servicePageHeader.sphColor_yellow {
+  color: #E9AD01;
+}
 .contentWrapper a {
   color: #006878;
   font-weight: bold;

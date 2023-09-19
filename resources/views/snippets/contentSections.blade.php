@@ -93,7 +93,7 @@
             @include('sections.events', ['cases' => $section->case_associations])
         @endif
         @if($section->_type == 'service_page_text_header')
-            @include('sections.service_page_text_header', ['title' => $section->title])
+            @include('sections.service_page_text_header', ['title' => $section->title, 'color' => $section->header_style])
         @endif
         @if($section->_type == 'marketing_terms')
             @include('sections.marketing_terms', [
