@@ -341,6 +341,10 @@ function getCustomPostsCollectionAttrs($coll, $pType) {
             }
             */
 
+            if($pType == 'training') {
+                $oP->card_logo = carbon_get_post_meta( $item->ID, 'card_logo' );
+            }
+
             $oP->id = $item->ID;
             $oP->title = $item->post_title;
             $oP->slug = $item->post_name;
