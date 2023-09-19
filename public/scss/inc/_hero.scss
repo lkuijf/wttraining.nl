@@ -31,21 +31,33 @@
             padding: 100px;
             @media (max-width: $sbp1_desktop) {padding: 80x;}
             @media (max-width: $sbp2_laptop) {padding: 60px;}
-            @media (max-width: $sbp3_tablet) {padding: 40px;}
-            @media (max-width: $sbp4_mobile) {padding: 20px;}
+            @media (max-width: $sbp3_tablet) {padding: 50px;}
+            @media (max-width: $sbp4_mobile) {padding: 40px;}
             .heroText {
                 font-family: $fontFamilyHero;
                 // max-width: 60%;
                 @media (max-width: $sbp1_desktop) {max-width: 80%;}
                 @media (max-width: $sbp2_laptop) {max-width: 100%;}
+                @media (max-width: $sbp4_mobile) {text-align: center;}
                 h1 {
-                    font-weight: bold;
+                    // font-weight: bold;
                     font-stretch: semi-condensed;
                     font-size: 3.5em;
+                    line-height: 1.5em;
+                    @media (max-width: $sbp1_desktop) {font-size: 3em;}
+                    @media (max-width: $sbp2_laptop) {font-size: 2.7em;}
+                    @media (max-width: $sbp3_tablet) {font-size: 2.5em;}
+                    @media (max-width: $sbp4_mobile) {font-size: 2.2em;}
+                    margin: 0;
                 }
                 p {
                     font-stretch: semi-condensed;
                     font-size: 3em;
+                    @media (max-width: $sbp1_desktop) {font-size: 2.5em;}
+                    @media (max-width: $sbp2_laptop) {font-size: 2.2em;}
+                    @media (max-width: $sbp3_tablet) {font-size: 2em;}
+                    @media (max-width: $sbp4_mobile) {font-size: 1.7em;text-align:center;}
+                    margin: 0;
                 }
             }
         }
@@ -56,22 +68,18 @@
         background-image: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8));
         color: $colorWhite;
         z-index: 1;
-        h1 {
-            margin: 0;
-            line-height: 1.2em;
-            font-weight: normal;
-            // font-size: 4em;
-            // @media (max-width: $sbp2_laptop) {font-size: 3em;}
-            // @media (max-width: $sbp3_tablet) {font-size: 2.5em;}
-            // @media (max-width: $sbp4_mobile) {font-size: 2em;}
-            font-size: clamp(2em, 3vw, 3.5em);
-        }
-        p {
-            margin: 0;
-            font-size: 1.4em;
-            @media (max-width: $sbp2_laptop) {font-size: 1em;}
-            line-height: 1em;
-        }
+        // h1 {
+        //     margin: 0;
+        //     line-height: 1.2em;
+        //     font-weight: normal;
+        //     font-size: clamp(2em, 3vw, 3.5em);
+        // }
+        // p {
+        //     margin: 0;
+        //     font-size: 1.4em;
+        //     @media (max-width: $sbp2_laptop) {font-size: 1em;}
+        //     line-height: 1em;
+        // }
         .makeContact {
             display: flex;
             gap: 20px;
@@ -87,21 +95,22 @@
                 height: 50px;
                 border-radius: 25px;
                 &.email {
+                    font-weight: normal;
                     background-color: $colorWTM;
                     color: $colorWhite;
-                    width: 500px;
-                    @media (max-width: $sbp4_mobile) {width: 100%}
+                    width: 400px;
+                    @media (max-width: $sbp4_mobile) {width: 300px;}
                     &:hover {
                         background-color: $colorWTMdark;
                     }
                 }
                 &.phone {
-                    background-color: $colorWhite;
-                    color: $colorBlack;
+                    background-color: $colorBlack;
+                    color: $colorWhite;
                     width: 50px;
                     &:before {
                         font-family: "wt_media_events";
-                        font-size: 30px;
+                        font-size: 20px;
                         content: '\e801';
                         display: block;
                         width: 50px;

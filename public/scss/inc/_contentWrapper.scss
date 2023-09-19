@@ -16,7 +16,7 @@
         em {
             color: $colorWTM;
             font-style: normal;
-            font-weight: bold;
+            // font-weight: bold;
             // text-shadow: -1px 0 $colorGrey, 0 1px $colorGrey, 1px 0 $colorGrey, 0 -1px $colorGrey;
         }
     }
@@ -57,7 +57,7 @@
     }
     a {
         color: $colorCtaBtn;
-        font-weight: bold;
+        // font-weight: bold;
         text-decoration: none;
         &:hover {
             text-decoration: underline;

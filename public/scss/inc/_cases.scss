@@ -25,7 +25,18 @@
             top: 40%;
             left: 0;
             &:after {
-                content: '\f177';
+                // content: '\f177';
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                transform: rotate(-180deg);
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
             }
         }
         .swiper-button-next {
@@ -33,7 +44,18 @@
             top: 40%;
             right: 0;
             &:after {
-                content: '\f178';
+                // content: '\f178';
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                // transform: rotate(-180deg);
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
             }
         }
         .swiperBtn {
@@ -58,20 +80,20 @@
 
     div.swiper-slide {
         > div {
-            padding-left: 60px;
-            padding-right: 60px;
-            @media (max-width: $sbp1_desktop) {
-                padding-left: 50px;
-                padding-right: 50px;
-            }
-            @media (max-width: $sbp2_laptop) {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-            @media (max-width: $sbp3_tablet) {
-                padding-left: 30px;
-                padding-right: 30px;
-            }
+            padding-left: 20px;
+            padding-right: 20px;
+            // @media (max-width: $sbp1_desktop) {
+            //     padding-left: 50px;
+            //     padding-right: 50px;
+            // }
+            // @media (max-width: $sbp2_laptop) {
+            //     padding-left: 40px;
+            //     padding-right: 40px;
+            // }
+            // @media (max-width: $sbp3_tablet) {
+            //     padding-left: 30px;
+            //     padding-right: 30px;
+            // }
             @media (max-width: $sbp4_mobile) {
                 padding-left: 10px;
                 padding-right: 10px;
@@ -81,7 +103,8 @@
                 @include borderRadius;
                 > p {
                     text-align: center;
-                    padding: 0 10px 20px 10px;
+                    padding: 5px 10px 20px 10px;
+                    margin: 0;
                     @media (max-width: $sbp4_mobile) {font-size:.8em;}
                 }
                 a {

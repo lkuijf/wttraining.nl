@@ -25,51 +25,64 @@
             border-bottom-right-radius: 0;
         }
         > div {
-
             position: absolute;
             width: 100%;
-            top: calc(100% - 50px);
+            top: calc(100% - 70px);
             background-color: $colorGreyLight;
             border-top: 3px solid $colorWTM;
             min-height: 100%;
             transition: top .3s ease-out;
-            padding: 7px 20px;
+            padding: 18px 10px 7px 15px;
 
-            :first-child {
+            > :first-child {
                 margin-top: 0;
                 margin-bottom: 0;
                 margin-right: 15px;
                 float: left;
-                font-size: 1.3em;
-                line-height: 1.7em;
+                font-size: 1.2em;
+                line-height: 1.8em;
             }
-            :nth-child(2) {
+            > :nth-child(2) {
                 margin-top: 0;
                 margin-bottom: 0;
             }
-            :nth-child(3) {
+            > :nth-child(3) {
                 display: inline-block;
                 overflow: hidden;
             }
-            :last-child {
+            > :last-child {
                 // margin-bottom: 0;
                 position: absolute;
                 font-size: 1em;
                 width: 120px;
-                bottom: 35px;
-                right: 5px;
+                bottom: 45px;
+                right: 15px;
                 background-color: $colorGreyLight;
             }
-            h2 {
-                color: $colorWTMdark;
-                font-size: 1.3em;
-                line-height: 1.7em;
+            > h2 {
+                color: $colorBlack;
+                font-weight: normal;
+                font-size: 1.2em;
+                line-height: 1.8em;
             }
-            .date {
-                &:before {
-                    font-family: 'wt_media_events';
-                    content: '\e804\00a0';
+            > .date {
+                span {
+                    line-height: 0;
+                    margin-left: 10px;
+                    border-bottom: 1px solid $colorBlack;
+                    display: inline-block;
+                    width: 50px;
                 }
+                // &:before {
+                //     font-family: 'wt_media_events';
+                //     content: '\e804\00a0';
+                // }
+                // em {
+                //     display: inline-block;
+                //     width: 50px;
+                //     border: 0;
+                //     border-bottom: 1px solid $colorBlack;
+                // }
             }
         }
         a {

@@ -23,7 +23,7 @@
                 &:hover {
                     .innerFlip {
                         transform: rotateY(180deg);
-                        cursor: pointer;
+                        // cursor: pointer;
                     }
                 }
                 .innerFlip {
@@ -40,7 +40,7 @@
                         height: 100%;
                         -webkit-backface-visibility: hidden;
                         backface-visibility: hidden;
-                        background-color: $colorGreyLight;
+                        background-color: $colorGreyLighter;
                         color: $colorBlack;
                         text-align: center;
                         @include borderRadius;

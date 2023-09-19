@@ -17,7 +17,18 @@
             top: 40%;
             left: 0;
             &:after {
-                content: '\f177';
+                // content: '\f177';
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                transform: rotate(-180deg);
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
             }
         }
         .swiper-button-next {
@@ -25,7 +36,18 @@
             top: 40%;
             right: 0;
             &:after {
-                content: '\f178';
+                // content: '\f178';
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                // transform: rotate(-180deg);
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
             }
         }
         .swiperBtn {
@@ -111,6 +133,8 @@
                             @include borderRadius;
                             img:not(.cardLogo) {
                                 @include borderRadius;
+                                border-bottom-right-radius: 0;
+                                border-bottom-left-radius: 0;
                                 width: 100%;
                                 aspect-ratio: 10/11;
                                 object-fit: cover;
@@ -131,6 +155,8 @@
                             -webkit-backface-visibility: hidden;
                             backface-visibility: hidden;
                             @include borderRadius;
+                            border-bottom-right-radius: 0;
+                            border-bottom-left-radius: 0;
                             background-color: $colorWTM;
                             color: $colorWhite;
                             transform: rotateY(180deg);

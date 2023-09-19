@@ -23,7 +23,8 @@ footer {
                 color: $colorWhite;
                 font-size: 1.2em;
                 text-decoration: none;
-                @include borderRadius;
+                // @include borderRadius;
+                border-radius: 25px;
                 padding: 8px 15px;
             }
         }
