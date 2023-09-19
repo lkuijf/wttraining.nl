@@ -872,6 +872,7 @@ function crbRegisterFields($args) {
             Field::make( 'rich_text', 'text', __( 'Text' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'textarea', 'card_text', __( 'Card text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator3', __( 'Training information' ) ),
+            Field::make( 'image', 'card_logo', __( 'Card logo' ) )->set_visible_in_rest_api($visible = true),
             Field::make( 'text', 'training_location', __( 'Training Location' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'text', 'training_participants', __( 'Training participants' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'text', 'training_time', __( 'Training time' ))->set_visible_in_rest_api($visible = true),
