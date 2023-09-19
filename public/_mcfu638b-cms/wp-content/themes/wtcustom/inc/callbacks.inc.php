@@ -90,6 +90,7 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
     $postType = 'post';
     $category = false;
     $service_page = false;
+    $training_category = false;
     $highlighted = false;
     $ids = false;
     if (isset($parameters['orderby'])) {
@@ -106,6 +107,9 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
     }
     if (isset($parameters['service_page'])) {
         $service_page = $parameters['service_page'];
+    }
+    if (isset($parameters['training_category'])) {
+        $training_category = $parameters['training_category'];
     }
     if (isset($parameters['highlighted'])) {
         $highlighted = $parameters['highlighted'];
@@ -127,14 +131,21 @@ function getCustomPostsSimplified(WP_REST_Request $request) {
             'terms'    => array( $category )
             )
         );
-    if($service_page) $postParams['tax_query'] = array(
-        array(
-            'taxonomy' => 'training_service_page',
-            'field'    => 'slug',
-            'terms'    => array( $service_page )
-            )
-        );
-    if($highlighted) $postParams['meta_query'] = array(
+        if($service_page) $postParams['tax_query'] = array(
+            array(
+                'taxonomy' => 'training_service_page',
+                'field'    => 'slug',
+                'terms'    => array( $service_page )
+                )
+            );
+        if($training_category) $postParams['tax_query'] = array(
+            array(
+                'taxonomy' => 'training_category',
+                'field'    => 'term_id',
+                'terms'    => $training_category
+                )
+            );
+        if($highlighted) $postParams['meta_query'] = array(
         array(
             'key' => '_highlighted',
             'value'    => 'yes'

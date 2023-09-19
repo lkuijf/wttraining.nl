@@ -801,11 +801,19 @@ class PagesController extends Controller
 // dd($cases);
             }
             if($sec->_type == 'trainings') {
+// dd($sec);
                 $trainingItems = new SimpleCustomPostsApi('training');
-                // $trainingItems->parameters['service_page'] = str_replace('_', '-', $sec->trainings_type);
+                $aTermIds = [];
+                if($sec->training_cat_associations && count($sec->training_cat_associations)) {
+                    foreach($sec->training_cat_associations as $tcAssoc) {
+                        $aTermIds[] = $tcAssoc->id;
+                    }
+                }
+// dd($aTermIds);
+                $trainingItems->parameters['training_category'] = $aTermIds;
                 $trainingItems->get();
                 $trainings = $trainingItems->getItems();
-// dd($trainings);
+dd($trainings);
                 foreach($trainings as &$training) {
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }
