@@ -295,45 +295,77 @@ var swiperCases = new Swiper(".casesSwiper", {
         }
 });
 
-var swiperCases = new Swiper(".trainingsSwiper", {
+var swiperCases = new Swiper(".trainingsSwiper1", {
     slidesPerView: 2,
     spaceBetween: 0,
     speed: 1000,
-    // loop: true, // not compatible with slidesPerView
-    // pagination: {
-    //     el: '.swiper-pagination-team',
-    //     clickable: true,
-    //     type: 'bullets',
-    // },
-    navigation: {
-        nextEl: '.swiperBtnNextTrainings',
-        prevEl: '.swiperBtnPrevTrainings',
-    },
-    // scrollbar: {
-    //     el: '.swiper-scrollbar-cases',
-    //     draggable: true,
-    //   },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 2,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-          1120: {
-            slidesPerView: 3,
-          },
-            1460: {
-            slidesPerView: 3,
-          },
-          1760: {
-            slidesPerView: 3,
-          },
-        }
+    navigation: {nextEl: '.swiperBtnNextTrainings1',prevEl: '.swiperBtnPrevTrainings1',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper2", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings2',prevEl: '.swiperBtnPrevTrainings2',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper3", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings3',prevEl: '.swiperBtnPrevTrainings3',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper4", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings4',prevEl: '.swiperBtnPrevTrainings4',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper5", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings5',prevEl: '.swiperBtnPrevTrainings5',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper6", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings6',prevEl: '.swiperBtnPrevTrainings6',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper7", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings7',prevEl: '.swiperBtnPrevTrainings7',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper8", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings8',prevEl: '.swiperBtnPrevTrainings8',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+});
+var swiperCases = new Swiper(".trainingsSwiper9", {
+    slidesPerView: 2,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {nextEl: '.swiperBtnNextTrainings9',prevEl: '.swiperBtnPrevTrainings9',},
+    autoplay: {delay: 2500,disableOnInteraction: false,},
+    breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
 });
 
 

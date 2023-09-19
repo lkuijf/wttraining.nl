@@ -198,6 +198,9 @@ form .error span {
     padding: 20px;
   }
 }
+.hero .heroOverlay > div .heroText {
+  font-family: "Oswald", sans-serif;
+}
 @media (max-width: 1200px) {
   .hero .heroOverlay > div .heroText {
     max-width: 80%;
@@ -207,6 +210,15 @@ form .error span {
   .hero .heroOverlay > div .heroText {
     max-width: 100%;
   }
+}
+.hero .heroOverlay > div .heroText h1 {
+  font-weight: bold;
+  font-stretch: semi-condensed;
+  font-size: 3.5em;
+}
+.hero .heroOverlay > div .heroText p {
+  font-stretch: semi-condensed;
+  font-size: 3em;
 }
 @media (max-width: 768px) {
   .hero .heroOverlay {
@@ -342,7 +354,7 @@ form .error span {
 }
 @media (min-width: 769px) {
   .standardPage .hero {
-    height: 450px;
+    height: 500px;
   }
 }
 @media (max-width: 768px) {
@@ -352,7 +364,7 @@ form .error span {
 }
 @media (min-width: 769px) {
   .standardPage .hero .heroOverlay {
-    height: 450px;
+    height: 500px;
   }
 }
 @media (max-width: 768px) {
@@ -362,7 +374,7 @@ form .error span {
 }
 @media (min-width: 769px) {
   .standardPage .hero .heroImages > div {
-    height: 450px;
+    height: 500px;
   }
 }
 @media (max-width: 768px) {
@@ -372,7 +384,7 @@ form .error span {
 }
 @media (min-width: 769px) {
   .standardPage .hero .heroImages > div img {
-    height: 450px;
+    height: 500px;
   }
 }
 
@@ -2115,26 +2127,32 @@ footer .btm .socials a img {
 .contentWrapper h3 {
   font-size: 2em;
 }
-.contentWrapper h1.servicePageHeader {
+.contentWrapper .servicePageHeaderWrap h1.servicePageHeader {
   font-size: 2em;
 }
-.contentWrapper h2.servicePageHeader {
+.contentWrapper .servicePageHeaderWrap h2.servicePageHeader {
   font-size: 1.5em;
 }
-.contentWrapper .servicePageHeader {
+.contentWrapper .servicePageHeaderWrap .servicePageHeader {
   font-weight: bold;
 }
-.contentWrapper .servicePageHeader.sphColor_black {
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphColor_black {
   color: #222;
 }
-.contentWrapper .servicePageHeader.sphColor_yellow {
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphColor_yellow {
   color: #E9AD01;
 }
-.contentWrapper .servicePageHeader.sphAlign_center {
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphAlign_center {
   text-align: center;
 }
-.contentWrapper .servicePageHeader.sphAlign_left {
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphAlign_left {
   text-align: left;
+}
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphMargin_default {
+  margin-top: 100px;
+}
+.contentWrapper .servicePageHeaderWrap .servicePageHeader.sphMargin_direct {
+  margin-top: default;
 }
 .contentWrapper a {
   color: #006878;

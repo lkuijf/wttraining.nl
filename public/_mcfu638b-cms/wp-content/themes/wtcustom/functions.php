@@ -611,6 +611,11 @@ function crbRegisterFields($args) {
                         'h1' => __( 'H1' ),
                         'h2' => __( 'H2' ),
                     ) ),
+                    Field::make( 'select', 'header_margin', __( 'Space above header' ) )
+                    ->set_options( array(
+                        'default' => __( 'Default (some space above header text)' ),
+                        'direct' => __( 'Direct (no space above header text)' ),
+                    ) ),
                 ) )
                 ->add_fields( 'marketing_terms', 'Marketing terms', array(
                     Field::make( 'separator', 'separator1', __( 'Marketing page terms' ) ),

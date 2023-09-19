@@ -93,7 +93,7 @@
             @include('sections.events', ['cases' => $section->case_associations])
         @endif
         @if($section->_type == 'service_page_text_header')
-            @include('sections.service_page_text_header', ['title' => $section->title, 'color' => $section->header_style, 'align' => $section->header_align, 'type' => $section->header_type])
+            @include('sections.service_page_text_header', ['title' => $section->title, 'color' => $section->header_style, 'align' => $section->header_align, 'type' => $section->header_type, 'margin' => $section->header_margin])
         @endif
         @if($section->_type == 'marketing_terms')
             @include('sections.marketing_terms', [
@@ -149,7 +149,7 @@
             @endif
         @endif
         @if($section->_type == 'trainings')
-            @include('sections.trainings', ['trainings' => $section->trainings])
+            @include('sections.trainings', ['trainings' => $section->trainings, 'counter' => $section->trainings_counter])
         @endif
         @if($section->_type == 'approach_tiles')
             @include('sections.approach_tiles', ['displayType' => $section->approuch_style, 'approaches' => $section->approach])

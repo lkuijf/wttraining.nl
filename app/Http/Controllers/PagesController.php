@@ -754,6 +754,7 @@ class PagesController extends Controller
     }
     public function handleCrbSections($pCrbSecs) {
         $secs = [];
+        $trainingsCounter = 0;
         foreach($pCrbSecs as $sec) {
             if($sec->_type == 'hero') {
                 $sec->crb_media_gallery = $this->getMediaGallery($sec->crb_media_gallery);
@@ -800,6 +801,7 @@ class PagesController extends Controller
                 $sec->cases = $cases;
             }
             if($sec->_type == 'trainings') {
+                $trainingsCounter++;
 // dd($sec);
                 $trainingItems = new SimpleCustomPostsApi('training');
                 $aTermIds = [];
@@ -815,7 +817,9 @@ class PagesController extends Controller
                 foreach($trainings as &$training) {
                     $training->gallery = $this->getMediaGallery($training->gallery);
                 }
+// dd($trainings);
                 $sec->trainings = $trainings;
+                $sec->trainings_counter = $trainingsCounter;
             }
             if($sec->_type == 'schedule_call') {
                 $sec->email_to = Crypt::encryptString($sec->email_to);

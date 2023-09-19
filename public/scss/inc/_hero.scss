@@ -11,7 +11,7 @@
         height: 350px;
     }
     @media (min-width: ($sbp3_tablet+1)) {
-        height: 450px;
+        height: 500px;
     }
 }
 
@@ -34,9 +34,19 @@
             @media (max-width: $sbp3_tablet) {padding: 40px;}
             @media (max-width: $sbp4_mobile) {padding: 20px;}
             .heroText {
+                font-family: $fontFamilyHero;
                 // max-width: 60%;
                 @media (max-width: $sbp1_desktop) {max-width: 80%;}
                 @media (max-width: $sbp2_laptop) {max-width: 100%;}
+                h1 {
+                    font-weight: bold;
+                    font-stretch: semi-condensed;
+                    font-size: 3.5em;
+                }
+                p {
+                    font-stretch: semi-condensed;
+                    font-size: 3em;
+                }
             }
         }
         position: absolute;
