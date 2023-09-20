@@ -52,6 +52,17 @@
                     @endforeach
                 </div>
             </article>
+            @if ($data['faqs'] && count($data['faqs']))
+            <div class="faqs">
+                <h2>FAQ</h2>
+                @foreach ($data['faqs'] as $faq)
+                    <div>
+                        <h3>{{ $faq->question }}</h3>
+                        <div class="answer">{!! $faq->answer !!}</div>
+                    </div>
+                @endforeach
+            </div>
+            @endif
         </div>
     </div>
 @endsection

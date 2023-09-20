@@ -288,6 +288,9 @@ class PagesController extends Controller
         $post = $cPost->get();
         if(!count($post)) return abort(404);
 
+        $cFaq = new CustomPostApi('faq');
+        $faqs = $cFaq->get();
+
         $post[0]->gallery = $this->getMediaGallery($post[0]->gallery);
 
         $data= [
@@ -303,6 +306,7 @@ class PagesController extends Controller
             't_participants' => $post[0]->training_participants,
             't_time' => $post[0]->training_time,
             't_requirements' => $post[0]->training_requirements,
+            'faqs' => $faqs,
             // 'blog_date' => date('d-m-Y', strtotime($post[0]->date)),
             // 'instagram_widget_code' => $instaCode,
         ];

@@ -14,13 +14,15 @@ const sfInputValstrik = document.querySelector('input[name=valstrik]');
 const csrfToken = document.querySelector('meta[name="_token"]').content;
 const xhrErrorAlert = document.querySelector('.hideXhrError');
 const xhrSuccessAlert = document.querySelector('.hideXhrSuccess');
+const faqBoxes = document.querySelectorAll('.faqs > div');
 
 let anchorsInViewport = [];
 
 const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero:first-of-type .heroImages div img');
 
 setArticlesClickable();
-
+initFaqs();
+setFaqsToggle();
 // upCountNumbers();
 
 setAfterScrollAttributes(); // when page is loaded at some scroll position. scroll event will not fire.
@@ -378,6 +380,26 @@ function setArticlesClickable() {
                     window.location = link.getAttribute("href");
                 });
             }
+        });
+    }
+}
+function initFaqs() {
+    if(faqBoxes.length) {
+        faqBoxes.forEach(box => {
+            let answer = box.querySelector('.answer');
+            answer.dataset.answerHeight = answer.offsetHeight;
+            answer.style.height = 0;
+        });
+    }
+}
+function setFaqsToggle() {
+    if(faqBoxes.length) {
+        faqBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                let answer = box.querySelector('div.answer');
+                if(answer.offsetHeight == 0) answer.style.height = answer.dataset.answerHeight + 'px';
+                else answer.style.height = 0;
+            });
         });
     }
 }
