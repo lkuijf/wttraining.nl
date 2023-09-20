@@ -65,6 +65,12 @@
             @endif
         </div>
     </div>
+    @include('sections.schedule_call', [
+        'title' => $data['website_options']->training_form_title,
+        'text' => $data['website_options']->training_form_text,
+        'email_to' => $data['website_options']->training_form_email,
+        'success_text' => $data['website_options']->training_form_success,
+    ])
 @endsection
 @section('extra_head')
     <link rel="stylesheet" href="{{ asset('css/asyncGallery.css') }}">
