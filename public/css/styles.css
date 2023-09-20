@@ -1581,11 +1581,18 @@ footer .btm .socials a img {
 }
 .blogBumper .bumperInner {
   display: flex;
+  gap: 20px;
   justify-content: space-between;
   padding: 15px;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 768px) {
+  .blogBumper .bumperInner {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .servicesBtns {
