@@ -859,15 +859,8 @@ function crbRegisterFields($args) {
     Container::make( 'post_meta', __( 'Information' ) )
         ->where( 'post_type', '=', 'teammember' )
         ->add_fields(array(
-            Field::make( 'text', 'question', __( 'Question' ))->set_visible_in_rest_api($visible = true),
-            Field::make( 'rich_text', 'answer', __( 'Answer' ))->set_visible_in_rest_api($visible = true),
-            )
-        );
-    Container::make( 'post_meta', __( 'Information' ) )
-        ->where( 'post_type', '=', 'faq' )
-        ->add_fields(array(
             // Field::make( 'separator', 'separator1', __( 'Images' ) ),
-            // Field::make( 'image', 'image', __( 'Image' ) )->set_visible_in_rest_api($visible = true),
+            Field::make( 'image', 'image', __( 'Image' ) )->set_visible_in_rest_api($visible = true),
             // Field::make( 'media_gallery', 'gallery', __( 'Images' ) )->set_visible_in_rest_api($visible = true),
             // Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             // Field::make( 'textarea', 'hero_text', __( 'Hero text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
@@ -880,6 +873,13 @@ function crbRegisterFields($args) {
             // Field::make( 'separator', 'separator3', __( 'SEO information' ) ),
             // Field::make( 'separator', 'separator4', __( 'Extra options' ) ),
             // Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
+            )
+        );
+    Container::make( 'post_meta', __( 'Information' ) )
+        ->where( 'post_type', '=', 'faq' )
+        ->add_fields(array(
+            Field::make( 'text', 'question', __( 'Question)' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'rich_text', 'answer', __( 'Answer' ))->set_visible_in_rest_api($visible = true),
             )
         );
     // Container::make( 'post_meta', __( 'Information' ) )
