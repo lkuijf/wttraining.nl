@@ -2349,6 +2349,150 @@ footer .btm .socials a img {
   margin-bottom: 0;
 }
 
+.banner {
+  position: relative;
+  height: 550px;
+}
+.banner .bannerOverlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8));
+  color: #FFF;
+  z-index: 1;
+}
+.banner .bannerOverlay > div {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 40px;
+  height: 100%;
+  padding: 100px;
+}
+@media (max-width: 1200px) {
+  .banner .bannerOverlay > div {
+    padding: 80x;
+  }
+}
+@media (max-width: 1024px) {
+  .banner .bannerOverlay > div {
+    padding: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .banner .bannerOverlay > div {
+    padding: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .banner .bannerOverlay > div {
+    padding: 40px;
+  }
+}
+.banner .bannerOverlay > div .bannerText {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .banner .bannerOverlay > div .bannerText {
+    max-width: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .banner .bannerOverlay > div .bannerText {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .banner .bannerOverlay > div .bannerText {
+    text-align: center;
+  }
+}
+.banner .bannerOverlay > div .bannerText h1 {
+  font-stretch: semi-condensed;
+  font-size: 3.5em;
+  line-height: 1.5em;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .banner .bannerOverlay > div .bannerText h1 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 1024px) {
+  .banner .bannerOverlay > div .bannerText h1 {
+    font-size: 2.7em;
+  }
+}
+@media (max-width: 768px) {
+  .banner .bannerOverlay > div .bannerText h1 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  .banner .bannerOverlay > div .bannerText h1 {
+    font-size: 2.2em;
+  }
+}
+.banner .bannerOverlay > div .bannerText p {
+  font-stretch: semi-condensed;
+  font-size: 2em;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .banner .bannerOverlay > div .bannerText p {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1024px) {
+  .banner .bannerOverlay > div .bannerText p {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 768px) {
+  .banner .bannerOverlay > div .bannerText p {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 480px) {
+  .banner .bannerOverlay > div .bannerText p {
+    font-size: 1em;
+  }
+}
+.banner .bannerOverlay .makeContact a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: normal;
+  background-color: #E9AD01;
+  color: #FFF;
+  width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  .banner .bannerOverlay .makeContact a {
+    width: 300px;
+  }
+}
+.banner .bannerOverlay .makeContact a:hover {
+  background-color: #745600;
+}
+.banner .bannerImage img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 html, body {
   margin: 0;
   padding: 0;
