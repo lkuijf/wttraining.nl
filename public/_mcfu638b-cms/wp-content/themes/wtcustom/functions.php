@@ -664,6 +664,10 @@ function crbRegisterFields($args) {
                     Field::make( 'text', 'email_to', __( 'E-mail to' ) ),
                     Field::make( 'text', 'success_text', __( 'Text on success' ) ),
                 ) )
+                ->add_fields( 'video', 'Video', array(
+                    Field::make( 'separator', 'separator1', __( 'Select a video' ) ),
+                    Field::make( 'image', 'video', __( 'Video' ) )->set_type( 'video' )->set_visible_in_rest_api($visible = true),
+                ) )
                 // ->add_fields( 'get_in_touch', 'Get in touch', array(
                 //     Field::make( 'separator', 'separator1', __( 'Get in touch' ) ),
                 //     Field::make( 'checkbox', 'show_get_in_touch', __( 'Show "Get in touch" section' ) ),

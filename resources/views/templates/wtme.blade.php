@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@200&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/video-js.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <meta name="_token" content="{{ csrf_token() }}">
     @yield('extra_head')
