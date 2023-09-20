@@ -1,7 +1,7 @@
 .contentWrapper {
     .standardPage {
         padding-top: $headerHeight;
-        > div {
+        > div:not(.hero) {
             margin-bottom: 40px;
         }
     }

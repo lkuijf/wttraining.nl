@@ -11,7 +11,6 @@
     padding: 20px;
     article {
         background-color: $colorWhite;
-        // border: 3px solid $colorWTM;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
         @include borderRadius;
         position: relative;
@@ -51,7 +50,6 @@
                 overflow: hidden;
             }
             > :last-child {
-                // margin-bottom: 0;
                 position: absolute;
                 font-size: 1em;
                 width: 120px;
@@ -73,16 +71,6 @@
                     display: inline-block;
                     width: 50px;
                 }
-                // &:before {
-                //     font-family: 'wt_media_events';
-                //     content: '\e804\00a0';
-                // }
-                // em {
-                //     display: inline-block;
-                //     width: 50px;
-                //     border: 0;
-                //     border-bottom: 1px solid $colorBlack;
-                // }
             }
         }
         a {
@@ -94,17 +82,21 @@
             }
         }
         &:hover {
-
             > div {
                 top: 50px;
             }
-
-        //     background-color: $colorWTMdark;
-        //     color: $colorWhite;
             cursor: pointer;
-        //     h2 {
-        //         color: $colorWhite;
-        //     }
         }
+    }
+}
+.blogBumper {
+    background-color: $colorGreyLight;
+    .bumperInner {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        max-width: $contentWidth;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

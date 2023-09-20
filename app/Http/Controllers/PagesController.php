@@ -229,6 +229,7 @@ class PagesController extends Controller
             'blog_hero_title' => $post[0]->hero_title,
             'blog_hero_text' => $post[0]->hero_text,
             'blog_hero_gallery' => $post[0]->gallery,
+            'hero_sub_title' => $post[0]->hero_sub_title,
             'blog_date' => date('d-m-Y', strtotime($post[0]->date)),
             // 'vessels' => $vessels,
             // 'news' => $news,

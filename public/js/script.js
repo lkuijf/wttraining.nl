@@ -18,7 +18,7 @@ const faqBoxes = document.querySelectorAll('.faqs > div');
 
 let anchorsInViewport = [];
 
-const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero:first-of-type .heroImages div img');
+const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero .heroImages div img');
 
 setArticlesClickable();
 initFaqs();

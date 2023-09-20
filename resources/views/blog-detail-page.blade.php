@@ -12,9 +12,14 @@
             // 'email' => $section->btn_email,
             // 'phone' => $section->btn_phone,
             ])
+        <div class="blogBumper">
+            <div class="bumperInner">
+                <div>{{ $data['hero_sub_title'] }}</div>
+                <div>{{ date('d F Y', strtotime($data['blog_date'])) }}</div>
+            </div>
+        </div>
         <div class="inner">
             <article class="detailArticle">
-                <p class="date"><span>{{ $data['blog_date'] }}</span></p>
                 {!! $data['blog_text'] !!}
             </article>
         </div>
