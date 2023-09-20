@@ -885,8 +885,8 @@ class PagesController extends Controller
                 $sec->image4 = $this->getMediaGallery($sec->image4);
                 $sec->image5 = $this->getMediaGallery($sec->image5);
                 $sec->image6 = $this->getMediaGallery($sec->image6);
-                $sec->image7 = $this->getMediaGallery($sec->image7);
-                $sec->image8 = $this->getMediaGallery($sec->image8);
+                // $sec->image7 = $this->getMediaGallery($sec->image7);
+                // $sec->image8 = $this->getMediaGallery($sec->image8);
             }
             if($sec->_type == 'approach_tiles' && count($sec->approach)) {
                 foreach($sec->approach as &$approachItem) {
