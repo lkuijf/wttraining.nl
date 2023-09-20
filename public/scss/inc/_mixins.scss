@@ -74,3 +74,63 @@
         }
     }
 }
+@mixin swiperBox {
+    .outerSwiperBox {
+        position: relative;
+        padding: 0 60px; // giving next/prev buttons some space
+        .swiper-button-prev {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                transform: rotate(-180deg);
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
+                @media (max-width: $sbp3_tablet) {left: 5px;}
+            }
+        }
+        .swiper-button-next {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            &:after {
+                content: '';
+                position: absolute;
+                width: 83px;
+                height: 50px;
+                background-image: url('../statics/arrow.png');
+                @media (max-width: $sbp1_desktop) {
+                    width: 50px;
+                    height: 30px;
+                    background-size: 50px 30px;
+                }
+                @media (max-width: $sbp3_tablet) {right: 5px;}
+            }
+        }
+        .swiperBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            &:after {
+                font-family: "wt_media_events";
+                font-size: 50px;
+                color: $colorWTM;
+            }
+            &:hover:after {
+                color: $colorWTM;
+            }
+        }
+    }
+}

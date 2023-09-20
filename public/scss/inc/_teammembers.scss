@@ -1,101 +1,23 @@
 .teammembersContent {
     text-align: center;
-
-
-    .outerSwiperBox {
-        position: relative;
-
-        padding: 0 60px; // giving next/prev buttons some space
-
-        // .swiper-scrollbar-cases {
-        //     height: 5px;
-        //     margin-top: 10px;
-        //     > div {
-        //         background-color: $colorWTM;
-        //     }
-        // }
-        .swiper-button-prev {
-            position: absolute;
-            top: 40%;
-            left: 0;
-            &:after {
-                // content: '\f177';
-                content: '';
-                position: absolute;
-                width: 83px;
-                height: 50px;
-                background-image: url('../statics/arrow.png');
-                transform: rotate(-180deg);
-                @media (max-width: $sbp1_desktop) {
-                    width: 50px;
-                    height: 30px;
-                    background-size: 50px 30px;
-                }
+    @include swiperBox;
+    .teamMembersSwiper {
+        img {
+            width: 300px;
+            aspect-ratio: 1/1;
+            @media (max-width: $sbp4_mobile) {
+                width: 90%;
+                aspect-ratio: 1/1;
             }
+            object-fit: cover;
+            @include borderRadius;
         }
-        .swiper-button-next {
-            position: absolute;
-            top: 40%;
-            right: 0;
-            &:after {
-                // content: '\f178';
-                content: '';
-                position: absolute;
-                width: 83px;
-                height: 50px;
-                background-image: url('../statics/arrow.png');
-                // transform: rotate(-180deg);
-                @media (max-width: $sbp1_desktop) {
-                    width: 50px;
-                    height: 30px;
-                    background-size: 50px 30px;
-                }
-            }
-        }
-        .swiperBtn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            text-decoration: none;
-            &:after {
-                font-family: "wt_media_events";
-                font-size: 50px;
-                color: $colorWTM;
-            }
-            &:hover:after {
-                color: $colorWTM;
+        p {
+            margin: 0;
+            &:first-of-type {
+                font-weight: bold;
             }
         }
     }
-
-
-
-    // .outerSwiperBox {
-        // position: relative;
-        .teamMembersSwiper {
-            img {
-                height: 300px;
-                width: 300px;
-                object-fit: cover;
-                @include borderRadius;
-            }
-            p {
-                margin: 0;
-                &:first-of-type {
-                    font-weight: bold;
-                }
-            }
-        }
-        // .swiper-scrollbar-team {
-        //     height: 5px;
-        //     margin-top: 10px;
-        //     > div {
-        //         background-color: $colorWTM;
-        //     }
-        // }
-    // }
 }
 

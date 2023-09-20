@@ -840,6 +840,11 @@ form .error span {
     background-size: 50px 30px;
   }
 }
+@media (max-width: 768px) {
+  .teammembersContent .outerSwiperBox .swiper-button-prev:after {
+    left: 5px;
+  }
+}
 .teammembersContent .outerSwiperBox .swiper-button-next {
   position: absolute;
   top: 40%;
@@ -857,6 +862,11 @@ form .error span {
     width: 50px;
     height: 30px;
     background-size: 50px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .teammembersContent .outerSwiperBox .swiper-button-next:after {
+    right: 5px;
   }
 }
 .teammembersContent .outerSwiperBox .swiperBtn {
@@ -877,11 +887,17 @@ form .error span {
   color: #E9AD01;
 }
 .teammembersContent .teamMembersSwiper img {
-  height: 300px;
   width: 300px;
+  aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
+}
+@media (max-width: 480px) {
+  .teammembersContent .teamMembersSwiper img {
+    width: 90%;
+    aspect-ratio: 1/1;
+  }
 }
 .teammembersContent .teamMembersSwiper p {
   margin: 0;
@@ -914,6 +930,11 @@ form .error span {
     background-size: 50px 30px;
   }
 }
+@media (max-width: 768px) {
+  .casesContent .outerSwiperBox .swiper-button-prev:after {
+    left: 5px;
+  }
+}
 .casesContent .outerSwiperBox .swiper-button-next {
   position: absolute;
   top: 40%;
@@ -931,6 +952,11 @@ form .error span {
     width: 50px;
     height: 30px;
     background-size: 50px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .casesContent .outerSwiperBox .swiper-button-next:after {
+    right: 5px;
   }
 }
 .casesContent .outerSwiperBox .swiperBtn {
@@ -1085,6 +1111,11 @@ form .error span {
     background-size: 50px 30px;
   }
 }
+@media (max-width: 768px) {
+  .trainingsContent .outerSwiperBox .swiper-button-prev:after {
+    left: 5px;
+  }
+}
 .trainingsContent .outerSwiperBox .swiper-button-next {
   position: absolute;
   top: 40%;
@@ -1102,6 +1133,11 @@ form .error span {
     width: 50px;
     height: 30px;
     background-size: 50px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .trainingsContent .outerSwiperBox .swiper-button-next:after {
+    right: 5px;
   }
 }
 .trainingsContent .outerSwiperBox .swiperBtn {

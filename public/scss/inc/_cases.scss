@@ -1,105 +1,14 @@
 .casesContent {
-
-
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(3, 1fr);}
-    // @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(2, 1fr);padding-left:40px;padding-right:40px;}
-    // @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(2, 1fr);}
-    // grid-gap: 40px;
-
-    .outerSwiperBox {
-        position: relative;
-
-        padding: 0 60px; // giving next/prev buttons some space
-
-        // .swiper-scrollbar-cases {
-        //     height: 5px;
-        //     margin-top: 10px;
-        //     > div {
-        //         background-color: $colorWTM;
-        //     }
-        // }
-        .swiper-button-prev {
-            position: absolute;
-            top: 40%;
-            left: 0;
-            &:after {
-                // content: '\f177';
-                content: '';
-                position: absolute;
-                width: 83px;
-                height: 50px;
-                background-image: url('../statics/arrow.png');
-                transform: rotate(-180deg);
-                @media (max-width: $sbp1_desktop) {
-                    width: 50px;
-                    height: 30px;
-                    background-size: 50px 30px;
-                }
-            }
-        }
-        .swiper-button-next {
-            position: absolute;
-            top: 40%;
-            right: 0;
-            &:after {
-                // content: '\f178';
-                content: '';
-                position: absolute;
-                width: 83px;
-                height: 50px;
-                background-image: url('../statics/arrow.png');
-                // transform: rotate(-180deg);
-                @media (max-width: $sbp1_desktop) {
-                    width: 50px;
-                    height: 30px;
-                    background-size: 50px 30px;
-                }
-            }
-        }
-        .swiperBtn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            text-decoration: none;
-            &:after {
-                font-family: "wt_media_events";
-                font-size: 50px;
-                color: $colorWTM;
-            }
-            &:hover:after {
-                color: $colorWTM;
-            }
-        }
-    }
-
-
+    @include swiperBox;
     div.swiper-slide {
         > div {
             padding-left: 20px;
             padding-right: 20px;
-            // @media (max-width: $sbp1_desktop) {
-            //     padding-left: 50px;
-            //     padding-right: 50px;
-            // }
-            // @media (max-width: $sbp2_laptop) {
-            //     padding-left: 40px;
-            //     padding-right: 40px;
-            // }
-            // @media (max-width: $sbp3_tablet) {
-            //     padding-left: 30px;
-            //     padding-right: 30px;
-            // }
             @media (max-width: $sbp4_mobile) {
                 padding-left: 10px;
                 padding-right: 10px;
             }
             article {
-                // background-color: $colorGreyLight;
                 @include borderRadius;
                 > p {
                     text-align: center;
@@ -131,7 +40,6 @@
                         height: 100%;
                         transition: transform 0.5s;
                         transform-style: preserve-3d;
-                        // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
                         @include borderRadius;
                         .flipFront {
                             position: absolute;
