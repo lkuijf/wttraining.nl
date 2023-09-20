@@ -293,6 +293,9 @@ class PagesController extends Controller
 
         $post[0]->gallery = $this->getMediaGallery($post[0]->gallery);
 
+        $options->training_form_email = Crypt::encryptString($options->training_form_email);
+        $options->training_form_success = Crypt::encryptString($options->training_form_success);
+
         $data= [
             'head_title' => $post[0]->page_title,
             'meta_description' => $post[0]->page_meta_description,
