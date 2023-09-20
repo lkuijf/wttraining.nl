@@ -424,6 +424,14 @@ function crbRegisterFields($args) {
                     // Field::make( 'image', 'image', 'Afbeelding' ),
                     // Field::make( 'rich_text', 'text', 'Tekst' ),
                 ) )
+                ->add_fields( 'banner', 'Banner', array(
+                    // Field::make( 'separator', 'separator1', __( 'Hero (big header)' ) ),
+                    Field::make( 'image', 'image', __( 'Banner Image' ) )->set_visible_in_rest_api($visible = true),
+                    Field::make( 'text', 'title', __( 'Banner title (can use html-tags)' ) ),
+                    Field::make( 'textarea', 'text', __( 'Banner Text (can use html-tags)' ) ),
+                    Field::make( 'text', 'btn_email', __( 'E-mail address (leave blank to remove the button)' ) ),
+                    Field::make( 'text', 'btn_email_text', __( 'Text of the e-mail button' ) ),
+                ) )
                 // ->add_fields( 'text', 'Tekst', array(
                 //     Field::make( 'separator', 'separator1', __( 'Text section' ) ),
 

@@ -766,6 +766,9 @@ class PagesController extends Controller
             if($sec->_type == 'hero') {
                 $sec->crb_media_gallery = $this->getMediaGallery($sec->crb_media_gallery);
             }
+            if($sec->_type == 'banner') {
+                $sec->image = $this->getMediaGallery($sec->image);
+            }
             if($sec->_type == '1column') {
                 if(count($sec->fullwidth)) {
                     foreach($sec->fullwidth as &$v) {

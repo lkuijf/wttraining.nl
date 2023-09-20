@@ -16,6 +16,15 @@
             'bCenterText' => $section->center_text,
             ])
     @endif
+    @if($section->_type == 'banner')
+        @include('sections.banner', [
+            'image' => $section->image,
+            'title' => $section->title,
+            'text' => $section->text,
+            'email' => $section->btn_email,
+            'email_text' => $section->btn_email_text,
+            ])
+    @endif
     {{-- @if($section->_type == 'text')
         @php
             if(!isset($section->cta_button)) $section->cta_button = [];

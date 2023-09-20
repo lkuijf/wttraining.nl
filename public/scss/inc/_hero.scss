@@ -14,7 +14,6 @@
         height: 500px;
     }
 }
-
 .hero {
     position: relative;
     @include heroHeight;
@@ -68,18 +67,6 @@
         background-image: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8));
         color: $colorWhite;
         z-index: 1;
-        // h1 {
-        //     margin: 0;
-        //     line-height: 1.2em;
-        //     font-weight: normal;
-        //     font-size: clamp(2em, 3vw, 3.5em);
-        // }
-        // p {
-        //     margin: 0;
-        //     font-size: 1.4em;
-        //     @media (max-width: $sbp2_laptop) {font-size: 1em;}
-        //     line-height: 1em;
-        // }
         .makeContact {
             display: flex;
             gap: 20px;
