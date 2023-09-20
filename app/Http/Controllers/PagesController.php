@@ -894,7 +894,9 @@ class PagesController extends Controller
                         $approachItem->image = $this->getMediaGallery($approachItem->image);
                     }
                 }
-// dd($sec);
+            }
+            if($sec->_type == 'video') {
+                $sec->video = $this->generateMediaUrl($sec->video);
             }
             $secs[] = $sec;
         }

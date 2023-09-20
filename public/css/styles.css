@@ -2585,8 +2585,12 @@ footer .btm .socials a img {
      object-fit: cover;
 }
 
-.videoContent video {
-  width: 100%;
+.videoContent {
+  margin: 40px 0;
+}
+.videoContent .vjs-tech {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 html, body {

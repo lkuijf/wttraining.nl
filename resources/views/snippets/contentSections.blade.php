@@ -25,6 +25,20 @@
             'email_text' => $section->btn_email_text,
             ])
     @endif
+    @if($section->_type == 'video')
+        @include('sections.video', [
+            'videoUrl' => $section->video,
+            ])
+        @section('before_closing_body_tag')
+            <script src="{{ asset('js/video.min.js') }}"></script>
+            <script>
+                const player = videojs('my-video');
+                // player.fluid(true);
+                player.aspectRatio('24:9');
+                // player.fill(true);
+            </script>
+        @endsection
+    @endif
     {{-- @if($section->_type == 'text')
         @php
             if(!isset($section->cta_button)) $section->cta_button = [];
