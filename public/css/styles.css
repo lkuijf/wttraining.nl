@@ -648,6 +648,9 @@ form .error span {
   }
 }
 
+.detailArticle {
+  padding-top: 40px;
+}
 @media (max-width: 768px) {
   .detailArticle {
     padding-left: 40px;
