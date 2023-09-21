@@ -992,13 +992,14 @@ form .error span {
 .casesContent div.swiper-slide > div article {
   border-radius: 15px;
 }
-.casesContent div.swiper-slide > div article > p {
+.casesContent div.swiper-slide > div article > h3 {
+  font-size: 1em;
   text-align: center;
   padding: 5px 10px 20px 10px;
   margin: 0;
 }
 @media (max-width: 480px) {
-  .casesContent div.swiper-slide > div article > p {
+  .casesContent div.swiper-slide > div article > h3 {
     font-size: 0.8em;
   }
 }

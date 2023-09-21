@@ -29,7 +29,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p><a href="{{ url('case/' . $case->slug) }}">{{ $case->title->rendered }}</a></p>
+                                        <h3><a href="{{ url('case/' . $case->slug) }}">{{ $case->title->rendered }}</a></h3>
                                     </article>
                                 </div>
                         </div>
