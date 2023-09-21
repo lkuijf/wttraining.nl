@@ -6,7 +6,7 @@ controls
 preload="auto"
 width="640"
 height="264"
-poster="{{ asset('statics/wtt-logo.png') }}"
+{{-- poster="{{ asset('statics/wtt-logo.png') }}" --}}
 data-setup="{}"
 >
 <source src="{{ $videoUrl }}" type="video/mp4" />
