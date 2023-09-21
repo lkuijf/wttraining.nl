@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('page_title')</title>
     <meta name="description" content="@yield('meta_description')">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}"">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
-    <link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#19b4b6">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e7ac00">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#19b4b6">
+    <meta name="theme-color" content="#e7ac00">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@200&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
