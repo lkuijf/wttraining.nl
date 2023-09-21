@@ -2591,6 +2591,12 @@ footer .btm .socials a img {
 .videoContent {
   margin: 40px 0;
 }
+@media (max-width: 768px) {
+  .videoContent .vjs-16-9 {
+    aspect-ratio: 1/1 !important;
+    height: 100% !important;
+  }
+}
 .videoContent .vjs-tech {
   -o-object-fit: cover;
      object-fit: cover;

@@ -1,7 +1,7 @@
 <div class="videoContent">
     <video
 id="my-video"
-class="video-js"
+class="video-js vjs-fluid vjs-16-9"
 controls
 preload="auto"
 width="640"

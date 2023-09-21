@@ -34,8 +34,9 @@
             <script>
                 const player = videojs('my-video');
                 // player.fluid(true);
-                player.aspectRatio('24:9');
                 // player.fill(true);
+                // player.aspectRatio('24:9');
+                // player.responsive(true);
             </script>
         @endsection
     @endif

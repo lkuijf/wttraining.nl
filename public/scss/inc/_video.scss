@@ -1,4 +1,10 @@
 .videoContent {
     margin: 40px 0;
+    .vjs-16-9 {
+        @media (max-width: $sbp3_tablet) {
+            aspect-ratio: 1/1 !important;
+            height: 100% !important;
+        }
+    }
     .vjs-tech { object-fit: cover; }
 }
