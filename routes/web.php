@@ -29,6 +29,9 @@ Route::get('/', function () {
     // return view('welcome');
     return redirect('https://www.wtgroup.nl/w-t-training/');
 });
+Route::get('/background-test', function () {
+    return view('templates.background-test');
+});
 Route::get('/clear-response-cache-wt', function () {
     ResponseCache::clear();
     echo 'Response Cache Cleared!';
