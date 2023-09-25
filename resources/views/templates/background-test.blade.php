@@ -8,6 +8,7 @@
     <style>
         body {
             background-image: url('{{ asset("statics/wtt-back-pattern2.png") }}');
+            background-size: 100%;
             height: 9999px
         }
     </style>
