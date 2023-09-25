@@ -7,7 +7,8 @@
     <title>WTT background</title>
     <style>
         body {
-            background-image: url('{{ asset("statics/wtt-back-pattern.png") }}');
+            background-image: url('{{ asset("statics/wtt-back-pattern2.png") }}');
+            height: 9999px
         }
     </style>
 </head>
