@@ -48,9 +48,10 @@ Route::get('/blog/{slug}', [PagesController::class, 'showPost'])->where([
     'slug' => '[a-z0-9_-]+',
 ]);
 
-// Route::get('/diensten/online-marketing', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'online-marketing')->defaults('subpage', false)->middleware('doNotCacheResponse');
-// Route::get('/diensten/webdevelopment', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'webdevelopment')->defaults('subpage', false)->middleware('doNotCacheResponse');
-// Route::get('/diensten/events', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'events')->defaults('subpage', false)->middleware('doNotCacheResponse');
+Route::get('/diensten/learning-en-development', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'learning-en-development')->defaults('subpage', false)->middleware('doNotCacheResponse');
+Route::get('/diensten/academy-en-lms', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'academy-en-lms')->defaults('subpage', false)->middleware('doNotCacheResponse');
+Route::get('/diensten/trainingen', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'trainingen')->defaults('subpage', false)->middleware('doNotCacheResponse');
+Route::get('/diensten/implementatie-ondersteuning', [PagesController::class, 'showPage'])->defaults('section', 'diensten')->defaults('page', 'implementatie-ondersteuning')->defaults('subpage', false)->middleware('doNotCacheResponse');
 
 Route::get('/training/{slug}', [PagesController::class, 'showTraining'])->where([
     'slug' => '[a-z0-9_-]+',
