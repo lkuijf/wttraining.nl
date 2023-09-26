@@ -378,17 +378,14 @@ add_action('save_post_review', 'deleteSimpleCustomPostsRestCacheReview');
 add_action('save_post_teammember', 'deleteSimpleCustomPostsRestCacheTeammember');
 */
 
-
 // add_action('save_post_page', 'deleteAllPostRestCache');
 // add_action('save_post_blog', 'deleteAllPostRestCache');
 // add_action('save_post', 'deleteAllPostRestCache');
 
 // add_action( 'pre_post_update', 'deleteAllPostRestCache', 10, 3 );
+add_action('save_post', 'clearLaravelResponseCache');
+add_action('carbon_fields_theme_options_container_saved', 'clearLaravelResponseCache');
 
-// function deleteAllPostRestCache() {
-//     \WP_Rest_Cache_Plugin\Includes\Caching\Caching::get_instance()->delete_cache_by_endpoint( '/_mcfu638b-cms/index.php/wp-json/wtcustom/simple-pages' );
-//     \WP_Rest_Cache_Plugin\Includes\Caching\Caching::get_instance()->delete_cache_by_endpoint( '/_mcfu638b-cms/index.php/wp-json/wtcustom/simple-custom-posts?post_type=blog' );
-// }
 
 // add_action('admin_head', 'loadAxios');
 // function loadAxios() {

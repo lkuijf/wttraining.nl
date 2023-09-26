@@ -14,6 +14,10 @@ function set_default_page_template() {
 }
 // 28-8-2023. Leon Kuijf. Removed api-endpoint caching. Using Laravel Response Cache instead.
 /*
+function deleteAllPostRestCache() {
+    \WP_Rest_Cache_Plugin\Includes\Caching\Caching::get_instance()->delete_cache_by_endpoint( '/_mcfu638b-cms/index.php/wp-json/wtcustom/simple-pages' );
+    \WP_Rest_Cache_Plugin\Includes\Caching\Caching::get_instance()->delete_cache_by_endpoint( '/_mcfu638b-cms/index.php/wp-json/wtcustom/simple-custom-posts?post_type=blog' );
+}
 function deleteWebsiteOptionsRestCache() {
     \WP_Rest_Cache_Plugin\Includes\Caching\Caching::get_instance()->delete_cache_by_endpoint( '/_mcfu638b-cms/index.php/wp-json/wtcustom/website-options' );
 }
@@ -260,3 +264,13 @@ function contextual_help_list_remove(){
 function remove_screen_options() {
     return false;
 }
+function clearLaravelResponseCache() {
+    $bSecure = true;
+    if(isset($_SERVER['SERVER_PORT_SECURE']) && $_SERVER['SERVER_PORT_SECURE'] == 0) $bSecure = false; // not 100% tested, probably only IIS
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, ($bSecure?'https':'http') . '://' . $_SERVER['HTTP_HOST'] . '/clear-response-cache-wt');
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_exec($ch);
+    curl_close($ch);
+}
+
