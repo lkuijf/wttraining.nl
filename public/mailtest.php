@@ -1,11 +1,12 @@
 <?php 
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $from = "test-mailer@wttraining.nl";
-    $to = "leon@wtmedia-events.nl";
+    $to = "leon.kuijf@gmail.com";
     $subject = "mail TEST";
     $message = "even kijken of hij aankomt";
-    $headers = "From:" . $from;
+    $headers = 'From: leon@wtmedia-events.nl' . "\r\n" .
+    'Reply-To: leon@wtmedia-events.nl' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
     mail($to,$subject,$message, $headers);
     
     echo "Test email sent";
