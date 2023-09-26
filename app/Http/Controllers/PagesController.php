@@ -168,7 +168,7 @@ class PagesController extends Controller
         foreach($items as &$blog) {
             $blog->gallery = $this->getMediaGallery($blog->gallery);
         }
-dd($items);
+// dd($items);
 
 //$sec->crb_media_gallery = $this->getMediaGallery($sec->crb_media_gallery);
         // $instagramFeedPage = new PageApi(1067);
