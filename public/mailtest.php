@@ -36,7 +36,10 @@
     // Calculate the hash of the specified headers (excluding the DKIM-Signature header)
     $hash = hash('sha256', $header, true);
     // Sign the hash with the DKIM private key
-    openssl_sign($hash, $signature, $privateKey);
+
+    $thePrivateKey = openssl_pkey_get_private($privateKey);
+
+    openssl_sign($hash, $signature, $thePrivateKey);
 
     // Add the DKIM signature header to your email headers
     $header .= " b=" . base64_encode($signature) . ";\r\n";
