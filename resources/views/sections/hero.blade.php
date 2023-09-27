@@ -39,8 +39,8 @@
             @foreach ($images as $image)
             <picture>
                 @if (isset($image['sizes']) && $image['sizes'])
-                    <source media="(min-width:480px)" srcset="{!! $image['sizes']['medium_large'] !!}">
-                    <img src="{!! $image['sizes']['2048x2048'] !!}" alt="{{ $image['alt'] }}">
+                    <source media="(min-width:480px)" srcset="{!! $image['sizes']['2048x2048'] !!}">
+                    <img src="{!! $image['sizes']['medium_large'] !!}" alt="{{ $image['alt'] }}">
                 @else
                     <img src="{!! $image['url'] !!}" alt="{{ $image['alt'] }}">
                 @endif
