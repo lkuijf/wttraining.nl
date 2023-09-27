@@ -37,7 +37,7 @@
     $hash = hash('sha256', $header, true);
     // Sign the hash with the DKIM private key
 
-    $thePrivateKey = openssl_pkey_get_private($privateKey);
+    $thePrivateKey = openssl_pkey_get_private($privateKey, 'wttraining');
 
     openssl_sign($hash, $signature, $thePrivateKey);
 
