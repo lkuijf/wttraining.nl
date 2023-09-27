@@ -37,9 +37,16 @@
     $hash = hash('sha256', $header, true);
     // Sign the hash with the DKIM private key
 
-    $thePrivateKey = openssl_pkey_get_private($privateKey, 'wttraining');
+    // $thePrivateKey = openssl_pkey_get_private($privateKey, 'wttraining');
 
-    openssl_sign($hash, $signature, $thePrivateKey);
+    // openssl_sign($hash, $signature, $thePrivateKey);
+    $fp = fopen("private.key", "r");
+    $privKey = fread($fp, 8192);
+    fclose($fp);
+// dd($pKeyId);
+    $pKeyId = openssl_get_privatekey($privKey, 'wttraining');
+
+    openssl_sign($hash, $signature, $pKeyId);
 
     // Add the DKIM signature header to your email headers
     $header .= " b=" . base64_encode($signature) . ";\r\n";
