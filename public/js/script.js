@@ -18,7 +18,7 @@ const faqBoxes = document.querySelectorAll('.faqs > div');
 
 let anchorsInViewport = [];
 
-const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero .heroImages div img');
+const heroSlideshowImages = document.querySelectorAll('.contentWrapper .hero .heroImages div picture img');
 
 setArticlesClickable();
 initFaqs();
@@ -108,8 +108,11 @@ function debounce(func){
 let curIndex = 0;
 let imgDuration = 6000;
 
+// console.log(heroSlideshowImages);
 function slideShow() {
     curIndex++;
+// console.log('_slideShow()');
+// console.log(curIndex);
     if (curIndex == heroSlideshowImages.length) {
         curIndex = 0;
         heroSlideshowImages.forEach((element,i) => {

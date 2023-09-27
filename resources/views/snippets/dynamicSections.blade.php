@@ -8,7 +8,7 @@
 @endif
 @if ($secData->_type == 'afbeelding')
     @include('sections.' . $layout . '_afbeelding', [
-    'imgUrlMedium' => $secData->image[0]['sizes']['medium_large'],
+    'imgUrlMediumLarge' => $secData->image[0]['sizes']['medium_large'],
     'imgUrlLarge' => $secData->image[0]['sizes']['large'],
     'imgAlt' => $secData->image[0]['alt'],
     ])

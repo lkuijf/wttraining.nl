@@ -377,7 +377,7 @@ form .error span {
     height: 650px;
   }
 }
-.hero .heroImages > div img:first-child {
+.hero .heroImages > div picture:first-child img {
   opacity: 1;
 }
 .hero .heroImages.zoom img {
