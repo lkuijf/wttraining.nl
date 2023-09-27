@@ -11,7 +11,19 @@
     $headers .= "Reply-To: leon@wtmedia-events.nl\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
-    // $headers .= "DKIM-Signature: v=1; a=rsa-sha256; d=wttraining.nl; s=key1; c=relaxed/simple; q=dns/txt; h=From:Subject:Date:Message-ID:To:Content-type; bh=base64-hash; b=DKIM-signature-data\r\n";
+    
+    $timestamp = time();
+    $dkimHeader = "DKIM-Signature: v=1; a=rsa-sha256; d=wttraining.nl; s=key1; t=$timestamp; c=relaxed/relaxed;";
+    $dkimHeader .= " h=from:to:subject; bh=" . base64_encode(hash('sha256', $headers)) . ";";
+        $hash = hash('sha256', $headers, true);
+        $fp = fopen("private.key", "r");
+        $privKey = fread($fp, 8192);
+        fclose($fp);
+        $pKeyId = openssl_get_privatekey($privKey, 'wttraining');
+        openssl_sign($hash, $signature, $pKeyId);
+    $dkimHeader .= " b=" . base64_encode($signature) . ";\r\n";
+    $headers .= $dkimHeader;
+
     mail($to,$subject,$message, $headers);
     
     // echo "Test email sent";
