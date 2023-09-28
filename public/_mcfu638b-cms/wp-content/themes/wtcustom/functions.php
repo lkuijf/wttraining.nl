@@ -419,6 +419,7 @@ function customAdminCss() {
         body {
             font-family: Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
         }
+        /*
         #wpwrap {
             border-left: 5px solid #E7AC00;
         }
@@ -426,6 +427,7 @@ function customAdminCss() {
             border-left: 5px solid #E7AC00;
             height: 32px;
         }
+        */
     </style>';
 }
 function crbRegisterFields($args) {
