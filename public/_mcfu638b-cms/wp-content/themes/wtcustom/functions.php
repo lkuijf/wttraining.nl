@@ -61,6 +61,7 @@ add_action( 'init', 'create_posttype_training' );
 // add_action( 'init', 'create_posttype_review' );
 add_action( 'init', 'create_posttype_teammember' );
 add_action( 'init', 'create_posttype_faq' );
+add_action( 'init', 'create_posttype_partner' );
 // add_action( 'init', 'create_posttype_professionals' );
 add_action( 'init', 'register_taxonomy_training_category' );
 
@@ -180,6 +181,26 @@ function create_posttype_teammember() {
                 'add_new' => __( 'Add New Team member' ),
                 'edit_item' => __( 'Edit Team member' ),
                 'update_item' => __( 'Update Team member' ),
+            ),
+            'public' => true,
+            // 'has_archive' => true,
+            // 'rewrite' => array('slug' => 'movies'),
+            'show_in_rest' => true,
+            // 'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+            'supports'            => array( 'title'),
+            )
+    );
+}
+function create_posttype_partner() {
+    register_post_type( 'partner',
+        array(
+            'labels' => array(
+                'name' => __( 'Partners' ),
+                'singular_name' => __( 'Partner' ),
+                'add_new_item' => __( 'Add New Partner' ),
+                'add_new' => __( 'Add New Partner' ),
+                'edit_item' => __( 'Edit Partner' ),
+                'update_item' => __( 'Update Partner' ),
             ),
             'public' => true,
             // 'has_archive' => true,
@@ -397,13 +418,9 @@ function customAdminCss() {
     <style>
         body {
             font-family: Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-            /*border-left: 10px solid #006878;*/
         }
         #wpwrap {
             border-left: 5px solid #E7AC00;
-        }
-        #wpadminbar {
-            /*border-left: 10px solid #006878;*/
         }
         #wp-toolbar {
             border-left: 5px solid #E7AC00;
@@ -910,6 +927,12 @@ function crbRegisterFields($args) {
             // Field::make( 'separator', 'separator3', __( 'SEO information' ) ),
             // Field::make( 'separator', 'separator4', __( 'Extra options' ) ),
             // Field::make( 'checkbox', 'highlighted', __('Show on homepage') ),
+            )
+        );
+    Container::make( 'post_meta', __( 'Information' ) )
+        ->where( 'post_type', '=', 'partner' )
+        ->add_fields(array(
+            Field::make( 'image', 'image', __( 'Image' ) )->set_visible_in_rest_api($visible = true),
             )
         );
     Container::make( 'post_meta', __( 'Information' ) )
