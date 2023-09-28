@@ -407,6 +407,7 @@ function customAdminCss() {
         }
         #wp-toolbar {
             border-left: 5px solid #E7AC00;
+            height: 32px;
         }
     </style>';
 }
