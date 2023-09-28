@@ -56,7 +56,7 @@ class PagesController extends Controller
         $options = $this->getWebsiteOptions();
 
         // if(isset($options['header_image'])) $options['header_image'] = $this->generateMediaUrl($options['header_image']);
-        if(isset($options->working_with)) $options->working_with = $this->getMediaGallery($options->working_with);
+        // if(isset($options->working_with)) $options->working_with = $this->getMediaGallery($options->working_with);
         $vessels = array();
         $news = array();
         $vessel = false;
@@ -760,6 +760,21 @@ class PagesController extends Controller
         }
         return $allSections;
     }
+    public function getCustomPostData($associations, $postType, $imageAttribute) {
+        foreach($associations as $k => &$item) {
+            $cPost = new CustomPostApi($postType, $item->id, false);
+            $customP = $cPost->get();
+            if(isset($customP->data->status)) { // some error, probably the custom post is removed
+                unset($associations[$k]);
+            } else {
+                $item = $customP;
+                if(isset($item->{$imageAttribute})) {
+                    $item->{$imageAttribute} = $this->getMediaGallery($item->{$imageAttribute});
+                }
+            }
+        }
+        return $associations;
+    }
     public function handleCrbSections($pCrbSecs) {
         $secs = [];
         $trainingsCounter = 0;
@@ -837,45 +852,21 @@ class PagesController extends Controller
                 $sec->email_to = Crypt::encryptString($sec->email_to);
                 $sec->success_text = Crypt::encryptString($sec->success_text);
             }
+
+
             if($sec->_type == 'team_specialists' && count($sec->team_specialists_associations)) {
-                foreach($sec->team_specialists_associations as &$specialist) {
-                    $cTeamMember = new CustomPostApi('teammember', $specialist->id, false);
-                    $teamMember = $cTeamMember->get();
-                    $specialist = $teamMember;
-
-                    // $cTeamMember = new SimpleCustomPostsApi('teammember');
-                    // $cTeamMember->parameters['ids'] = $specialist->id;
-                    // $teamMembers = $cTeamMember->get();
-                    // $specialist = $teamMembers[0];
-                    if(isset($specialist->image) && $specialist->image) {
-                        $specialist->image = $this->getMediaGallery($specialist->image);
-                    }
-                }
+                $sec->team_specialists_associations = $this->getCustomPostData($sec->team_specialists_associations, $postType = 'teammember', $imageAttribute = 'image');
             }
-
-
             if($sec->_type == 'blog_items' && count($sec->blog_associations)) {
-                foreach($sec->blog_associations as &$blogItem) {
-                    $cBlog = new CustomPostApi('blog', $blogItem->id, false);
-                    $blog = $cBlog->get();
-                    $blogItem = $blog;
-                    if(isset($blogItem->gallery)) {
-                        $blogItem->gallery = $this->getMediaGallery($blogItem->gallery);
-                    }
-                }
+                $sec->blog_associations = $this->getCustomPostData($sec->blog_associations, $postType = 'blog', $imageAttribute = 'gallery');
             }
-
             if($sec->_type == 'case_items' && count($sec->case_associations)) {
-                foreach($sec->case_associations as &$caseItem) {
-                    $cCase = new CustomPostApi('case', $caseItem->id, false);
-                    $case = $cCase->get();
-                    $caseItem = $case;
-
-                    if(isset($caseItem->gallery) && $caseItem->gallery) {
-                        $caseItem->gallery = $this->getMediaGallery($caseItem->gallery);
-                    }
-                }
+                $sec->case_associations = $this->getCustomPostData($sec->case_associations, $postType = 'case', $imageAttribute = 'gallery');
             }
+            if($sec->_type == 'partner_items' && count($sec->partner_associations)) {
+                $sec->partner_associations = $this->getCustomPostData($sec->partner_associations, $postType = 'partner', $imageAttribute = 'image');
+            }
+
 
             if($sec->_type == 'marketing_terms') {
                 $sec->image1 = $this->getMediaGallery($sec->image1);

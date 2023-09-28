@@ -1,4 +1,4 @@
-@foreach ($data['content_sections'] as $section)
+@foreach ($data['content_sections'] as $i => $section)
     @if ($section->_type == '_anchor')
         <a id="{{ $section->value }}" class="anchorPoint"></a>
     @endif
@@ -30,6 +30,7 @@
             'videoUrl' => $section->video,
             ])
         @section('before_closing_body_tag')
+        @parent
             <script src="{{ asset('js/video.min.js') }}"></script>
             <script>
                 const player = videojs('my-video');
@@ -101,9 +102,9 @@
         @if($section->_type == 'reviews' && $section->show_reviews)
             @include('sections.reviews', ['reviews' => $data['reviews']])
         @endif
-        @if($section->_type == 'working_with' && $section->show_working_with)
+        {{-- @if($section->_type == 'working_with' && $section->show_working_with)
             @include('sections.working_with')
-        @endif
+        @endif --}}
         @if($section->_type == 'teammembers' && $section->show_teammembers)
             @include('sections.teammembers')
         @endif
@@ -116,6 +117,15 @@
         @endif
         @if($section->_type == 'case_items')
             @include('sections.events', ['cases' => $section->case_associations])
+        @endif
+        @if($section->_type == 'partner_items')
+            @include('sections.working_with', ['partners' => $section->partner_associations, 'swiperClass' => 'partnerSwiper_' . $i, 'swiperPaginationClass' => 'swiper-pagination_' . $i])
+            @section('before_closing_body_tag')
+            @parent
+            <script>
+                initPartnerSwiper(".partnerSwiper_{{ $i }}", ".swiper-pagination_{{ $i }}");
+            </script>
+            @endsection
         @endif
         @if($section->_type == 'service_page_text_header')
             @include('sections.service_page_text_header', ['title' => $section->title, 'color' => $section->header_style, 'align' => $section->header_align, 'type' => $section->header_type, 'margin' => $section->header_margin])

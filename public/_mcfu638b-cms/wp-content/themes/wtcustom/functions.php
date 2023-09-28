@@ -46,7 +46,7 @@ $websiteOptions[] = array('text', 'training_form_success', 'Formulier succes mel
 // $websiteOptions[] = array('file', 'wt_algemene_voorwaarden', 'Algemene voorwaarden');
 // $websiteOptions[] = array('image', 'header_image', 'Header afbeelding');
 $websiteOptions[] = array('separator', 'separator6', 'Logo\'s en afbeeldingen');
-$websiteOptions[] = array('media_gallery', 'working_with', 'Partner logo\'s');
+// $websiteOptions[] = array('media_gallery', 'working_with', 'Partner logo\'s');
 // $websiteOptions[] = array('separator', 'separator6', 'Statistieken');
 // $websiteOptions[] = array('text', 'happy_clients', 'Tevreden klanten (web development dienstenpagina)');
 // $websiteOptions[] = array('text', 'total_projects', 'Aantal projecten (web development dienstenpagina)');
@@ -546,7 +546,7 @@ function crbRegisterFields($args) {
                         ),
                     ) )
                 ) )
-                ->add_fields( 'blog_items', 'Blog items', array(
+                ->add_fields( 'blog_items', 'Blog items - carrousel', array(
                     Field::make( 'separator', 'separator1', __( 'Blog items' ) ),
                     Field::make( 'association', 'blog_associations', __( 'Select blog items' ))
                     ->set_types( array(
@@ -556,7 +556,7 @@ function crbRegisterFields($args) {
                         ),
                     ) )
                 ) )
-                ->add_fields( 'case_items', 'Case items', array(
+                ->add_fields( 'case_items', 'Case items - carrousel', array(
                     Field::make( 'separator', 'separator1', __( 'Case items' ) ),
                     Field::make( 'association', 'case_associations', __( 'Select case items' ))
                     ->set_types( array(
@@ -566,7 +566,7 @@ function crbRegisterFields($args) {
                         ),
                     ) )
                 ) )
-                ->add_fields( 'partner_items', 'Partner items', array(
+                ->add_fields( 'partner_items', 'Partner items - carrousel', array(
                     Field::make( 'separator', 'separator1', __( 'Partner items' ) ),
                     Field::make( 'association', 'partner_associations', __( 'Select partner items' ))
                     ->set_types( array(
@@ -590,16 +590,16 @@ function crbRegisterFields($args) {
                 //     Field::make( 'separator', 'separator1', __( 'Prijs Pakketten' ) ),
                 //     Field::make( 'checkbox', 'show_packages', __( 'Show Pricing Packages' ) ),
                 // ) )
-                ->add_fields( 'working_with', 'Clients', array(
-                    Field::make( 'separator', 'separator1', __( 'Clients' ) ),
-                    Field::make( 'checkbox', 'show_working_with', __( 'Show "Clients" section' ) ),
-                ) )
+                // ->add_fields( 'working_with', 'Clients', array(
+                //     Field::make( 'separator', 'separator1', __( 'Clients' ) ),
+                //     Field::make( 'checkbox', 'show_working_with', __( 'Show "Clients" section' ) ),
+                // ) )
                 // ->add_fields( 'reviews', 'Reviews', array(
                 //     Field::make( 'separator', 'separator1', __( 'Reviews' ) ),
                 //     Field::make( 'checkbox', 'show_reviews', __( 'Show Reviews' ) ),
                 // ) )
                 ->add_fields( 'teammembers', 'Team members', array(
-                    Field::make( 'separator', 'separator1', __( 'Team members' ) ),
+                    Field::make( 'separator', 'separator1', __( 'Team members - carrousel' ) ),
                     Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
                 ) )
                 ->add_fields( 'service_page_text_header', 'Text header h1/h2', array(

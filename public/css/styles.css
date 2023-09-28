@@ -793,26 +793,26 @@ form .error span {
 .workingWithContent .outerSwiperBox {
   position: relative;
 }
-.workingWithContent .outerSwiperBox .partnerSwiper {
+.workingWithContent .outerSwiperBox .swiper {
   padding: 20px;
 }
-.workingWithContent .outerSwiperBox .partnerSwiper img {
+.workingWithContent .outerSwiperBox .swiper img {
   height: 150px;
   width: 150px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.workingWithContent .outerSwiperBox .swiper-pagination {
+.workingWithContent .outerSwiperBox .swiper-pagination-bullets {
   bottom: -20px !important;
 }
-.workingWithContent .outerSwiperBox .swiper-pagination .swiper-pagination-bullet {
+.workingWithContent .outerSwiperBox .swiper-pagination-bullets .swiper-pagination-bullet {
   border: 3px solid #E9AD01;
   background-color: #FFF !important;
   height: 18px;
   width: 18px;
   opacity: 1;
 }
-.workingWithContent .outerSwiperBox .swiper-pagination .swiper-pagination-bullet-active {
+.workingWithContent .outerSwiperBox .swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: #E9AD01 !important;
 }
 

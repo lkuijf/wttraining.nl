@@ -193,29 +193,31 @@ setTimeout(() => { // using setTimeout for elements that are directly in viewpor
 }, 100);
 /*************************************************/
 
-var swiperPartner = new Swiper(".partnerSwiper", {
-    slidesPerView: 2,
-    spaceBetween: 0,
-    speed: 1000,
-    // loop: true, // not compatible with slidesPerView
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'bullets',
-    },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        768: {
-          slidesPerView: 3,
+function initPartnerSwiper(swiperClass, paginationClass) {
+    var swiperPartner = new Swiper(swiperClass, {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        speed: 1000,
+        // loop: true, // not compatible with slidesPerView
+        pagination: {
+            el: paginationClass,
+            clickable: true,
+            type: 'bullets',
         },
-        1024: {
-          slidesPerView: 5,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
-    }
-});
+        breakpoints: {
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+        }
+    });
+}
 
 
 var swiperTeam = new Swiper(".teamMembersSwiper", {
