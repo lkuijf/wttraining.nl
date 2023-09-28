@@ -397,13 +397,13 @@ function customAdminCss() {
     <style>
         body {
             font-family: Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-            border-left: 10px solid #006878;
+            /*border-left: 10px solid #006878;*/
         }
         #wpwrap {
             border-left: 5px solid #E7AC00;
         }
         #wpadminbar {
-            border-left: 10px solid #006878;
+            /*border-left: 10px solid #006878;*/
         }
         #wp-toolbar {
             border-left: 5px solid #E7AC00;
