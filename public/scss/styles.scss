@@ -64,9 +64,15 @@ html {
     color: $colorBlack;
     background-color: $colorWhite;
     scroll-behavior: smooth;
-    background-image: url('../statics/wtt-back2.jpg');
+    background-image: url('../statics/wtt-back-pattern4.jpg');
     background-repeat: repeat;
-    // background-size: 100%;
+    background-size: 100%;
+    @media (max-width: $sbp1_desktop) {background-size: 200%;}
+    @media (max-width: $sbp2_laptop) {background-size: 250%;}
+    @media (max-width: $sbp3_tablet) {background-size: 300%;}
+    @media (max-width: $sbp4_mobile) {background-size: 400%;}
+
+    // background-attachment: fixed;
 }
 *, *:before, *:after {
     box-sizing: inherit;
