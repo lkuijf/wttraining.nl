@@ -26,7 +26,7 @@
 
     mail($to,$subject,$message, $headers);
     
-    // echo "Test email sent";
+    echo "Test email sent";
 
     // $selector = 'key1'; // Your DKIM selector
     // $domain = 'wttraining.nl'; // Your DKIM domain
