@@ -564,6 +564,16 @@ function crbRegisterFields($args) {
                         ),
                     ) )
                 ) )
+                ->add_fields( 'partner_items', 'Partner items', array(
+                    Field::make( 'separator', 'separator1', __( 'Partner items' ) ),
+                    Field::make( 'association', 'partner_associations', __( 'Select partner items' ))
+                    ->set_types( array(
+                        array(
+                            'type' => 'post',
+                            'post_type' => 'partner',
+                        ),
+                    ) )
+                ) )
                 // ->add_fields( 'news_boxes', 'News', array(
                 //     Field::make( 'separator', 'separator1', __( 'News' ) ),
                 //     Field::make( 'association', 'news_associations', __( 'Select news (max 3)' ))
