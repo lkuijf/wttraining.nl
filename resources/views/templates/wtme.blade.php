@@ -112,9 +112,9 @@
         });
     </script>
     @endif
-    <script>
+    {{-- <script>
         setReviewsShowMoreToggleButtons();
-    </script>
+    </script> --}}
     @yield('before_closing_body_tag')
 </body>
 </html>

@@ -1,7 +1,7 @@
 .teammembersContent {
     text-align: center;
     @include swiperBox;
-    .teamMembersSwiper {
+    .swiper {
         img {
             width: 300px;
             aspect-ratio: 1/1;

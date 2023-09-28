@@ -106,7 +106,20 @@
             @include('sections.working_with')
         @endif --}}
         @if($section->_type == 'teammembers' && $section->show_teammembers)
-            @include('sections.teammembers')
+            @php
+                $tmSwClass = 'teamMembersSwiper_';
+                $tmSwPrevClass = 'swiperBtnPrevTeam_';
+                $tmSwNextClass = 'swiperBtnNextTeam_';
+            @endphp
+            @include('sections.teammembers', [
+                'swClass' => $tmSwClass . $i,
+                'swBtnPrev' => $tmSwPrevClass . $i,
+                'swBtnNext' => $tmSwNextClass . $i,
+                ])
+            @section('before_closing_body_tag')
+            @parent
+            <script>initTeamMembersSwiper(".{{ $tmSwClass.$i }}", ".{{ $tmSwPrevClass.$i }}", ".{{ $tmSwNextClass.$i }}");</script>
+            @endsection
         @endif
         @if($section->_type == 'team_specialists')
             @include('sections.team_specialists', ['specialists' => $section->team_specialists_associations])
@@ -116,15 +129,35 @@
             @include('sections.button', ['url' => url('blog'), 'title' => 'Bekijk alle items'])
         @endif
         @if($section->_type == 'case_items')
-            @include('sections.events', ['cases' => $section->case_associations])
-        @endif
-        @if($section->_type == 'partner_items')
-            @include('sections.working_with', ['partners' => $section->partner_associations, 'swiperClass' => 'partnerSwiper_' . $i, 'swiperPaginationClass' => 'swiper-pagination_' . $i])
+            @php
+                $cSwClass = 'casesSwiper_';
+                $cSwPrevClass = 'swiperBtnPrevCases_';
+                $cSwNextClass = 'swiperBtnNextCases_';
+            @endphp
+            @include('sections.events', [
+                'cases' => $section->case_associations,
+                'swClass' => $cSwClass . $i,
+                'swBtnPrev' => $cSwPrevClass . $i,
+                'swBtnNext' => $cSwNextClass . $i,
+                ])
             @section('before_closing_body_tag')
             @parent
-            <script>
-                initPartnerSwiper(".partnerSwiper_{{ $i }}", ".swiper-pagination_{{ $i }}");
-            </script>
+            <script>initCasesSwiper(".{{ $cSwClass.$i }}", ".{{ $cSwPrevClass.$i }}", ".{{ $cSwNextClass.$i }}");</script>
+            @endsection
+        @endif
+        @if($section->_type == 'partner_items')
+            @php
+                $pSwClass = 'partnerSwiper_';
+                $pSwPaginationClass = 'swiperPaginationPartner_';
+            @endphp
+            @include('sections.working_with', [
+                'partners' => $section->partner_associations,
+                'swiperClass' => $pSwClass . $i,
+                'swiperPaginationClass' => $pSwPaginationClass . $i,
+                ])
+            @section('before_closing_body_tag')
+            @parent
+            <script>initPartnerSwiper(".{{ $pSwClass.$i }}", ".{{ $pSwPaginationClass.$i }}");</script>
             @endsection
         @endif
         @if($section->_type == 'service_page_text_header')
@@ -190,7 +223,22 @@
             @endif
         @endif
         @if($section->_type == 'trainings')
-            @include('sections.trainings', ['trainings' => $section->trainings, 'counter' => $section->trainings_counter])
+            @php
+                $tSwClass = 'trainingsSwiper_';
+                $tSwPrevClass = 'swiperBtnPrevTrainings_';
+                $tSwNextClass = 'swiperBtnNextTrainings_';
+            @endphp
+            @include('sections.trainings', [
+                'trainings' => $section->trainings,
+                // 'counter' => $section->trainings_counter,
+                'swClass' => $tSwClass . $i,
+                'swBtnPrev' => $tSwPrevClass . $i,
+                'swBtnNext' => $tSwNextClass . $i,
+                ])
+            @section('before_closing_body_tag')
+            @parent
+            <script>initTrainingsSwiper(".{{ $tSwClass.$i }}", ".{{ $tSwPrevClass.$i }}", ".{{ $tSwNextClass.$i }}");</script>
+            @endsection
         @endif
         @if($section->_type == 'approach_tiles')
             @include('sections.approach_tiles', ['displayType' => $section->approuch_style, 'approaches' => $section->approach])

@@ -2,7 +2,7 @@
     <div class="casesContent">
 
         <div class="outerSwiperBox">
-            <div class="swiper casesSwiper">
+            <div class="swiper {{ $swClass }}">
                 <div class="swiper-wrapper">
 
                     @if($cases && count($cases))
@@ -39,8 +39,8 @@
                 </div>
             </div>
 
-            <div class="swiperBtn swiper-button-prev swiperBtnPrevCases"></div>
-            <div class="swiperBtn swiper-button-next swiperBtnNextCases"></div>
+            <div class="swiperBtn swiper-button-prev {{ $swBtnPrev }}"></div>
+            <div class="swiperBtn swiper-button-next {{ $swBtnNext }}"></div>
 
             {{-- <div class="swiper-scrollbar-cases"></div> --}}
         </div>

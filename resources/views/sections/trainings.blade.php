@@ -2,7 +2,7 @@
     <div class="trainingsContent">
 
         <div class="outerSwiperBox">
-            <div class="swiper trainingsSwiper{{ $counter }}">
+            <div class="swiper {{ $swClass }}">
                 <div class="swiper-wrapper">
 
                 @if($trainings && count($trainings))
@@ -45,8 +45,8 @@
                 </div>
             </div>
 
-            <div class="swiperBtn swiper-button-prev swiperBtnPrevTrainings{{ $counter }}"></div>
-            <div class="swiperBtn swiper-button-next swiperBtnNextTrainings{{ $counter }}"></div>
+            <div class="swiperBtn swiper-button-prev {{ $swBtnPrev }}"></div>
+            <div class="swiperBtn swiper-button-next {{ $swBtnNext }}"></div>
 
             {{-- <div class="swiper-scrollbar-cases"></div> --}}
         </div>

@@ -2,7 +2,7 @@
     <div class="teammembersContent">
 
         <div class="outerSwiperBox">
-            <div class="swiper teamMembersSwiper">
+            <div class="swiper {{ $swClass }}">
                 <div class="swiper-wrapper">
                     @if($data['team_members'] && count($data['team_members']))
                     @foreach ($data['team_members'] as $member)
@@ -17,8 +17,8 @@
                 
             </div>
 
-            <div class="swiperBtn swiper-button-prev swiperBtnPrevTeam"></div>
-            <div class="swiperBtn swiper-button-next swiperBtnNextTeam"></div>
+            <div class="swiperBtn swiper-button-prev {{ $swBtnPrev }}"></div>
+            <div class="swiperBtn swiper-button-next {{ $swBtnNext }}"></div>
 
             {{-- <div class="swiper-scrollbar-team"></div> --}}
             {{-- <div class="swiper-pagination-team"></div> --}}
