@@ -38,6 +38,12 @@ Route::get('/clear-response-cache-wt', function () {
 })->middleware('doNotCacheResponse');
 
 
+Route::get('/wtcustom/website-options', function () {
+    echo file_get_contents(config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');
+});
+
+
+
 Route::post('/submit-subscription-form', [SubmitController::class, 'submitSubscriptionFormXHR']);
 Route::post('/submit-schedule-call-form', [SubmitController::class, 'submitScheduleCallForm'])->name('submitScheduleCall');
 
