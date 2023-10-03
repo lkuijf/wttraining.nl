@@ -695,12 +695,14 @@ class PagesController extends Controller
         // foreach($homepageCases as &$case) {
         //     $case->gallery = $this->getMediaGallery($case->gallery);
         // }
-        $reviewPosts = new SimpleCustomPostsApi('review');
-        $reviewPosts->get();
-        $reviews = $reviewPosts->getItems();
-        foreach($reviews as &$review) {
-            $review->image = $this->getMediaGallery($review->image);
-        }
+
+        // $reviewPosts = new SimpleCustomPostsApi('review');
+        // $reviewPosts->get();
+        // $reviews = $reviewPosts->getItems();
+        // foreach($reviews as &$review) {
+        //     $review->image = $this->getMediaGallery($review->image);
+        // }
+        
         $teamPosts = new SimpleCustomPostsApi('teammember');
         $teamPosts->get();
         $teamMembers = $teamPosts->getItems();
@@ -744,7 +746,7 @@ class PagesController extends Controller
             'website_options' => $options,
             'content_sections' => $allCrbSections,
             // 'cases_highlighted' => $homepageCases,
-            'reviews' => $reviews,
+            // 'reviews' => $reviews,
             'team_members' => $teamMembers,
             // 'instagram_widget_code' => $instaCode,
         ];
@@ -761,19 +763,35 @@ class PagesController extends Controller
         return $allSections;
     }
     public function getCustomPostData($associations, $postType, $imageAttribute) {
-        foreach($associations as $k => &$item) {
-            $cPost = new CustomPostApi($postType, $item->id, false);
-            $customP = $cPost->get();
-            if(isset($customP->data->status)) { // some error, probably the custom post is removed
-                unset($associations[$k]);
-            } else {
-                $item = $customP;
-                if(isset($item->{$imageAttribute})) {
-                    $item->{$imageAttribute} = $this->getMediaGallery($item->{$imageAttribute});
+        // foreach($associations as $k => &$item) {
+        //     $cPost = new CustomPostApi($postType, $item->id, false);
+        //     $customP = $cPost->get();
+        //     if(isset($customP->data->status)) { // some error, probably the custom post is removed
+        //         unset($associations[$k]);
+        //     } else {
+        //         $item = $customP;
+        //         if(isset($item->{$imageAttribute})) {
+        //             $item->{$imageAttribute} = $this->getMediaGallery($item->{$imageAttribute});
+        //         }
+        //     }
+        // }
+        // return $associations;
+
+        $ids = array();
+        foreach($associations as $item) {
+            $ids[] = $item->id;
+        }
+        $cPosts = new CustomPostApi($postType, $ids, false);
+        $customPosts = $cPosts->get();
+        if($customPosts && count($customPosts)) {
+            foreach($customPosts as $i => $cP) {
+                if(isset($cP->{$imageAttribute})) {
+                    $customPosts[$i]->{$imageAttribute} = $this->getMediaGallery($cP->{$imageAttribute});
                 }
             }
         }
-        return $associations;
+        return $customPosts;
+
     }
     public function handleCrbSections($pCrbSecs) {
         $secs = [];
