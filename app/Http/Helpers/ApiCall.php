@@ -19,7 +19,7 @@ class ApiCall {
         $params = '';
         if($this->parameters) $params = '?' . http_build_query($this->parameters);
 
-echo "\n" . '[' . config('app_wt.host') . $this->endpoint . $params.']' . "<br />\n";
+// echo "\n" . '[' . config('app_wt.host') . $this->endpoint . $params.']' . "<br />\n";
 
         curl_setopt($curl, CURLOPT_URL, config('app_wt.host') . $this->endpoint . $params);
         if($this->method == 'POST') {
