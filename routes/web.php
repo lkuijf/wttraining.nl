@@ -39,9 +39,7 @@ Route::get('/clear-response-cache-wt', function () {
 
 
 Route::get('/wtcustom/website-options', function () {
-    $json = file_get_contents(config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');
-    // $someshit = 'dyzzzzzzz';
-    return $json;
+    return file_get_contents(config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');
 });
 
 
