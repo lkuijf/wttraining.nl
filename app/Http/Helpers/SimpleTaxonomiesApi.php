@@ -3,7 +3,7 @@ namespace App\Http\Helpers;
 
 class SimpleTaxonomiesApi extends ApiCall {
     public function __construct() {
-        $this->endpoint = '/index.php/wp-json/wtcustom/simple-taxonomies';
+        $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-taxonomies';
     }
     public function makeListById() {
         /* Make available by ID */

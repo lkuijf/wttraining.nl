@@ -3,7 +3,7 @@ namespace App\Http\Helpers;
 
 class SimpleMediaApi extends ApiCall {
     public function __construct() {
-        $this->endpoint = '/index.php/wp-json/wtcustom/simple-media';
+        $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-media';
     }
     public function makeListById() {
         /* Make available by ID */

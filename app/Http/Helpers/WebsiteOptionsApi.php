@@ -3,6 +3,7 @@ namespace App\Http\Helpers;
 
 class WebsiteOptionsApi extends ApiCall {
     public function __construct() {
-        $this->endpoint = '/index.php/wp-json/wtcustom/website-options';
+        // $this->endpoint = '/index.php/wp-json/wtcustom/website-options';
+        $this->endpoint = '/wtcustom/website-options';
     }
 }

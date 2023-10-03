@@ -3,7 +3,7 @@ namespace App\Http\Helpers;
 
 class SimplePostsApi extends ApiCall {
     public function __construct() {
-        $this->endpoint = '/index.php/wp-json/wtcustom/simple-posts';
+        $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-posts';
     }
     public function setParameters($oFilters) {
         if(isset($oFilters->sort[0])) {

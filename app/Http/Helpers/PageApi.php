@@ -4,11 +4,11 @@ namespace App\Http\Helpers;
 class PageApi extends ApiCall {
     public function __construct($id, $orderby = false, $order = false) {
         if(is_array($id)) { // multiple id's
-            $this->endpoint = '/index.php/wp-json/wp/v2/pages?include=' . implode(',', $id);
+            $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wp/v2/pages?include=' . implode(',', $id);
             if($orderby) $this->endpoint .= '&orderby=' . $orderby;
             if($order) $this->endpoint .= '&order=' . $order;
         } else {
-            $this->endpoint = '/index.php/wp-json/wp/v2/pages/' . $id;
+            $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wp/v2/pages/' . $id;
         }
     }
     public function postProcess() {

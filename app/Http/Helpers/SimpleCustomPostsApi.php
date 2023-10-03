@@ -6,7 +6,7 @@ class SimpleCustomPostsApi extends ApiCall {
         $this->parameters['post_type'] = $postType;
         //extra available parameters: orderby, category, ids (see callbacks.inc.php)
         //will be extra endpoints, so must be cleared when mutated.
-        $this->endpoint = '/index.php/wp-json/wtcustom/simple-custom-posts';
+        $this->endpoint = config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-custom-posts';
     }
     public function getItems() {
         $data = new \stdClass();
