@@ -702,7 +702,7 @@ class PagesController extends Controller
         // foreach($reviews as &$review) {
         //     $review->image = $this->getMediaGallery($review->image);
         // }
-        
+
         $teamPosts = new SimpleCustomPostsApi('teammember');
         $teamPosts->get();
         $teamMembers = $teamPosts->getItems();
@@ -722,19 +722,40 @@ class PagesController extends Controller
 // dd($instagramFeedPageData);
 
 
-        $allCrbSections = array();
+
+        $pageIds = array();
+// var_dump($spages);
         foreach($spages[0] as $sPage) {
-            // if($sPage->title == 'Blog') continue;
             if($sPage->title == 'Privacy policy') continue;
+            $pageIds[] = $sPage->id;
+        }
+// var_dump($pageIds);
+        $reqPages = new PageApi($pageIds, $orderby = 'menu_order', $order = 'asc');
+        $allPagesData = $reqPages->get();
+// dd($allPagesData);
+
+
+        $allCrbSections = array();
+        // foreach($spages[0] as $sPage) {
+        foreach($allPagesData as $pData) {
+            // if($sPage->title == 'Blog') continue;
+            // if($sPage->title == 'Privacy policy') continue;
             $pageA = new \stdClass;
             $pageA->_type = '_anchor';
-            $pageA->value = $sPage->slug;
+            $pageA->value = $pData->slug;
             $allCrbSections[] = $pageA;
 
             /* check rotterdamsehorecawandeling.nl for details */
             
-            $crbSecs = $this->getPageCrbSections($sPage->id);
-            $allCrbSections = array_merge($allCrbSections, $crbSecs);
+            // $crbSecs = $this->getPageCrbSections($sPage->id);
+
+            // $currPageSecs = [];
+            if(isset($pData->crb_sections) && count($pData->crb_sections)) {
+                $sections = $this->handleCrbSections($pData->crb_sections);
+                $allCrbSections = array_merge($allCrbSections, $sections); 
+            }
+    
+            // $allCrbSections = array_merge($allCrbSections, $crbSecs);
         }
 
 // dd($allCrbSections);
