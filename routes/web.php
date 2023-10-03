@@ -34,12 +34,14 @@ Route::get('/', function () {
 // });
 Route::get('/clear-response-cache-wt', function () {
     ResponseCache::clear();
-    echo 'Response Cache Cleared!';
+    return 'Response Cache Cleared!';
 })->middleware('doNotCacheResponse');
 
 
 Route::get('/wtcustom/website-options', function () {
-    echo file_get_contents(config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');
+    $json = file_get_contents(config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');
+    // $someshit = 'dyzzzzzzz';
+    return $json;
 });
 
 
