@@ -38,7 +38,9 @@ Route::get('/clear-response-cache-wt', function () {
 })->middleware('doNotCacheResponse');
 
 
+Route::get('/wtcustom/simple-pages', function () {return file_get_contents(config('app_wt.host') . config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-pages');});
 Route::get('/wtcustom/website-options', function () {return file_get_contents(config('app_wt.host') . config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/website-options');});
+Route::get('/wtcustom/simple-media', function () {return file_get_contents(config('app_wt.host') . config('app_wt.cmsPath') . '/index.php/wp-json/wtcustom/simple-media');});
 
 
 
