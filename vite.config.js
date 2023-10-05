@@ -2,6 +2,16 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
+    build: {
+        // rollupOptions: {
+        //     output: {
+        //         // Add the names of the functions or variables you want to keep
+        //         // separated by commas
+        //         keepAlive: ['initPartnerSwiper', 'initTeamMembersSwiper', 'initCasesSwiper']
+        //     }
+        // }
+        minify: false
+    },
     plugins: [
         laravel({
             input: [
