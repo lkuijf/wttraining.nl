@@ -1,0 +1,55 @@
+{
+  "resources/css/swiper-bundle.min.css": {
+    "file": "assets/swiper-bundle.min-34aed2f1.css",
+    "isEntry": true,
+    "src": "resources/css/swiper-bundle.min.css"
+  },
+  "resources/css/video-js.css": {
+    "file": "assets/video-js-308ed619.css",
+    "isEntry": true,
+    "src": "resources/css/video-js.css"
+  },
+  "resources/fontello/font/wt_media_events.eot": {
+    "file": "assets/wt_media_events-b916b7b0.eot",
+    "src": "resources/fontello/font/wt_media_events.eot"
+  },
+  "resources/fontello/font/wt_media_events.svg": {
+    "file": "assets/wt_media_events-10cdc19e.svg",
+    "src": "resources/fontello/font/wt_media_events.svg"
+  },
+  "resources/fontello/font/wt_media_events.ttf": {
+    "file": "assets/wt_media_events-5316deef.ttf",
+    "src": "resources/fontello/font/wt_media_events.ttf"
+  },
+  "resources/fontello/font/wt_media_events.woff": {
+    "file": "assets/wt_media_events-35799cb8.woff",
+    "src": "resources/fontello/font/wt_media_events.woff"
+  },
+  "resources/fontello/font/wt_media_events.woff2": {
+    "file": "assets/wt_media_events-49689011.woff2",
+    "src": "resources/fontello/font/wt_media_events.woff2"
+  },
+  "resources/js/script.js": {
+    "file": "assets/script-fe4bfda6.js",
+    "isEntry": true,
+    "src": "resources/js/script.js"
+  },
+  "resources/js/swiper-bundle.min.js": {
+    "file": "assets/swiper-bundle.min-5e32116f.js",
+    "isEntry": true,
+    "src": "resources/js/swiper-bundle.min.js"
+  },
+  "resources/scss/styles.scss": {
+    "file": "assets/styles-53cf7654.css",
+    "isEntry": true,
+    "src": "resources/scss/styles.scss"
+  },
+  "resources/statics/arrow.png": {
+    "file": "assets/arrow-ad6c1cbe.png",
+    "src": "resources/statics/arrow.png"
+  },
+  "resources/statics/wtt-back-pattern4.jpg": {
+    "file": "assets/wtt-back-pattern4-ea17c569.jpg",
+    "src": "resources/statics/wtt-back-pattern4.jpg"
+  }
+}
