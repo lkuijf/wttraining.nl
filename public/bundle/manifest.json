@@ -1,11 +1,11 @@
 {
   "resources/css/swiper-bundle.min.css": {
-    "file": "assets/swiper-bundle.min-73eaa8d7.css",
+    "file": "assets/swiper-bundle.min-34aed2f1.css",
     "isEntry": true,
     "src": "resources/css/swiper-bundle.min.css"
   },
   "resources/css/video-js.css": {
-    "file": "assets/video-js-7428b350.css",
+    "file": "assets/video-js-308ed619.css",
     "isEntry": true,
     "src": "resources/css/video-js.css"
   },
@@ -30,17 +30,17 @@
     "src": "resources/fontello/font/wt_media_events.woff2"
   },
   "resources/js/script.js": {
-    "file": "assets/script-fa9c2373.js",
+    "file": "assets/script-fe4bfda6.js",
     "isEntry": true,
     "src": "resources/js/script.js"
   },
   "resources/js/swiper-bundle.min.js": {
-    "file": "assets/swiper-bundle.min-f73df683.js",
+    "file": "assets/swiper-bundle.min-5e32116f.js",
     "isEntry": true,
     "src": "resources/js/swiper-bundle.min.js"
   },
   "resources/scss/styles.scss": {
-    "file": "assets/styles-f89b586f.css",
+    "file": "assets/styles-53cf7654.css",
     "isEntry": true,
     "src": "resources/scss/styles.scss"
   },

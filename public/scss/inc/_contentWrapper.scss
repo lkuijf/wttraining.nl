@@ -1,0 +1,100 @@
+.contentWrapper {
+    .standardPage {
+        padding-top: $headerHeight;
+        > div:not(.hero) {
+            margin-bottom: 40px;
+        }
+    }
+    h1,h3 {
+        font-weight: normal;
+        font-size: 2.5em;
+        hr {
+            display: inline-block;
+            width: 70px;
+            transform: translateY(5px);
+        }
+        em {
+            color: $colorWTM;
+            font-style: normal;
+            // font-weight: bold;
+            // text-shadow: -1px 0 $colorGrey, 0 1px $colorGrey, 1px 0 $colorGrey, 0 -1px $colorGrey;
+        }
+    }
+    h3 {
+        font-size: 2em;
+    }
+    .servicePageHeaderWrap {
+        h1.servicePageHeader {
+            font-size: 2em;
+        }
+        h2.servicePageHeader {
+            font-size: 1.5em;
+        }
+        .servicePageHeader {
+            font-weight: bold;
+            max-width: 850px;
+            &.sphColor_black {
+                color: $colorBlack;
+            }
+            &.sphColor_yellow {
+                color: $colorWTM;
+            }
+            &.sphAlign_center {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &.sphAlign_left {
+                text-align: left;
+            }
+            &.sphMargin_default {
+                margin-top: 100px;
+            }
+            &.sphMargin_direct {
+                margin-top: default;
+            }
+        }
+    }
+    a {
+        color: $colorCtaBtn;
+        // font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .fullw, .twoColumns {
+        picture {
+            img {
+                width: 100%;
+                position: relative;
+                object-fit: cover;
+                @include borderRadius;
+                aspect-ratio: 4/3;
+            }
+        }
+    }
+    .ctaBtnWrap {
+        // @media (max-width: $sbp3_tablet) {
+            text-align: center;
+        // }
+        .ctaBtn {
+            @include borderRadius;
+            background-color: $colorWhite;
+            color: $colorWTM;
+            text-decoration: none;
+            padding: 8px 80px;
+            display: inline-block;
+            border: 3px solid $colorWTM;
+            &:hover {
+                background-color: $colorWTM;
+                color: $colorWhite;
+            }
+            // box-shadow: #ccc 10px 10px 0px -2px, $colorCtaBtn 10px 10px;
+            // &:active {
+            //     transform: translate(5px, 5px);
+            //     box-shadow: #ccc 5px 5px 0px -2px, $colorCtaBtn 5px 5px;
+            // }
+        }
+    }
+}

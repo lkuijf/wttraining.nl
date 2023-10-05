@@ -10,7 +10,24 @@ export default defineConfig({
         //         keepAlive: ['initPartnerSwiper', 'initTeamMembersSwiper', 'initCasesSwiper']
         //     }
         // }
-        minify: false
+
+        minify: 'esbuild',
+        esbuild: {
+            minifyIdentifiers: false
+        },
+
+
+        // minify: 'terser',
+        // terserOptions: {
+        //     compress: {
+        //         keep_fnames: true,
+        //         pure_funcs: ['initPartnerSwiper']
+        //     },
+        //     mangle: {
+        //         // toplevel: true,
+        //         keep_fnames: true
+        //     }
+        // }
     },
     plugins: [
         laravel({

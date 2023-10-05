@@ -1,0 +1,28 @@
+.workingWithContent {
+    text-align: center;
+    margin: 50px 0;
+    .outerSwiperBox {
+        position: relative;
+        .swiper {
+            padding: 20px;
+            img {
+                height: 150px;
+                width: 150px;
+                object-fit: contain;
+            }
+        }
+        .swiper-pagination-bullets {
+            bottom: -20px !important;
+            .swiper-pagination-bullet {
+                border: 3px solid $colorWTM;
+                background-color: $colorWhite !important;
+                height: 18px;
+                width: 18px;
+                opacity: 1;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: $colorWTM !important;
+            }
+        }
+    }
+}

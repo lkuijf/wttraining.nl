@@ -1,0 +1,31 @@
+.subscribeContent {
+    max-width: 800px;
+    margin: 0 auto;
+    .getUpdatesText {
+        text-align: center;
+        font-size: 2em;
+        @include textPaddingOnMobile;
+    }
+}
+.subscriptionForm {
+    @include textPaddingOnMobile;
+    text-align: center;
+    input {
+        font-family: $fontFamily;
+        font-size: 1.5em;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        border: 3px solid $colorWTM;
+        // @include borderRadius;
+        border-radius: 35px;
+        height: 70px;
+        padding: 0 20px;
+        width: 100%;
+        max-width: 850px;
+        @media (max-width: $sbp4_mobile) {width: 100%;}
+    }
+    button {
+        @include submitButton;
+        border-radius: 25px !important;
+    }
+}

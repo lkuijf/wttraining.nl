@@ -1,0 +1,98 @@
+@mixin bannerHeight() {
+    // @media (max-width: $sbp3_tablet) {
+    //     height: 450px;
+    // }
+    // @media (min-width: ($sbp3_tablet+1)) {
+        height: 550px;
+    // }
+}
+.banner {
+    position: relative;
+    @include bannerHeight;
+    .bannerOverlay {
+        > div {
+            max-width: $contentWidth;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 40px;
+            height: 100%;
+            padding: 100px;
+            @media (max-width: $sbp1_desktop) {padding: 80x;}
+            @media (max-width: $sbp2_laptop) {padding: 60px;}
+            @media (max-width: $sbp3_tablet) {padding: 50px;}
+            @media (max-width: $sbp4_mobile) {padding: 40px;}
+            .bannerText {
+                font-family: $fontFamilyHero;
+                text-align: center;
+                @media (max-width: $sbp1_desktop) {max-width: 80%;}
+                @media (max-width: $sbp2_laptop) {max-width: 100%;}
+                @media (max-width: $sbp4_mobile) {text-align: center;}
+                h1 {
+                    font-stretch: semi-condensed;
+                    font-size: 3.5em;
+                    line-height: 1.5em;
+                    @media (max-width: $sbp1_desktop) {font-size: 3em;}
+                    @media (max-width: $sbp2_laptop) {font-size: 2.7em;}
+                    @media (max-width: $sbp3_tablet) {font-size: 2.5em;}
+                    @media (max-width: $sbp4_mobile) {font-size: 2.2em;}
+                    margin: 0;
+                }
+                p {
+                    font-stretch: semi-condensed;
+                    font-size: 2em;
+                    @media (max-width: $sbp1_desktop) {font-size: 1.5em;}
+                    @media (max-width: $sbp2_laptop) {font-size: 1.4em;}
+                    @media (max-width: $sbp3_tablet) {font-size: 1.2em;}
+                    @media (max-width: $sbp4_mobile) {font-size: 1em;}
+                    margin: 0;
+                }
+            }
+        }
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include bannerHeight;
+        background-image: linear-gradient(to left, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8));
+        color: $colorWhite;
+        z-index: 1;
+        .makeContact {
+            a {
+                text-decoration: none;
+                display: block;
+                text-align: center;
+                line-height: 50px;
+                height: 50px;
+                border-radius: 25px;
+                font-weight: normal;
+                background-color: $colorWTM;
+                color: $colorWhite;
+                width: 400px;
+                margin: 0 auto;
+                @media (max-width: $sbp4_mobile) {width: 300px;}
+                &:hover {
+                    background-color: $colorWTMdark;
+                }
+            }
+        }
+    }
+    .bannerImage {
+        // > div {
+        //     display: block;
+        //     width: 100%;
+        //     @include bannerHeight;
+        //     position: absolute;
+        //     top: 0;
+        //     background-color: $colorBlack;
+            img {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                @include bannerHeight;
+                object-fit: cover;
+            }
+        // }
+    }
+}

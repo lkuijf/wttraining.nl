@@ -1,0 +1,83 @@
+.pricing3Column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    article {
+        flex: 0 1 400px;
+        @media (max-width: $sbp4_mobile) {
+            flex: 0 1 95%;
+        }
+        background-color: #EFEFEF;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        @include borderRadius;
+        .packHeader {
+            @include borderRadius;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background-color: $colorWTM;
+            padding: 10px;
+            color: #FFF;
+            h3 {
+                font-size: 1.8em;
+            }
+        }
+        .packInfo {
+            color: $colorBlack;
+            padding: 20px 40px;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+
+            div:first-child {
+                p {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+            }
+            div:last-child {
+                a {
+                    font-size: 1em;
+                    padding: 10px 20px;
+                    background-color: $colorWTM;
+                    color: #FFF;
+                    text-decoration: none;
+                    @include borderRadius;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    border-bottom: 2px solid $colorGreyLight;
+                    line-height: 3em;
+                    &:before {
+                        font-family: 'wt_media_events';
+                        font-size: 1.3em;
+                        content: '\e803\00a0\00a0';
+                    }
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            .packHeader {
+                background-color: $colorGrey;
+            }
+            .packInfo {
+                color: $colorBlackLight;
+            }
+            div:last-child {
+                a {
+                    background-color: $colorGrey;
+                }
+            }
+        }
+    }
+}
