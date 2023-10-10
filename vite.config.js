@@ -9,14 +9,6 @@ import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     build: {
-        // rollupOptions: {
-        //     output: {
-        //         // Add the names of the functions or variables you want to keep
-        //         // separated by commas
-        //         keepAlive: ['initPartnerSwiper', 'initTeamMembersSwiper', 'initCasesSwiper']
-        //     }
-        // }
-
         // minify: 'esbuild',
         // minify: 'terser',
         // terserOptions: {
@@ -27,19 +19,6 @@ export default defineConfig({
         // esbuild: {
         //     minifyIdentifiers: false
         // },
-
-
-        // minify: 'terser',
-        // terserOptions: {
-        //     compress: {
-        //         keep_fnames: true,
-        //         pure_funcs: ['initPartnerSwiper']
-        //     },
-        //     mangle: {
-        //         // toplevel: true,
-        //         keep_fnames: true
-        //     }
-        // }
     },
     plugins: [
         laravel({
