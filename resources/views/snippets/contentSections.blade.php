@@ -31,8 +31,8 @@
             ])
         @section('before_closing_body_tag')
         @parent
-            <script src="{{ asset('js/video.min.js') }}"></script>
-            <script>
+            <script type="module" src="{{ asset('js/video.min.js') }}"></script>
+            <script type="module">
                 const player = videojs('my-video');
                 // player.fluid(true);
                 // player.fill(true);
@@ -118,7 +118,7 @@
                 ])
             @section('before_closing_body_tag')
             @parent
-            <script>initTeamMembersSwiper(".{{ $tmSwClass.$i }}", ".{{ $tmSwPrevClass.$i }}", ".{{ $tmSwNextClass.$i }}");</script>
+            <script type="module">initTeamMembersSwiper(".{{ $tmSwClass.$i }}", ".{{ $tmSwPrevClass.$i }}", ".{{ $tmSwNextClass.$i }}");</script>
             @endsection
         @endif
         @if($section->_type == 'team_specialists')
@@ -142,7 +142,7 @@
                 ])
             @section('before_closing_body_tag')
             @parent
-            <script>initCasesSwiper(".{{ $cSwClass.$i }}", ".{{ $cSwPrevClass.$i }}", ".{{ $cSwNextClass.$i }}");</script>
+            <script type="module">initCasesSwiper(".{{ $cSwClass.$i }}", ".{{ $cSwPrevClass.$i }}", ".{{ $cSwNextClass.$i }}");</script>
             @endsection
         @endif
         @if($section->_type == 'partner_items')
@@ -157,7 +157,7 @@
                 ])
             @section('before_closing_body_tag')
             @parent
-            <script>initPartnerSwiper(".{{ $pSwClass.$i }}", ".{{ $pSwPaginationClass.$i }}");</script>
+            <script type="module">initPartnerSwiper(".{{ $pSwClass.$i }}", ".{{ $pSwPaginationClass.$i }}");</script>
             @endsection
         @endif
         @if($section->_type == 'service_page_text_header')
@@ -237,7 +237,7 @@
                 ])
             @section('before_closing_body_tag')
             @parent
-            <script>initTrainingsSwiper(".{{ $tSwClass.$i }}", ".{{ $tSwPrevClass.$i }}", ".{{ $tSwNextClass.$i }}");</script>
+            <script type="module">initTrainingsSwiper(".{{ $tSwClass.$i }}", ".{{ $tSwPrevClass.$i }}", ".{{ $tSwNextClass.$i }}");</script>
             @endsection
         @endif
         @if($section->_type == 'approach_tiles')

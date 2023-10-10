@@ -11,48 +11,48 @@
         // const events = document.querySelectorAll('.eventCases a');
         const marketingTermBoxes = document.querySelectorAll('.mTermBox');
         // const toggleEventsBtn = document.querySelector('.toggleEvents a');
-        const initialWebDevCase = document.querySelector('.webDevGallery a');
-        const allHiddenWebDevCases = document.querySelectorAll('.hiddenWebDevCases a');
-        const webDevPrevBtn = document.querySelector('.wdnPref');
-        const webDevNextBtn = document.querySelector('.wdnNext');
-        const webDevTitle = document.querySelector('.wdnTitle');
+        // const initialWebDevCase = document.querySelector('.webDevGallery a');
+        // const allHiddenWebDevCases = document.querySelectorAll('.hiddenWebDevCases a');
+        // const webDevPrevBtn = document.querySelector('.wdnPref');
+        // const webDevNextBtn = document.querySelector('.wdnNext');
+        // const webDevTitle = document.querySelector('.wdnTitle');
         
-        if(webDevPrevBtn && webDevNextBtn) {
-            let curIndex = -1; // -1 is the initial shown item
-            let initHref = initialWebDevCase.href;
-            let initImage = initialWebDevCase.querySelector('img').src;
-            let initTitle = initialWebDevCase.querySelector('img').dataset.title;
+        // if(webDevPrevBtn && webDevNextBtn) {
+        //     let curIndex = -1; // -1 is the initial shown item
+        //     let initHref = initialWebDevCase.href;
+        //     let initImage = initialWebDevCase.querySelector('img').src;
+        //     let initTitle = initialWebDevCase.querySelector('img').dataset.title;
 
-            webDevNextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                curIndex++;
-                if(allHiddenWebDevCases[curIndex]) {
-                    setNewImageValues(allHiddenWebDevCases[curIndex]);
-                } else {
-                    curIndex--;
-                }
-            });
-            webDevPrevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                curIndex--;
-                if(curIndex == -1) {
-                    initialWebDevCase.href = initHref;
-                    initialWebDevCase.querySelector('img').src = initImage;
-                    webDevTitle.innerHTML = initTitle;
-                } else if(allHiddenWebDevCases[curIndex]) {
-                    setNewImageValues(allHiddenWebDevCases[curIndex]);
-                } else {
-                    curIndex++;
-                }
-            });
-        }
-        function setNewImageValues(sourceElement) {
-            let hdnImage = sourceElement.querySelector('img');
-            let img = initialWebDevCase.querySelector('img');
-            initialWebDevCase.href = sourceElement.href
-            img.src = hdnImage.src;
-            webDevTitle.innerHTML = hdnImage.dataset.title;
-        }
+        //     webDevNextBtn.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         curIndex++;
+        //         if(allHiddenWebDevCases[curIndex]) {
+        //             setNewImageValues(allHiddenWebDevCases[curIndex]);
+        //         } else {
+        //             curIndex--;
+        //         }
+        //     });
+        //     webDevPrevBtn.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         curIndex--;
+        //         if(curIndex == -1) {
+        //             initialWebDevCase.href = initHref;
+        //             initialWebDevCase.querySelector('img').src = initImage;
+        //             webDevTitle.innerHTML = initTitle;
+        //         } else if(allHiddenWebDevCases[curIndex]) {
+        //             setNewImageValues(allHiddenWebDevCases[curIndex]);
+        //         } else {
+        //             curIndex++;
+        //         }
+        //     });
+        // }
+        // function setNewImageValues(sourceElement) {
+        //     let hdnImage = sourceElement.querySelector('img');
+        //     let img = initialWebDevCase.querySelector('img');
+        //     initialWebDevCase.href = sourceElement.href
+        //     img.src = hdnImage.src;
+        //     webDevTitle.innerHTML = hdnImage.dataset.title;
+        // }
         
 
 

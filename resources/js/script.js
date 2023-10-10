@@ -193,6 +193,7 @@ setTimeout(() => { // using setTimeout for elements that are directly in viewpor
 /*************************************************/
 
 function initPartnerSwiper(swiperClass, paginationClass) {
+// const initPartnerSwiper = () => {
     var swiperPartner = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 0,
@@ -217,6 +218,7 @@ function initPartnerSwiper(swiperClass, paginationClass) {
         }
     });
 }
+window.initPartnerSwiper = initPartnerSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag
 
 function initTeamMembersSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperTeam = new Swiper(swiperClass, {
@@ -260,6 +262,7 @@ function initTeamMembersSwiper(swiperClass, btnPrevClass, btnNextClass) {
             }
     });
 }
+window.initTeamMembersSwiper = initTeamMembersSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag
 
 function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperCases = new Swiper(swiperClass, {
@@ -303,6 +306,7 @@ function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
             }
     });
 }
+window.initCasesSwiper = initCasesSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag
 function initTrainingsSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperTrainings = new Swiper(swiperClass, {
         slidesPerView: 2,
@@ -313,6 +317,7 @@ function initTrainingsSwiper(swiperClass, btnPrevClass, btnNextClass) {
         breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
     });
 }
+window.initTrainingsSwiper = initTrainingsSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag
 
 function setArticlesClickable() {
     if(articles.length) {

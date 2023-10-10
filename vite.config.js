@@ -1,6 +1,12 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
+// import Swiper from 'swiper';
+// import { Navigation, Pagination } from 'swiper/modules';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+
 export default defineConfig({
     build: {
         // rollupOptions: {
@@ -11,10 +17,16 @@ export default defineConfig({
         //     }
         // }
 
-        minify: 'esbuild',
-        esbuild: {
-            minifyIdentifiers: false
-        },
+        // minify: 'esbuild',
+        // minify: 'terser',
+        // terserOptions: {
+        //     compress: false,
+        //     mangle: false,
+        // }
+        // minify: false,
+        // esbuild: {
+        //     minifyIdentifiers: false
+        // },
 
 
         // minify: 'terser',
@@ -37,7 +49,8 @@ export default defineConfig({
                 'resources/css/swiper-bundle.min.css',
                 'resources/css/video-js.css',
                 // 'resources/js/app.js',
-                'resources/js/swiper-bundle.min.js',
+                // 'resources/js/swiper-bundle.min.js',
+                // 'resources/js/swiper.js',
                 'resources/js/script.js',
             ],
             buildDirectory: 'bundle',

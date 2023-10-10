@@ -17,14 +17,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@200&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    {{-- <script src="{{ asset('js/swiper.js') }}"></script> --}}
     <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/video-js.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    {{-- @vite(['resources/scss/styles.scss', 'resources/css/swiper-bundle.min.css', 'resources/css/video-js.css', 'resources/js/swiper-bundle.min.js']) --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/video-js.css') }}"> --}}
+    {{-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> --}}
+    @vite(['resources/scss/styles.scss', 'resources/css/swiper-bundle.min.css', 'resources/css/video-js.css'])
     <meta name="_token" content="{{ csrf_token() }}">
     @yield('extra_head')
-    
 </head>
 <body>
     @yield('after_body_tag')
@@ -102,10 +102,10 @@
     </footer>
 
     <a href="" id="toTop"></a>
-    <script src="{{ asset('js/script.js') }}"></script>
-    {{-- @vite(['resources/js/script.js']) --}}
+    {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
+    @vite(['resources/js/script.js'])
     @if($errors->any())
-    <script>
+    <script type="module">
         const errors = document.querySelectorAll('.error');
         errors.forEach((el) => {
             const err = document.createElement('span');

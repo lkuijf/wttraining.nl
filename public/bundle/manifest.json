@@ -30,14 +30,9 @@
     "src": "resources/fontello/font/wt_media_events.woff2"
   },
   "resources/js/script.js": {
-    "file": "assets/script-fe4bfda6.js",
+    "file": "assets/script-194c3874.js",
     "isEntry": true,
     "src": "resources/js/script.js"
-  },
-  "resources/js/swiper-bundle.min.js": {
-    "file": "assets/swiper-bundle.min-5e32116f.js",
-    "isEntry": true,
-    "src": "resources/js/swiper-bundle.min.js"
   },
   "resources/scss/styles.scss": {
     "file": "assets/styles-53cf7654.css",
