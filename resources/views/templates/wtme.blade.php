@@ -60,7 +60,7 @@
 
     <header class="headerOuter">
         <div class="headerInnerWrap">
-            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Training"></a></div>
+            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Training" width="120" height="120"></a></div>
             <nav class="mainNav">
                 <input type="checkbox" id="burger-check">
                 <label for="burger-check" class="burger-label">
