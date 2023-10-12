@@ -21,9 +21,10 @@
             justify-content: space-around;
             img {
                 height: 120px;
-                transition: height 0.3s ease;
+                transition: height 0.3s ease, width 0.3s ease;
                 &.afterScroll {
                     height: 100px;
+                    width: 100px;
                 }
             }
         }
