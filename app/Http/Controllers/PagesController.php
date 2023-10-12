@@ -219,8 +219,8 @@ class PagesController extends Controller
         // $instaCode = $instagramFeedPageData->content->rendered;
 
         $data= [
-            'head_title' => $post[0]->page_title,
-            'meta_description' => $post[0]->page_meta_description,
+            'head_title' => ($post[0]->page_title?$post[0]->page_title:$post[0]->title->rendered),
+            'meta_description' => ($post[0]->page_meta_description?$post[0]->page_meta_description:$post[0]->card_text),
             'html_menu' => $htmlMenu->html,
             'website_options' => $options,
             // 'cart_total' => $cartTotalItems,
