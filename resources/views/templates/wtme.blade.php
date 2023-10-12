@@ -83,7 +83,7 @@
         {{-- <div class="inner"> --}}
             <div class="ftr">
                 <div class="footerContact">
-                    <img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Media & Events">
+                    <img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Media & Events" width="100" height="100">
                     <a href="mailto:support@wtmedia-events.nl">CONTACT</a>
                 </div>
                 <nav>
