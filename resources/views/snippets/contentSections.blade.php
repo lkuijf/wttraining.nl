@@ -31,9 +31,9 @@
             ])
         @section('before_closing_body_tag')
         @parent
-            <script type="module" src="{{ asset('js/video.min.js') }}"></script>
+            {{-- <script type="module" src="{{ asset('js/video.min.js') }}"></script> --}}
             <script type="module">
-                const player = videojs('my-video');
+                // const player = videojs('my-video');
                 // player.fluid(true);
                 // player.fill(true);
                 // player.aspectRatio('24:9');

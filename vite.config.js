@@ -25,9 +25,9 @@ export default defineConfig({
             input: [
                 // 'resources/css/app.css',
                 'resources/scss/styles.scss',
-                'resources/css/swiper-bundle.min.css',
-                'resources/css/video-js.css',
-                // 'resources/js/app.js',
+                // 'resources/css/swiper-bundle.min.css',
+                // 'resources/css/video-js.css',
+                'resources/js/app.js',
                 // 'resources/js/swiper-bundle.min.js',
                 // 'resources/js/swiper.js',
                 'resources/js/script.js',

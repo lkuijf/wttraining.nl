@@ -1,14 +1,4 @@
 {
-  "resources/css/swiper-bundle.min.css": {
-    "file": "assets/swiper-bundle.min-34aed2f1.css",
-    "isEntry": true,
-    "src": "resources/css/swiper-bundle.min.css"
-  },
-  "resources/css/video-js.css": {
-    "file": "assets/video-js-308ed619.css",
-    "isEntry": true,
-    "src": "resources/css/video-js.css"
-  },
   "resources/fontello/font/wt_media_events.eot": {
     "file": "assets/wt_media_events-b916b7b0.eot",
     "src": "resources/fontello/font/wt_media_events.eot"
@@ -28,6 +18,18 @@
   "resources/fontello/font/wt_media_events.woff2": {
     "file": "assets/wt_media_events-49689011.woff2",
     "src": "resources/fontello/font/wt_media_events.woff2"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-29b64786.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-29b64786.css"
+    ],
+    "file": "assets/app-2885cda3.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
   },
   "resources/js/script.js": {
     "file": "assets/script-194c3874.js",
