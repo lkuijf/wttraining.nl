@@ -383,11 +383,11 @@ add_action('carbon_fields_register_fields', function() use ( $carbonFieldsArgs )
 // 28-8-2023. Leon Kuijf. Removed api-endpoint caching. Using Laravel Response Cache instead.
 /*
 add_action('carbon_fields_theme_options_container_saved', 'deleteWebsiteOptionsRestCache');
-
-add_action('add_attachment', 'deleteSimpleMediaRestCache');
-add_action('delete_attachment', 'deleteSimpleMediaRestCache');
-add_action('attachment_updated', 'deleteSimpleMediaRestCache');
-
+*/
+// add_action('add_attachment', 'clearLaravelResponseCache');
+// add_action('delete_attachment', 'clearLaravelResponseCache');
+add_action('attachment_updated', 'clearLaravelResponseCache');
+/*
 add_action('create_term', 'deleteSimpleTaxonomiesRestCache');
 add_action('edit_term', 'deleteSimpleTaxonomiesRestCache');
 add_action('delete_term', 'deleteSimpleTaxonomiesRestCache');
