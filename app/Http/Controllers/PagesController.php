@@ -38,8 +38,14 @@ class PagesController extends Controller
         if($request->query('trashed')) return redirect('_mcfu638b-cms/wp-admin/index.php');
         
         $simplePages = new SimplePagesApi();
+        $simplePagesSidebar = new SimplePagesApi();
+
         $htmlMenu = new Menu($simplePages->get());
-        $htmlMenu->generateUlMenu();
+        $htmlMenu->generateUlMenu(721, '/diensten'); // diensten menu
+        
+        $htmlMenuSidebar = new Menu($simplePagesSidebar->get());
+        $htmlMenuSidebar->generateUlMenu(); // sidebar manu
+        
         $this->allPagesPerParent = $simplePages->pagesPerParent;
         $allSlugsNested = $simplePages->getAllSlugs();
 // dd($allSlugsNested);
@@ -101,10 +107,33 @@ class PagesController extends Controller
         // $instagramFeedPageData = $instagramFeedPage->get();
         // $instaCode = $instagramFeedPageData->content->rendered;
 
+        $teamMembers = [];
+        $blogArts = [];
+
+        if($section == 'ons-team') {
+            $teamPosts = new SimpleCustomPostsApi('teammember');
+            $teamPosts->get();
+            $teamMembers = $teamPosts->getItems();
+            foreach($teamMembers as &$member) {
+                $member->image = $this->getMediaGallery($member->image);
+            }
+        }
+
+        if($section == 'blog') {
+            $blogItems = new SimpleCustomPostsApi('blog');
+            $blogItems->get();
+            $blogArts = $blogItems->getItems();
+            foreach($blogArts as &$blog) {
+                $blog->gallery = $this->getMediaGallery($blog->gallery);
+            }
+        }
+
+
         $data= [
             'head_title' => $content->pageTitle,
             'meta_description' => $content->pageMetaDescription,
             'html_menu' => $htmlMenu->html,
+            'sidebar_menu' => $htmlMenuSidebar->html,
             'website_options' => $options,
             // 'cart_total' => $cartTotalItems,
             // 'user_logged_in' => $loggedInUserId,
@@ -114,6 +143,9 @@ class PagesController extends Controller
             // 'vessel' => $vessel,
             // 'newsItem' => $newsItem,
             // 'instagram_widget_code' => $instaCode,
+
+            'blog_items' => $blogArts,
+            'team_members' => $teamMembers,
         ];
         if($vessel) {
             $data['head_title'] = $vessel->title->rendered . ' - ' . config('app_wt.metaTitle');
@@ -153,8 +185,16 @@ class PagesController extends Controller
     }
     public function showBlog() {
         $simplePages = new SimplePagesApi();
+
+        $simplePages = new SimplePagesApi();
+        $simplePagesSidebar = new SimplePagesApi();
+
         $htmlMenu = new Menu($simplePages->get());
-        $htmlMenu->generateUlMenu();
+        $htmlMenu->generateUlMenu(721, '/diensten'); // diensten menu
+        
+        $htmlMenuSidebar = new Menu($simplePagesSidebar->get());
+        $htmlMenuSidebar->generateUlMenu(); // sidebar manu
+        
         $options = $this->getWebsiteOptions();
         $simpleMedia = new SimpleMediaApi();
         $simpleMedia->get();
@@ -175,10 +215,19 @@ class PagesController extends Controller
         // $instagramFeedPageData = $instagramFeedPage->get();
         // $instaCode = $instagramFeedPageData->content->rendered;
 // dd($content->contentSections);
+
+        $teamPosts = new SimpleCustomPostsApi('teammember');
+        $teamPosts->get();
+        $teamMembers = $teamPosts->getItems();
+        foreach($teamMembers as &$member) {
+            $member->image = $this->getMediaGallery($member->image);
+        }
+
         $data= [
             'head_title' => $content->pageTitle,
             'meta_description' => $content->pageMetaDescription,
             'html_menu' => $htmlMenu->html,
+            'sidebar_menu' => $htmlMenuSidebar->html,
             'website_options' => $options,
             // 'cart_total' => $cartTotalItems,
             // 'user_logged_in' => $loggedInUserId,
@@ -195,14 +244,23 @@ class PagesController extends Controller
             // 'vessel' => $vessel,
             // 'newsItem' => $newsItem,
             // 'instagram_widget_code' => $instaCode,
+            'team_members' => $teamMembers,
         ];
 
         return view('blog-overview-page')->with('data', $data);
     }
     public function showPost($slug) {
         $simplePages = new SimplePagesApi();
+
+        $simplePages = new SimplePagesApi();
+        $simplePagesSidebar = new SimplePagesApi();
+
         $htmlMenu = new Menu($simplePages->get());
-        $htmlMenu->generateUlMenu();
+        $htmlMenu->generateUlMenu(721, '/diensten'); // diensten menu
+        
+        $htmlMenuSidebar = new Menu($simplePagesSidebar->get());
+        $htmlMenuSidebar->generateUlMenu(); // sidebar manu
+
         $options = $this->getWebsiteOptions();
         $simpleMedia = new SimpleMediaApi();
         $simpleMedia->get();
@@ -222,6 +280,7 @@ class PagesController extends Controller
             'head_title' => ($post[0]->page_title?$post[0]->page_title:$post[0]->title->rendered),
             'meta_description' => ($post[0]->page_meta_description?$post[0]->page_meta_description:$post[0]->card_text),
             'html_menu' => $htmlMenu->html,
+            'sidebar_menu' => $htmlMenuSidebar->html,
             'website_options' => $options,
             // 'cart_total' => $cartTotalItems,
             // 'user_logged_in' => $loggedInUserId,

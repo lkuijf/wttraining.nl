@@ -10,21 +10,25 @@
         &.afterScroll {
             height: $headerHeightAfterScroll;
         }
-        padding: 0 40px;
+        padding: 0 80px 0 40px;
         background-color: $colorWhite;
         display: flex;
         justify-content: space-between;
-        gap: 40px;
+        gap: 10px;
+        @media (max-width: $sbp1_desktop) {
+            justify-content: flex-start;
+            gap: 30px;
+        }
         .mainLogoWrap {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             img {
-                height: 120px;
+                height: 80px;
                 transition: height 0.3s ease, width 0.3s ease;
                 &.afterScroll {
-                    height: 100px;
-                    width: 100px;
+                    height: 70px;
+                    width: 70px;
                 }
             }
         }
@@ -33,55 +37,74 @@
             #burger-check, .burger-label {
                 display: none;
             }
-            @media (max-width: $sbp3_tablet) {
+            // @media (max-width: $sbp3_tablet) {
                 @include burgerMenuAdapter;
                 #burger-check ~ ul {
-                    background-color: #EFEFEF;
-                    padding: 60px 0 20px 0;
+                    // background-color: #EFEFEF;
+                    background-color: #FFF;
+                    padding: 90px 0 20px 0;
                     z-index: 1;
                     text-align: center;
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 0;
                     top: 0;
                     li {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        
+                        margin: 0;
                         a {
                             @include mainNavButton;
                         }
                         ul {
-                            padding-top: 10px;
-                            li {
-                                padding: 10px 0;
-                                a {
-                                    font-size: 1em;
-                                }
-                            }
+                            margin: 0;
+                            // padding-top: 10px;
+                            // li {
+                            //     padding: 10px 0;
+                            //     a {
+                            //         font-size: 1em;
+                            //     }
+                            // }
                         }
                     }
                 }
                 #burger-check:checked ~ ul {
-                    width: 80%;
+                    // width: 80%;
+                    width: 200px;
+                    border-left: 2px solid black;
+                    border-bottom: 2px solid black;
                 }
                 .burger-label {
                     z-index: 2;
-                    &.afterScroll {
-                        top: 41px;
-                    }
+                    // &.afterScroll {
+                        // top: 41px;
+                        top: 35px;
+                        transition: top 0.3s ease;
+                        &.afterScroll {
+                            top: 32px;
+                        }
+                    // }
                 }
-            }
-            @media (min-width: ($sbp3_tablet + 1)) {
+            // }
+            // @media (min-width: ($sbp3_tablet + 1)) {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 ul {
                     display: flex;
-                    gap: 40px;
+                    gap: 30px;
                     @media (max-width: $sbp1_desktop) {gap: 15px;}
+                    @media (max-width: $sbp1_desktop) {
+                        flex-direction: column;
+                        gap: 0;
+                    }
                     li {
                         position: relative;
                         a {
                             @include mainNavButton;
                             @media (max-width: $sbp1_desktop) {font-size: 1.1em;}
+                            white-space: nowrap;
                         }
                         ul {
                             display: none;
@@ -99,14 +122,14 @@
                                 }
                             }
                         }
-                        &:hover {
-                            ul {
-                                display: block;
-                            }
-                        }
+                        // &:hover {
+                        //     ul {
+                        //         display: block;
+                        //     }
+                        // }
                     }
                 }
-            }
+            // }
         }
     }
 }

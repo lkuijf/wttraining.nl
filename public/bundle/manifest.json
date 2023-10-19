@@ -37,7 +37,7 @@
     "src": "resources/js/script.js"
   },
   "resources/scss/styles.scss": {
-    "file": "assets/styles-5eae748b.css",
+    "file": "assets/styles-723a70ce.css",
     "isEntry": true,
     "src": "resources/scss/styles.scss"
   },
@@ -45,8 +45,8 @@
     "file": "assets/arrow-ad6c1cbe.png",
     "src": "resources/statics/arrow.png"
   },
-  "resources/statics/wtt-back-pattern4.jpg": {
-    "file": "assets/wtt-back-pattern4-ea17c569.jpg",
-    "src": "resources/statics/wtt-back-pattern4.jpg"
+  "resources/statics/wtt-back-pattern6.jpg": {
+    "file": "assets/wtt-back-pattern6-23057cba.jpg",
+    "src": "resources/statics/wtt-back-pattern6.jpg"
   }
 }

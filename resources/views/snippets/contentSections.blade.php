@@ -128,6 +128,9 @@
             @include('sections.blog_items', ['blog_items' => $section->blog_associations])
             @include('sections.button', ['url' => url('blog'), 'title' => 'Bekijk alle items'])
         @endif
+        @if($section->_type == 'allblogitems' && $section->show_blogitems)
+        @include('sections.all_blog_items')
+        @endif
         @if($section->_type == 'case_items')
             @php
                 $cSwClass = 'casesSwiper_';

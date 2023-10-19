@@ -8,8 +8,8 @@ $sbp_marketingTerms2: 1420px; // ScreenBreakpoint for Marketing Terms
 // $contentWidth: 100%; // max contentwidht .inner
 $contentWidth: 1920px; // max contentwidht .inner
 // $contentWidthFooter: 1600px;
-$headerHeight: 200px;
-$headerHeightAfterScroll: 120px;
+$headerHeight: 100px;
+$headerHeightAfterScroll: 90px;
 
 $colorBlack: #222; // text
 $colorBlackLight: #555;
@@ -64,7 +64,7 @@ html {
     color: $colorBlack;
     background-color: $colorWhite;
     scroll-behavior: smooth;
-    background-image: url('../statics/wtt-back-pattern4.jpg');
+    background-image: url('../statics/wtt-back-pattern6.jpg');
     background-repeat: repeat;
     background-size: 100%;
     @media (max-width: $sbp1_desktop) {background-size: 200%;}

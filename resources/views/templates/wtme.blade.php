@@ -60,7 +60,7 @@
 
     <header class="headerOuter">
         <div class="headerInnerWrap">
-            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Training" width="120" height="120"></a></div>
+            <div class="mainLogoWrap"><a href="{{ url()->route('home') }}"><img src="{{ asset('statics/wtt-logo.png') }}" alt="WT Training" width="80" height="80"></a></div>
             <nav class="mainNav">
                 <input type="checkbox" id="burger-check">
                 <label for="burger-check" class="burger-label">
@@ -68,16 +68,22 @@
                     <span></span>
                     <span></span>
                 </label>
+                {!! $data['sidebar_menu'] !!}
+            </nav>
+            <nav class="mainNav">
                 {!! $data['html_menu'] !!}
             </nav>
+            
         </div>
     </header>
+    {{-- {!! $data['html_menu'] !!} --}}
 
     <div class="contentWrapper">
         @yield('content')
-        @yield('subscriptionForm');
+        @yield('subscriptionForm')
         {{-- @include('snippets.subscription-form') --}}
     </div>
+
     
     <footer>
         {{-- <div class="inner"> --}}
