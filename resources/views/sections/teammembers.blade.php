@@ -7,9 +7,11 @@
                     @if($data['team_members'] && count($data['team_members']))
                     @foreach ($data['team_members'] as $member)
                     <div class="swiper-slide">
-                        <img src="{!! $member->image[0]['sizes']['medium_large'] !!}" alt="{{ $member->image[0]['alt'] }}" loading="lazy">
-                        <p>{{ $member->title }}</p>
-                        <p>{{ $member->function }}</p>
+                        <article>
+                            <img src="{!! $member->image[0]['sizes']['medium_large'] !!}" alt="{{ $member->image[0]['alt'] }}" loading="lazy">
+                            <p>{{ $member->title }}</p>
+                            <p>{{ $member->function }}</p>
+                        </article>
                     </div>
                     @endforeach
                     @endif

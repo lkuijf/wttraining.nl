@@ -269,6 +269,8 @@ function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
         slidesPerView: 2,
         spaceBetween: 0,
         speed: 1000,
+        // centeredSlides: true,
+        // centeredSlidesBounds: true,
         // loop: true, // not compatible with slidesPerView
         // pagination: {
         //     el: '.swiper-pagination-team',
@@ -289,16 +291,16 @@ function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
         },
         breakpoints: {
             0: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               640: {
-                slidesPerView: 2,
+                slidesPerView: 1,
               },
               1120: {
-                slidesPerView: 3,
+                slidesPerView: 2,
               },
                 1460: {
-                slidesPerView: 4,
+                slidesPerView: 3,
               },
               1760: {
                 slidesPerView: 4,
@@ -314,7 +316,7 @@ function initTrainingsSwiper(swiperClass, btnPrevClass, btnNextClass) {
         speed: 1000,
         navigation: {prevEl: btnPrevClass,nextEl: btnNextClass,},
         autoplay: {delay: 2500,disableOnInteraction: false,},
-        breakpoints: {0: {slidesPerView: 2,},640: {slidesPerView: 2,},1120: {slidesPerView: 3,},1460: {slidesPerView: 3,},1760: {slidesPerView: 3,},}
+        breakpoints: {0: {slidesPerView: 1,},640: {slidesPerView: 1,},1120: {slidesPerView: 2,},1460: {slidesPerView: 3,},1760: {slidesPerView: 4,},}
     });
 }
 window.initTrainingsSwiper = initTrainingsSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag
