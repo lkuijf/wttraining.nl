@@ -20,14 +20,14 @@
     "src": "resources/fontello/font/wt_media_events.woff2"
   },
   "resources/js/app.css": {
-    "file": "assets/app-604355f0.css",
+    "file": "assets/app-29b64786.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-604355f0.css"
+      "assets/app-29b64786.css"
     ],
-    "file": "assets/app-36797578.js",
+    "file": "assets/app-2885cda3.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -37,7 +37,7 @@
     "src": "resources/js/script.js"
   },
   "resources/scss/styles.scss": {
-    "file": "assets/styles-723a70ce.css",
+    "file": "assets/styles-23b1a007.css",
     "isEntry": true,
     "src": "resources/scss/styles.scss"
   },

@@ -21,7 +21,8 @@
                 padding-right: 10px;
             }
             article {
-                background-color: $colorGreyLight;
+                background-color: $colorWhite;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
                 @include borderRadius;
                 > p {
                     text-align: center;

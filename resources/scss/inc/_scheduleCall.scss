@@ -7,6 +7,8 @@
         background-color: $colorWTM;
         @include borderRadius;
         padding: 80px;
+        @media (max-width: $sbp3_tablet) {padding: 60px;}
+        @media (max-width: $sbp4_mobile) {padding: 40px;}
         .formRow {
             display: flex;
             align-items: center;
@@ -16,8 +18,8 @@
                 flex: 1 1 100%;
             }
             img {
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 object-fit: contain;
             }
         }

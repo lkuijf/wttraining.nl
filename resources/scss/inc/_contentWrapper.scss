@@ -1,8 +1,9 @@
 .contentWrapper {
     .standardPage {
         padding-top: $headerHeight;
-        > div:not(.hero) {
-            margin-bottom: 40px;
+        // > div:not(.hero) {
+        > div:not(.bloghero) {
+            margin-bottom: 60px;
         }
     }
     h1,h3 {

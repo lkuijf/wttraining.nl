@@ -4,7 +4,7 @@
         font-size: 3em;
     }
     > div {
-        background-color: $colorGreyLighter;
+        background-color: $colorWhite;
         @include borderRadius;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
         padding: 40px;

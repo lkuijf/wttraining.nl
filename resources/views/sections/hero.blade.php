@@ -8,7 +8,7 @@
     @endif
 </div>
 @endif
-<div class="hero">
+<div class="hero @if (isset($isBlogHero) && $isBlogHero){{ 'bloghero' }}@endif">
     @if (!isset($isBlogHero) || !$isBlogHero)
     <div class="heroOverlay @if(isset($bCenterText) && $bCenterText){{ 'centerText' }}@endif">
         <div>

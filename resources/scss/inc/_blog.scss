@@ -27,7 +27,7 @@
             position: absolute;
             width: 100%;
             top: calc(100% - 70px);
-            background-color: $colorGreyLight;
+            background-color: $colorWhite;
             border-top: 3px solid $colorWTM;
             min-height: 100%;
             transition: top .3s ease-out;
@@ -55,7 +55,7 @@
                 width: 120px;
                 bottom: 45px;
                 right: 15px;
-                background-color: $colorGreyLight;
+                background-color: $colorWhite;
             }
             > h2 {
                 color: $colorBlack;

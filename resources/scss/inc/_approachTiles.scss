@@ -3,8 +3,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         @media (max-width: $sbp2_laptop) {grid-template-columns: repeat(2, 1fr);}
-        @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(1, 1fr);padding-left:40px;padding-right:40px;}
-        @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(1, 1fr);}
+        @media (max-width: $sbp3_tablet) {grid-template-columns: repeat(1, 1fr);padding-left:120px;padding-right:120px;}
+        @media (max-width: $sbp4_mobile) {grid-template-columns: repeat(1, 1fr);padding-left:80px;padding-right:80px;}
         // grid-row-gap: 150px;
         grid-row-gap: 8vw;
         > article {
@@ -40,7 +40,7 @@
                         height: 100%;
                         -webkit-backface-visibility: hidden;
                         backface-visibility: hidden;
-                        background-color: $colorGreyLighter;
+                        background-color: $colorWhite;
                         color: $colorBlack;
                         text-align: center;
                         @include borderRadius;
@@ -91,7 +91,7 @@
             margin-bottom: 40px;
             @include borderRadius;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-            background-color: $colorGreyLighter;
+            background-color: $colorWhite;
             .flipFront {
                 display: flex;
                 @media (max-width: $sbp4_mobile) {flex-direction: column;}
