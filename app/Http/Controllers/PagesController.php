@@ -304,8 +304,16 @@ class PagesController extends Controller
     }
     public function showCase($slug) {
         $simplePages = new SimplePagesApi();
+
+        $simplePages = new SimplePagesApi();
+        $simplePagesSidebar = new SimplePagesApi();
+
         $htmlMenu = new Menu($simplePages->get());
-        $htmlMenu->generateUlMenu();
+        $htmlMenu->generateUlMenu(721, '/diensten'); // diensten menu
+        
+        $htmlMenuSidebar = new Menu($simplePagesSidebar->get());
+        $htmlMenuSidebar->generateUlMenu(); // sidebar manu
+
         $options = $this->getWebsiteOptions();
         $simpleMedia = new SimpleMediaApi();
         $simpleMedia->get();
@@ -325,6 +333,7 @@ class PagesController extends Controller
             'head_title' => $post[0]->page_title,
             'meta_description' => $post[0]->page_meta_description,
             'html_menu' => $htmlMenu->html,
+            'sidebar_menu' => $htmlMenuSidebar->html,
             'website_options' => $options,
             'text' => $post[0]->text,
             'hero_title' => $post[0]->title->rendered,
