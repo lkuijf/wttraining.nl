@@ -110,7 +110,7 @@ class PagesController extends Controller
         $teamMembers = [];
         $blogArts = [];
 
-        if($section == 'ons-team') {
+        if($section == 'ons-team' && $page == false) {
             $teamPosts = new SimpleCustomPostsApi('teammember');
             $teamPosts->get();
             $teamMembers = $teamPosts->getItems();
@@ -119,7 +119,7 @@ class PagesController extends Controller
             }
         }
 
-        if($section == 'blog') {
+        if($section == 'blog' && $page == false) {
             $blogItems = new SimpleCustomPostsApi('blog');
             $blogItems->get();
             $blogArts = $blogItems->getItems();
@@ -129,6 +129,7 @@ class PagesController extends Controller
         }
 
 
+// dd($blogArts);
         $data= [
             'head_title' => $content->pageTitle,
             'meta_description' => $content->pageMetaDescription,
