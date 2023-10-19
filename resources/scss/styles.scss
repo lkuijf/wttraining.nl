@@ -118,9 +118,11 @@ nav ul {
     @media (max-width: $sbp2_laptop) {gap: 60px;}
     @media (max-width: $sbp3_tablet) {gap: 30px;flex-direction: column;}
     @media (max-width: $sbp4_mobile) {gap: 20px;}
-    align-items: flex-start;
+    // align-items: flex-start;
+    align-items: stretch;
     > div {
-        flex: 1 1 50%;
+        flex: 0 0 50%;
+        // outline: 2px solid green;
         @media (max-width: $sbp3_tablet) {width: 100%} // forcing full width, for forms e.d.
         > :first-child {
             margin-top: 0;

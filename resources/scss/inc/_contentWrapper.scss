@@ -66,6 +66,9 @@
     }
     .fullw, .twoColumns {
         picture {
+            // outline: 1px solid red;
+            height: 100%;
+            position: relative;
             img {
                 width: 100%;
                 position: relative;
