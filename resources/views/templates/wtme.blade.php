@@ -22,7 +22,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('css/swiper-bundle.min.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/video-js.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/styles.css') }}"> --}}
-    @vite(['resources/scss/styles.scss', 'resources/js/app.js', 'resources/js/app.css'])
+    @vite(['resources/scss/styles.scss', 'resources/js/app.js', 'resources/js/app.css', 'resources/css/asyncGallery.css'])
     <meta name="_token" content="{{ csrf_token() }}">
     @yield('extra_head')
 </head>
@@ -109,7 +109,7 @@
 
     <a href="" id="toTop"></a>
     {{-- <script src="{{ asset('js/script.js') }}"></script> --}}
-    @vite(['resources/js/script.js'])
+    @vite(['resources/js/script.js', 'resources/js/asyncGallery.js'])
     @if($errors->any())
     <script type="module">
         const errors = document.querySelectorAll('.error');

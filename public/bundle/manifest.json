@@ -1,4 +1,9 @@
 {
+  "resources/css/asyncGallery.css": {
+    "file": "assets/asyncGallery-c5207088.css",
+    "isEntry": true,
+    "src": "resources/css/asyncGallery.css"
+  },
   "resources/fontello/font/wt_media_events.eot": {
     "file": "assets/wt_media_events-b916b7b0.eot",
     "src": "resources/fontello/font/wt_media_events.eot"
@@ -30,6 +35,11 @@
     "file": "assets/app-36797578.js",
     "isEntry": true,
     "src": "resources/js/app.js"
+  },
+  "resources/js/asyncGallery.js": {
+    "file": "assets/asyncGallery-e085417a.js",
+    "isEntry": true,
+    "src": "resources/js/asyncGallery.js"
   },
   "resources/js/script.js": {
     "file": "assets/script-5045912c.js",

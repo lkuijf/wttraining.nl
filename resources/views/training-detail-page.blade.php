@@ -73,7 +73,7 @@
     ])
 @endsection
 @section('extra_head')
-    <link rel="stylesheet" href="{{ asset('css/asyncGallery.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/asyncGallery.css') }}"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('css/lightbox.min.css') }}"> --}}
     <meta property="og:title" content="{{ $data['head_title'] }}" />
     <meta property="og:type" content="article" />
@@ -81,7 +81,7 @@
     @if (isset($data['gallery'][0]['sizes']))<meta property="og:image" content="{{ $data['gallery'][0]['sizes']['large'] }}" />@endif
 @endsection
 @section('before_closing_body_tag')
-    <script src="{{ asset('js/asyncGallery.js') }}"></script>
+    {{-- <script src="{{ asset('js/asyncGallery.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/fslightbox.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/lightbox.min.js') }}"></script> --}}
 @endsection
