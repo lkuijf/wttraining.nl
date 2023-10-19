@@ -844,6 +844,7 @@ function crbRegisterFields($args) {
             Field::make( 'text', 'hero_sub_title', __( 'Blog subtext below Hero' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator2', __( 'Blog text' ) ),
             Field::make( 'rich_text', 'text', __( 'Text' ))->set_visible_in_rest_api($visible = true),
+            Field::make( 'text', 'card_title', __( 'Card title' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'textarea', 'card_text', __( 'Card text (can use html-tags)' ))->set_visible_in_rest_api($visible = true),
             Field::make( 'separator', 'separator3', __( 'SEO information' ) ),
             Field::make( 'text', 'page_title', __( 'Blog title (shown in browser tab)' ))->set_visible_in_rest_api($visible = true),
