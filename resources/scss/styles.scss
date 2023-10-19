@@ -131,7 +131,7 @@ nav ul {
     &.colReverse {
         @media (max-width: $sbp3_tablet) {flex-direction: column-reverse;}
     }
-    img {
+    img:not(.noshadow) {
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     }
 }

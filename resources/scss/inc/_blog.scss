@@ -33,19 +33,19 @@
             transition: top .3s ease-out;
             padding: 18px 10px 7px 15px;
 
-            > :first-child {
+            // > :first-child {
+            //     margin-top: 0;
+            //     margin-bottom: 0;
+            //     margin-right: 15px;
+            //     float: left;
+            //     font-size: 1.2em;
+            //     line-height: 1.8em;
+            // }
+            > :nth-child(1) {
                 margin-top: 0;
                 margin-bottom: 0;
-                margin-right: 15px;
-                float: left;
-                font-size: 1.2em;
-                line-height: 1.8em;
             }
             > :nth-child(2) {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            > :nth-child(3) {
                 display: inline-block;
                 overflow: hidden;
             }

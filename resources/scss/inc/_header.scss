@@ -19,6 +19,10 @@
             justify-content: flex-start;
             gap: 30px;
         }
+        @media (max-width: $sbp4_mobile) {
+            justify-content: flex-start;
+            gap: 10px;
+        }
         .mainLogoWrap {
             display: flex;
             flex-direction: column;
