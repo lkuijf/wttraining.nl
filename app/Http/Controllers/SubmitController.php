@@ -150,7 +150,7 @@ class SubmitController extends Controller
 
         if(!count($res->errors)) {
             $res->success = $websiteOptions->form_subscription_success;
-            $to_email = 'leon@wtmedia-events.nl';
+            $to_email = 'support@wtmedia-events.nl';
             $subjectCompany = 'Ingevuld aanmeld-formulier vanaf wttraining.nl';
             $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
             $messages = $this->getHtmlEmails($request->all(), url('statics/email/logo.png'), 'De volgende gegevens zijn achtergelaten door de bezoeker.', 'Bedankt voor uw bericht. De volgende informatie hebben we ontvangen:');
@@ -200,7 +200,7 @@ class SubmitController extends Controller
 
         if(!count($res->errors)) {
             $res->success = $websiteOptions->form_schedulecall_success;
-            $to_email = 'leon@wtmedia-events.nl';
+            $to_email = 'support@wtmedia-events.nl';
             $subjectCompany = 'Ingevuld schedule-call-form vanaf wttraining.nl';
             $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
             $messages = $this->getHtmlEmails($request->all(), url('statics/email/logo.png'), 'De volgende gegevens zijn achtergelaten door de bezoeker.', 'Bedankt voor uw bericht. De volgende informatie hebben we ontvangen:');
