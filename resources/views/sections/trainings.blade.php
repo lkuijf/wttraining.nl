@@ -15,14 +15,14 @@
                                         <div class="flipFront">
 
                                             @if (isset($case->card_logo[0]) && isset($case->card_logo[0]['sizes']))
-                                                <img class="cardLogo" src="{{ $case->card_logo[0]['sizes']['medium'] }}" alt="{{ $case->card_logo[0]['alt'] }}" loading="lazy">
+                                                <img class="cardLogo" src="{{ $case->card_logo[0]['sizes']['medium'] }}" alt="{{ $case->card_logo[0]['alt'] }}">
                                             @endif
 
 
                                             @if (isset($case->gallery[0]) && isset($case->gallery[0]['sizes']))
-                                                <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
+                                                <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}">
                                             @else
-                                                <img src="{{ $case->gallery[0]['url'] }}" alt="{{ $case->gallery[0]['alt'] }}" loading="lazy">
+                                                <img src="{{ $case->gallery[0]['url'] }}" alt="{{ $case->gallery[0]['alt'] }}">
                                             @endif
                                         </div>
                                         <div class="flipBack">

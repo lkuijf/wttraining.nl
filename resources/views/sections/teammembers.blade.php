@@ -8,7 +8,7 @@
                     @foreach ($data['team_members'] as $member)
                     <div class="swiper-slide">
                         <article>
-                            <img src="{!! $member->image[0]['sizes']['medium_large'] !!}" alt="{{ $member->image[0]['alt'] }}" loading="lazy">
+                            <img src="{!! $member->image[0]['sizes']['medium_large'] !!}" alt="{{ $member->image[0]['alt'] }}">
                             <p>{{ $member->title }}</p>
                             <p>{{ $member->function }}</p>
                         </article>

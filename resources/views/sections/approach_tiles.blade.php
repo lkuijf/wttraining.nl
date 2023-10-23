@@ -8,9 +8,9 @@
                     <div class="flipFront">
                         {{-- <a href="{{ url('diensten/' . $case->categories[0]->slug . '/' . $case->slug) }}"> --}}
                             @if (isset($approach->image[0]) && isset($approach->image[0]['sizes']))
-                                <img src="{{ $approach->image[0]['sizes']['medium_large'] }}" alt="{{ $approach->image[0]['alt'] }}" loading="lazy">
+                                <img src="{{ $approach->image[0]['sizes']['medium_large'] }}" alt="{{ $approach->image[0]['alt'] }}">
                             @else
-                                <img src="{{ $approach->image[0]['url'] }}" alt="{{ $approach->image[0]['alt'] }}" loading="lazy">
+                                <img src="{{ $approach->image[0]['url'] }}" alt="{{ $approach->image[0]['alt'] }}">
                             @endif
                         {{-- </a> --}}
                         <h3>{{ $approach->approach_title }}</h3>

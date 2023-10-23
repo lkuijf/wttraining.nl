@@ -12,7 +12,7 @@
                         
                     
                     <div class="swiper-slide">
-                        {{-- <img src="{!! $image['sizes']['medium'] !!}" alt="{{ $image['alt'] }}" loading="lazy"> --}}
+                        {{-- <img src="{!! $image['sizes']['medium'] !!}" alt="{{ $image['alt'] }}"> --}}
                         @if (isset($partner->image[0]) && isset($partner->image[0]['sizes']) && $partner->image[0]['sizes'])
                         <img src="{{ $partner->image[0]['sizes']['medium_large'] }}" alt="{{ $partner->image[0]['alt'] }}">
                         @else
