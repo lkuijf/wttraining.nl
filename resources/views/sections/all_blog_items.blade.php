@@ -8,7 +8,7 @@
             @endif
             <div>
                 {{-- <p class="date">{{ date('d.m', strtotime($blogItem->date)) }}<span>&nbsp;</span></p> --}}
-                {{-- <h2>{{ $blogItem->card_title }}</h2> --}}
+                <h2>{{ $blogItem->card_title }}</h2>
                 <p>{!! $blogItem->card_text !!}</p>
                 <p><a href="{{ url('blog/' . $blogItem->slug) }}">Lees verder ></a></p>
             </div>
