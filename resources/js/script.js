@@ -469,6 +469,10 @@ if(callForm) {
                 } else { //no errors!
                     // sfInputEmail.style.backgroundColor = initBackColor;
                     // sfInputEmail.value = '';
+                    callForm.querySelector('input[name=email]').value = '';
+                    callForm.querySelector('input[name=name]').value = '';
+                    callForm.querySelector('input[name=phone]').value = '';
+                    callForm.querySelector('input[name=company]').value = '';
                     let succList = xhrSuccessAlert.querySelector('div:last-child');
                     succList.innerHTML = '';
                     let para = document.createElement('p');
