@@ -14,6 +14,10 @@
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
 
                 width: 320px;
+                @media (max-width: $sbp2_laptop) {width: 200px;}
+                @media (max-width: $sbp3_tablet) {width: 170px;}
+                @media (max-width: $sbp4_mobile) {width: 150px;}
+                    // @media (max-width: $sbp4_mobile) {width: 280px;}
                 margin-left: auto;
                 margin-right: auto;
 

@@ -208,6 +208,7 @@ function initPartnerSwiper(swiperClass, paginationClass) {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         breakpoints: {
             768: {
@@ -243,14 +244,15 @@ function initTeamMembersSwiper(swiperClass, btnPrevClass, btnNextClass) {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
+            // 0: {
+            //     slidesPerView: 1,
+            //   },
+            //   640: {
+            //     slidesPerView: 1,
+            //   },
               1120: {
                 slidesPerView: 2,
               },
@@ -289,14 +291,15 @@ function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-              },
-              640: {
-                slidesPerView: 1,
-              },
+            // 0: {
+            //     slidesPerView: 1,
+            //   },
+            //   640: {
+            //     slidesPerView: 1,
+            //   },
               1120: {
                 slidesPerView: 2,
               },
@@ -316,8 +319,10 @@ function initTrainingsSwiper(swiperClass, btnPrevClass, btnNextClass) {
         spaceBetween: 0,
         speed: 1000,
         navigation: {prevEl: btnPrevClass,nextEl: btnNextClass,},
-        autoplay: {delay: 2500,disableOnInteraction: false,},
-        breakpoints: {0: {slidesPerView: 1,},640: {slidesPerView: 1,},1120: {slidesPerView: 2,},1460: {slidesPerView: 3,},1760: {slidesPerView: 4,},}
+        autoplay: {delay: 2500,disableOnInteraction: false,pauseOnMouseEnter: true,},
+        breakpoints: {
+            // 0: {slidesPerView: 1,},640: {slidesPerView: 1,},
+            1120: {slidesPerView: 2,},1460: {slidesPerView: 3,},1760: {slidesPerView: 4,},}
     });
 }
 window.initTrainingsSwiper = initTrainingsSwiper; // Prevents removal from tree-shaking. Vite workaround. When function is called from a blade template, within <script> -tag

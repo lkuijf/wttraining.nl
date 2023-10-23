@@ -25,6 +25,8 @@ $fontFamily: 'Inter', sans-serif;
 $fontFamilyButton: 'Karla', sans-serif;
 $fontFamilyHero: 'Oswald', sans-serif;
 $fontSize: 18px;
+$fontSizeMobile: 14px;
+$lineHeightMobile: 20px;
 
 @import 'inc/mixins';
 
@@ -69,7 +71,7 @@ html {
     background-size: 100%;
     @media (max-width: $sbp1_desktop) {background-size: 200%;}
     @media (max-width: $sbp2_laptop) {background-size: 250%;}
-    @media (max-width: $sbp3_tablet) {background-size: 300%;}
+    @media (max-width: $sbp3_tablet) {background-size: 300%;font-size: $fontSizeMobile; line-height: $lineHeightMobile;}
     @media (max-width: $sbp4_mobile) {background-size: 400%;}
 
     // background-attachment: fixed;
@@ -118,8 +120,8 @@ nav ul {
     @media (max-width: $sbp_marketingTerms2) {gap: 80px;}
     @media (max-width: $sbp1_desktop) {gap: 60px;}
     @media (max-width: $sbp2_laptop) {gap: 40px;}
-    @media (max-width: $sbp3_tablet) {gap: 30px;flex-direction: column;}
-    @media (max-width: $sbp4_mobile) {gap: 20px;}
+    @media (max-width: $sbp3_tablet) {gap: 40px;flex-direction: column;}
+    @media (max-width: $sbp4_mobile) {gap: 40px;}
     // align-items: flex-start;
     align-items: stretch;
     > div {

@@ -8,7 +8,6 @@
     }
     h1,h3 {
         font-weight: normal;
-        font-size: 2.5em;
         hr {
             display: inline-block;
             width: 70px;
@@ -17,12 +16,19 @@
         em {
             color: $colorWTM;
             font-style: normal;
-            // font-weight: bold;
-            // text-shadow: -1px 0 $colorGrey, 0 1px $colorGrey, 1px 0 $colorGrey, 0 -1px $colorGrey;
         }
     }
-    h3 {
+    h1 {
+        font-size: 2.2em;
+        @media (max-width: $sbp3_tablet) {font-size: 1.7em;}
+    }
+    h2 {
         font-size: 2em;
+        @media (max-width: $sbp3_tablet) {font-size: 1.5em;}
+    }
+    h3 {
+        font-size: 1.8em;
+        @media (max-width: $sbp3_tablet) {font-size: 1.3em;}
     }
     .servicePageHeaderWrap {
         h1.servicePageHeader {
