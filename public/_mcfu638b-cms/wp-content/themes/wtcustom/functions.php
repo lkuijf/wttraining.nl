@@ -438,6 +438,29 @@ function crbRegisterFields($args) {
         ->add_tab( __('Page content'), array(
             Field::make( 'complex', 'crb_sections', 'Sections' )->set_visible_in_rest_api($visible = true)
                 ->set_layout( 'tabbed-vertical' )
+                ->add_fields( 'hero', 'Hero (big page header)', array(
+                    Field::make( 'separator', 'separator1', __( 'Hero (big header)' ) ),
+                    Field::make( 'media_gallery', 'crb_media_gallery', __( 'Media Gallery' ) )
+                        ->set_type( array( 'image' ) )->set_duplicates_allowed( false ),
+                    Field::make( 'checkbox', 'center_text', __( 'Center text' ) ),
+                    Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ) ),
+                    // Field::make( 'text', 'small_header', __( 'Small header text (can use html-tags)' ) ),
+                    Field::make( 'textarea', 'text', __( 'Text (can use html-tags)' ) ),
+                    Field::make( 'text', 'btn_email', __( 'E-mail address (leave blank to remove the button)' ) ),
+                    Field::make( 'text', 'btn_email_text', __( 'Text of the e-mail button' ) ),
+                    Field::make( 'text', 'btn_phone', __( 'Phone number (leave blank to remove the button)' ) ),
+                    // Field::make( 'checkbox', 'show_logo', __('Show Glomar Offshore logo') ),
+
+                    // Field::make( 'image', 'image', 'Afbeelding' )->set_value_type( 'url' ),
+                    // Field::make( 'select', 'color', __( 'Choose block letters color' ) )
+                    // ->set_options( array(
+                        // 'white' => __( 'White' ),
+                        // 'black' => __( 'Black' ),
+                    // ) ),
+                    // Field::make( 'checkbox', 'show_reserve_button', __( 'Show reserve button' ) ),
+                    // Field::make( 'image', 'image', 'Afbeelding' ),
+                    // Field::make( 'rich_text', 'text', 'Tekst' ),
+                ) )
                 ->add_fields( '1column', 'Content', array(
                     Field::make( 'complex', 'fullwidth', 'Content' )
                         ->add_fields('tekst', array(
@@ -471,7 +494,6 @@ function crbRegisterFields($args) {
                         //     ) )
                         // ) ),
                 ) )
-
                 ->add_fields( '2column', 'Content (2 kolommen)', array(
                     Field::make( 'select', 'column_direction', __( 'Column direction on mobile device' ) )
                     ->set_options( array(
@@ -535,28 +557,30 @@ function crbRegisterFields($args) {
                         //     ) )
                         // ) )
                 ) )
-                ->add_fields( 'hero', 'Hero (big header)', array(
-                    Field::make( 'separator', 'separator1', __( 'Hero (big header)' ) ),
-                    Field::make( 'media_gallery', 'crb_media_gallery', __( 'Media Gallery' ) )
-                        ->set_type( array( 'image' ) )->set_duplicates_allowed( false ),
-                    Field::make( 'checkbox', 'center_text', __( 'Center text' ) ),
-                    Field::make( 'text', 'hero_title', __( 'Hero title (can use html-tags)' ) ),
-                    // Field::make( 'text', 'small_header', __( 'Small header text (can use html-tags)' ) ),
-                    Field::make( 'textarea', 'text', __( 'Text (can use html-tags)' ) ),
-                    Field::make( 'text', 'btn_email', __( 'E-mail address (leave blank to remove the button)' ) ),
-                    Field::make( 'text', 'btn_email_text', __( 'Text of the e-mail button' ) ),
-                    Field::make( 'text', 'btn_phone', __( 'Phone number (leave blank to remove the button)' ) ),
-                    // Field::make( 'checkbox', 'show_logo', __('Show Glomar Offshore logo') ),
-
-                    // Field::make( 'image', 'image', 'Afbeelding' )->set_value_type( 'url' ),
-                    // Field::make( 'select', 'color', __( 'Choose block letters color' ) )
-                    // ->set_options( array(
-                        // 'white' => __( 'White' ),
-                        // 'black' => __( 'Black' ),
-                    // ) ),
-                    // Field::make( 'checkbox', 'show_reserve_button', __( 'Show reserve button' ) ),
-                    // Field::make( 'image', 'image', 'Afbeelding' ),
-                    // Field::make( 'rich_text', 'text', 'Tekst' ),
+                ->add_fields( 'service_page_text_header', 'Text header h1/h2', array(
+                    Field::make( 'separator', 'separator1', __( 'Text header (H1 / H2)' ) ),
+                    // Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
+                    Field::make( 'text', 'title', __( 'Header text' ) ),
+                    Field::make( 'select', 'header_style', __( 'Color of header' ) )
+                    ->set_options( array(
+                        'black' => __( 'Black' ),
+                        'yellow' => __( 'Yellow' ),
+                    ) ),
+                    Field::make( 'select', 'header_align', __( 'Alignment of header' ) )
+                    ->set_options( array(
+                        'center' => __( 'Center' ),
+                        'left' => __( 'Left' ),
+                    ) ),
+                    Field::make( 'select', 'header_type', __( 'type of header' ) )
+                    ->set_options( array(
+                        'h1' => __( 'H1' ),
+                        'h2' => __( 'H2' ),
+                    ) ),
+                    Field::make( 'select', 'header_margin', __( 'Space above header' ) )
+                    ->set_options( array(
+                        'default' => __( 'Default (some space above header text)' ),
+                        'direct' => __( 'Direct (no space above header text)' ),
+                    ) ),
                 ) )
                 ->add_fields( 'banner', 'Banner', array(
                     // Field::make( 'separator', 'separator1', __( 'Hero (big header)' ) ),
@@ -677,20 +701,20 @@ function crbRegisterFields($args) {
                     Field::make( 'separator', 'separator1', __( 'Team members' ) ),
                     Field::make( 'checkbox', 'show_teammembers', __( 'Show All team members' ) ),
                 ) )
-                ->add_fields( 'allblogitems', 'Blog items', array(
+                ->add_fields( 'allblogitems', 'Blog items (alles)', array(
                     Field::make( 'separator', 'separator1', __( 'Blog items' ) ),
                     Field::make( 'checkbox', 'show_blogitems', __( 'Show All blog items' ) ),
                 ) )
-                ->add_fields( 'team_specialists', 'Team specialists', array(
-                    Field::make( 'separator', 'separator1', __( 'Team specialists' ) ),
-                    Field::make( 'association', 'team_specialists_associations', __( 'Select team specialists' ))
-                    ->set_types( array(
-                        array(
-                            'type' => 'post',
-                            'post_type' => 'teammember',
-                        ),
-                    ) )
-                ) )
+                // ->add_fields( 'team_specialists', 'Team specialists', array(
+                //     Field::make( 'separator', 'separator1', __( 'Team specialists' ) ),
+                //     Field::make( 'association', 'team_specialists_associations', __( 'Select team specialists' ))
+                //     ->set_types( array(
+                //         array(
+                //             'type' => 'post',
+                //             'post_type' => 'teammember',
+                //         ),
+                //     ) )
+                // ) )
                 // ->add_fields( 'news_boxes', 'News', array(
                 //     Field::make( 'separator', 'separator1', __( 'News' ) ),
                 //     Field::make( 'association', 'news_associations', __( 'Select news (max 3)' ))
@@ -713,31 +737,6 @@ function crbRegisterFields($args) {
                 //     Field::make( 'separator', 'separator1', __( 'Reviews' ) ),
                 //     Field::make( 'checkbox', 'show_reviews', __( 'Show Reviews' ) ),
                 // ) )
-                ->add_fields( 'service_page_text_header', 'Text header h1/h2', array(
-                    Field::make( 'separator', 'separator1', __( 'Text header (H1 / H2)' ) ),
-                    // Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
-                    Field::make( 'text', 'title', __( 'Header text' ) ),
-                    Field::make( 'select', 'header_style', __( 'Color of header' ) )
-                    ->set_options( array(
-                        'black' => __( 'Black' ),
-                        'yellow' => __( 'Yellow' ),
-                    ) ),
-                    Field::make( 'select', 'header_align', __( 'Alignment of header' ) )
-                    ->set_options( array(
-                        'center' => __( 'Center' ),
-                        'left' => __( 'Left' ),
-                    ) ),
-                    Field::make( 'select', 'header_type', __( 'type of header' ) )
-                    ->set_options( array(
-                        'h1' => __( 'H1' ),
-                        'h2' => __( 'H2' ),
-                    ) ),
-                    Field::make( 'select', 'header_margin', __( 'Space above header' ) )
-                    ->set_options( array(
-                        'default' => __( 'Default (some space above header text)' ),
-                        'direct' => __( 'Direct (no space above header text)' ),
-                    ) ),
-                ) )
                 ->add_fields( 'marketing_terms', 'Implementation terms', array(
                     Field::make( 'separator', 'separator1', __( 'Implementation page terms' ) ),
                     // Field::make( 'checkbox', 'show_teammembers', __( 'Show Team members carousel' ) ),
