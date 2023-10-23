@@ -81,7 +81,7 @@
     <div class="contentWrapper">
         @yield('content')
         @yield('subscriptionForm')
-        {{-- @include('snippets.subscription-form') --}}
+        @include('snippets.subscription-form')
     </div>
 
     

@@ -381,6 +381,7 @@ function setFaqsToggle() {
 // }
 
 var errTimeout;
+var initBackColor = sfInputEmail.style.backgroundColor;
 if(subsribeForm) {
     subsribeForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -395,6 +396,7 @@ if(subsribeForm) {
             if (xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 if(response.errors.length) { // errors!
+                    sfInputEmail.style.backgroundColor = '#ffcccb';
                     let errList = xhrErrorAlert.querySelector('div:last-child');
                     errList.innerHTML = '';
                     response.errors.forEach(err => {
@@ -407,6 +409,7 @@ if(subsribeForm) {
                     if(typeof errTimeout !== 'undefined') clearTimeout(errTimeout);
                     errTimeout = setTimeout(function() {xhrErrorAlert.classList.add('hideXhrError')}, 6000);
                 } else { //no errors!
+                    sfInputEmail.style.backgroundColor = initBackColor;
                     sfInputEmail.value = '';
                     xhrSuccessAlert.classList.remove('hideXhrSuccess');
                     setTimeout(function() {xhrSuccessAlert.classList.add('hideXhrSuccess')}, 9000);
