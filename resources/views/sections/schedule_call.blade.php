@@ -5,7 +5,7 @@
             {{-- <div class="inner"> --}}
             <div class="columns">
                 <div>
-                    <form action="{{ route('submitScheduleCall') }}" method="POST">
+                    <form action="{{ route('submitScheduleCall') }}" method="POST" class="scheduleCallForm">
                         @method('POST')
                         @csrf
                         <input type="hidden" name="success_text" value="{{ $success_text }}">

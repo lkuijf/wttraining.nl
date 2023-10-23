@@ -54,7 +54,8 @@
     </div>
     <div class="alert alert-success hideXhrSuccess">
         <div><p class="thumbsUpIcon"></p></div>
-        <div><p>{{ $data['website_options']->form_subscription_success }}</p></div>
+        {{-- <div><p>{{ $data['website_options']->form_subscription_success }}</p></div> --}}
+        <div></div>
     </div>
 
 

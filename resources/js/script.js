@@ -8,9 +8,10 @@ const anchors = document.querySelectorAll('.anchorPoint');
 const buttons = document.querySelectorAll('.mainNav ul li a');
 const burgerMenuLabel = document.querySelector('.burger-label');
 const subsribeForm = document.querySelector('.subscriptionForm');
-const sfInputEmail = document.querySelector('input[name=Email]');
-const sfInputValkuil = document.querySelector('input[name=valkuil]');
-const sfInputValstrik = document.querySelector('input[name=valstrik]');
+const callForm = document.querySelector('.scheduleCallForm');
+// const sfInputEmail = document.querySelector('input[name=Email]');
+// const sfInputValkuil = document.querySelector('input[name=valkuil]');
+// const sfInputValstrik = document.querySelector('input[name=valstrik]');
 const csrfToken = document.querySelector('meta[name="_token"]').content;
 const xhrErrorAlert = document.querySelector('.hideXhrError');
 const xhrSuccessAlert = document.querySelector('.hideXhrSuccess');
@@ -381,8 +382,10 @@ function setFaqsToggle() {
 // }
 
 var errTimeout;
-var initBackColor = sfInputEmail.style.backgroundColor;
+
 if(subsribeForm) {
+    const sfInputEmail = subsribeForm.querySelector('input[name=Email]')
+    var initBackColor = sfInputEmail.style.backgroundColor;
     subsribeForm.addEventListener('submit', (e) => {
         e.preventDefault();
         xhrErrorAlert.classList.add('hideXhrError');
@@ -411,6 +414,12 @@ if(subsribeForm) {
                 } else { //no errors!
                     sfInputEmail.style.backgroundColor = initBackColor;
                     sfInputEmail.value = '';
+                    let succList = xhrSuccessAlert.querySelector('div:last-child');
+                    succList.innerHTML = '';
+                    let para = document.createElement('p');
+                    let textN = document.createTextNode(response.success);
+                    para.appendChild(textN);
+                    succList.appendChild(para);
                     xhrSuccessAlert.classList.remove('hideXhrSuccess');
                     setTimeout(function() {xhrSuccessAlert.classList.add('hideXhrSuccess')}, 9000);
                 }
@@ -423,8 +432,66 @@ if(subsribeForm) {
         };
         let formData = {
             Email: sfInputEmail.value,
-            valkuil: sfInputValkuil.value,
-            valstrik: sfInputValstrik.value,
+            valkuil: subsribeForm.querySelector('input[name=valkuil]').value,
+            valstrik: subsribeForm.querySelector('input[name=valstrik]').value,
+        };
+        xhr.send(JSON.stringify(formData));
+
+    });
+}
+if(callForm) {
+    // var initBackColor = sfInputEmail.style.backgroundColor;
+    callForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        xhrErrorAlert.classList.add('hideXhrError');
+        xhrSuccessAlert.classList.add('hideXhrSuccess');
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', '/submit-schedule-call-form');
+        xhr.setRequestHeader('X-CSRF-TOKEN', csrfToken);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                const response = JSON.parse(xhr.responseText);
+                if(response.errors.length) { // errors!
+                    // sfInputEmail.style.backgroundColor = '#ffcccb';
+                    let errList = xhrErrorAlert.querySelector('div:last-child');
+                    errList.innerHTML = '';
+                    response.errors.forEach(err => {
+                        let para = document.createElement('p');
+                        let textN = document.createTextNode(err);
+                        para.appendChild(textN);
+                        errList.appendChild(para);
+                    });
+                    xhrErrorAlert.classList.remove('hideXhrError');
+                    if(typeof errTimeout !== 'undefined') clearTimeout(errTimeout);
+                    errTimeout = setTimeout(function() {xhrErrorAlert.classList.add('hideXhrError')}, 6000);
+                } else { //no errors!
+                    // sfInputEmail.style.backgroundColor = initBackColor;
+                    // sfInputEmail.value = '';
+                    let succList = xhrSuccessAlert.querySelector('div:last-child');
+                    succList.innerHTML = '';
+                    let para = document.createElement('p');
+                    let textN = document.createTextNode(response.success);
+                    para.appendChild(textN);
+                    succList.appendChild(para);
+                    xhrSuccessAlert.classList.remove('hideXhrSuccess');
+                    setTimeout(function() {xhrSuccessAlert.classList.add('hideXhrSuccess')}, 9000);
+                }
+            } else {
+                console.error('Error:', xhr.statusText);
+            }
+        };
+        xhr.onerror = function() {
+            console.error('Error:', xhr.statusText);
+        };
+        let formData = {
+            email: callForm.querySelector('input[name=email]').value,
+            name: callForm.querySelector('input[name=name]').value,
+            phone: callForm.querySelector('input[name=phone]').value,
+            company: callForm.querySelector('input[name=company]').value,
+            valkuil: callForm.querySelector('input[name=valkuil]').value,
+            valstrik: callForm.querySelector('input[name=valstrik]').value,
         };
         xhr.send(JSON.stringify(formData));
 

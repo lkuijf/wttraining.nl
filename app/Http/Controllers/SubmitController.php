@@ -125,6 +125,10 @@ class SubmitController extends Controller
     public function submitSubscriptionFormXHR(Request $request) {
         $res = new \stdClass();
         $res->errors = [];
+        $res->success = '';
+
+        $allWebsiteOptions = new WebsiteOptionsApi();
+        $websiteOptions = $allWebsiteOptions->get();
 
         if($request->get('valkuil') || $request->get('valstrik')) {
             $res->errors[] = 'Spam gedetecteerd';
@@ -145,6 +149,7 @@ class SubmitController extends Controller
         }
 
         if(!count($res->errors)) {
+            $res->success = $websiteOptions->form_subscription_success;
             $to_email = 'leon@wtmedia-events.nl';
             $subjectCompany = 'Ingevuld aanmeld-formulier vanaf wttraining.nl';
             $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
@@ -152,7 +157,7 @@ class SubmitController extends Controller
             $headers = array(
                 "MIME-Version: 1.0",
                 "Content-Type: text/html; charset=ISO-8859-1",
-                "From: WT Media & Events <aanmeld-formulier@wttraining.nl>",
+                "From: WT Training <aanmeld-formulier@wttraining.nl>",
                 "Reply-To: support@wttraining.nl",
                 // "X-Priority: 1",
             );
@@ -163,6 +168,58 @@ class SubmitController extends Controller
 
         echo json_encode($res);
     }
+    public function submitScheduleCallFormXHR(Request $request) {
+        $res = new \stdClass();
+        $res->errors = [];
+        $res->success = '';
+
+        $allWebsiteOptions = new WebsiteOptionsApi();
+        $websiteOptions = $allWebsiteOptions->get();
+
+        if($request->get('valkuil') || $request->get('valstrik')) {
+            $res->errors[] = 'Spam gedetecteerd';
+        }
+        $toValidate = array(
+            'email' => 'required|email',
+            'name' => 'required',
+            'phone' => 'required',
+        );
+        $validationMessages = array(
+            'email.required'=> 'Vul een e-mail adres in',
+            'email.email'=> 'Het e-mail adres is niet juist geformuleerd',
+            'name.required'=> 'Vul een naam in',
+            'phone.required'=> 'Vul een telefoonnummer in',
+        );
+        $validator = Validator::make($request->all(), $toValidate, $validationMessages);
+        if($validator->fails()) {
+            $errors = $validator->errors();
+            foreach($errors->all() as $message) {
+                $res->errors[] = $message;
+            }
+        }
+
+        if(!count($res->errors)) {
+            $res->success = $websiteOptions->form_schedulecall_success;
+            $to_email = 'leon@wtmedia-events.nl';
+            $subjectCompany = 'Ingevuld schedule-call-form vanaf wttraining.nl';
+            $subjectVisitor = 'Kopie van uw bericht aan wttraining.nl';
+            $messages = $this->getHtmlEmails($request->all(), url('statics/email/logo.png'), 'De volgende gegevens zijn achtergelaten door de bezoeker.', 'Bedankt voor uw bericht. De volgende informatie hebben we ontvangen:');
+            $headers = array(
+                "MIME-Version: 1.0",
+                "Content-Type: text/html; charset=ISO-8859-1",
+                "From: WT Training <aanmeld-formulier@wttraining.nl>",
+                "Reply-To: support@wttraining.nl",
+                // "X-Priority: 1",
+            );
+            $headers = implode("\r\n", $headers);
+            mail($to_email, $subjectCompany, $messages[0], $headers);
+            mail($request->get('email'), $subjectVisitor, $messages[1], $headers);
+        }
+
+        echo json_encode($res);
+    }
+
+
 
     public function submitScheduleCallForm(Request $request) {
 
