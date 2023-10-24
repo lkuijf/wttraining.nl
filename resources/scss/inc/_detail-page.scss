@@ -21,7 +21,7 @@
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
             flex: 0 0 500px;
             @media (max-width: $sbp1_desktop) {flex-basis:400px;}
-            @media (max-width: $sbp2_laptop) {flex-basis:300px;}
+            @media (max-width: $sbp2_laptop) {flex-basis:350px;}
             // @media (max-width: $sbp3_tablet) {flex-basis:200px;}
             // @media (max-width: $sbp4_mobile) {flex-basis:100px;}
             padding: 30px;
@@ -30,9 +30,11 @@
                 align-items: center;
                 gap: 30px;
                 margin-bottom: 20px;
+                @media (max-width: $sbp3_tablet) {margin-bottom: 10px;}
                 > div {
                     &:first-child {
                         flex: 0 0 60px;
+                        @media (max-width: $sbp3_tablet) {flex: 0 0 30px;}
                     }
                     :first-child {
                         // margin-top: 20px;
