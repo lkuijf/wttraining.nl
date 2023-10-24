@@ -1,5 +1,6 @@
 @if (isset($isBlogHero) && $isBlogHero)
 <div class="inner heroTextBlog">
+    <p><a href="/blog" class="toBlogBtn">Naar blog overzicht</a></p>
     @if (isset($title) && $title)
         <h1>{!! $title !!}</h1>
     @endif

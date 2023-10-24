@@ -105,3 +105,9 @@
         margin-right: auto;
     }
 }
+.toBlogBtn {
+    @include submitButton;
+    font-size: 1em !important;
+    color: $colorWhite !important;
+    padding: 10px 25px !important;
+}
