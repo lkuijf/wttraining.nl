@@ -20,11 +20,12 @@
             background-color: $colorWhite;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
             flex: 0 0 500px;
-            @media (max-width: $sbp1_desktop) {flex-basis:400px;}
-            @media (max-width: $sbp2_laptop) {flex-basis:350px;}
             // @media (max-width: $sbp3_tablet) {flex-basis:200px;}
             // @media (max-width: $sbp4_mobile) {flex-basis:100px;}
             padding: 30px;
+            @media (max-width: $sbp1_desktop) {flex-basis:400px;}
+            @media (max-width: $sbp2_laptop) {flex-basis:350px;}
+            @media (max-width: $sbp3_tablet) {padding: 15px;}
             > div {
                 display: flex;
                 align-items: center;
