@@ -23,7 +23,7 @@ class Menu {
             $pageUrl = $url . '/' . $page->slug;
 // dd($pageUrl);
             // if(substr_count($pageUrl, '/') == 2) continue;
-            $this->html .= '<li itemprop="name">';
+            $this->html .= '<li itemprop="name" data-link-name="' . $page->title . '">';
             $href = $pageUrl;
             if(isset($page->alt_url) && $page->alt_url) $href = $page->alt_url; // mironmarine.nl
             $active = false;
