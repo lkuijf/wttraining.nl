@@ -47,7 +47,7 @@ class Menu {
                 // }
 
             // }
-
+//test
             $this->html .= $page->title;
             $this->html .= '</a>';
             if(isset($this->allPagesFlattenedPerParent[$page->id])) $this->generateUlMenu($page->id, $pageUrl);
