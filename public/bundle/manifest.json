@@ -42,12 +42,12 @@
     "src": "resources/js/asyncGallery.js"
   },
   "resources/js/script.js": {
-    "file": "assets/script-d9ecf9cc.js",
+    "file": "assets/script-37ba5b02.js",
     "isEntry": true,
     "src": "resources/js/script.js"
   },
   "resources/scss/styles.scss": {
-    "file": "assets/styles-a37dae96.css",
+    "file": "assets/styles-417b2c74.css",
     "isEntry": true,
     "src": "resources/scss/styles.scss"
   },
