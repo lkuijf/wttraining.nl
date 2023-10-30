@@ -2,9 +2,9 @@
     @media (max-width: $sbp3_tablet) {padding-left:40px;padding-right:40px;}
     @media (max-width: $sbp4_mobile) {padding-left:20px;padding-right:20px;}
     padding-top: 40px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    // max-width: 1000px;
+    // margin-left: auto;
+    // margin-right: auto;
     img {
         max-width: 100%;
         height: auto;
@@ -37,12 +37,12 @@
                         flex: 0 0 60px;
                         @media (max-width: $sbp3_tablet) {flex: 0 0 30px;}
                     }
-                    :first-child {
+                    // :first-child {
                         // margin-top: 20px;
-                    }
-                    color: $colorWTM;
-                    font-weight: bold;
-                    font-size: 1.2em;
+                    // }
+                    color: $colorBlack;
+                    // font-weight: bold;
+                    // font-size: 1.2em;
                 }
             }
         }

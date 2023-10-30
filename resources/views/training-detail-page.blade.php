@@ -51,7 +51,9 @@
                         @endif
                     @endforeach
                 </div>
+                <p><a href="/diensten/trainingen" class="toBlogBtn">Naar trainings overzicht</a></p>
             </article>
+            
             @if ($data['faqs'] && count($data['faqs']))
             <div class="faqs">
                 <h2>FAQ</h2>

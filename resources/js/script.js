@@ -198,7 +198,7 @@ function initPartnerSwiper(swiperClass, paginationClass) {
     var swiperPartner = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 0,
-        speed: 1000,
+        speed: randomIntFromInterval(900, 1900),
         // loop: true, // not compatible with slidesPerView
         pagination: {
             el: paginationClass,
@@ -226,7 +226,7 @@ function initTeamMembersSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperTeam = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 0,
-        speed: 1000,
+        speed: randomIntFromInterval(900, 1900),
         // loop: true, // not compatible with slidesPerView
         // pagination: {
         //     el: '.swiper-pagination-team',
@@ -271,7 +271,7 @@ function initCasesSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperCases = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 0,
-        speed: 1000,
+        speed: randomIntFromInterval(900, 1900),
         // centeredSlides: true,
         // centeredSlidesBounds: true,
         // loop: true, // not compatible with slidesPerView
@@ -317,7 +317,7 @@ function initTrainingsSwiper(swiperClass, btnPrevClass, btnNextClass) {
     var swiperTrainings = new Swiper(swiperClass, {
         slidesPerView: 2,
         spaceBetween: 0,
-        speed: 1000,
+        speed: randomIntFromInterval(900, 1900),
         navigation: {prevEl: btnPrevClass,nextEl: btnNextClass,},
         autoplay: {delay: 2500,disableOnInteraction: false,pauseOnMouseEnter: true,},
         breakpoints: {
@@ -505,4 +505,7 @@ if(callForm) {
         xhr.send(JSON.stringify(formData));
 
     });
+}
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }

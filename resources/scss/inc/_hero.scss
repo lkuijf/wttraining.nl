@@ -70,10 +70,10 @@
         .makeContact {
             display: flex;
             gap: 20px;
-            @media (max-width: $sbp4_mobile) {
-                flex-direction: column;
-                align-items: center;
-            }
+            // @media (max-width: $sbp4_mobile) {
+            //     flex-direction: column;
+            //     align-items: center;
+            // }
             a {
                 text-decoration: none;
                 display: block;
@@ -121,6 +121,9 @@
             .makeContact {
                 margin-left: auto;
                 margin-right: auto;
+            }
+            .heroText {
+                max-width: none;
             }
         }
     }

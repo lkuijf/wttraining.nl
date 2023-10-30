@@ -34,7 +34,7 @@ class Menu {
             //     $this->html .= '<a itemprop="url" href="' . $href . '"' . ($active?' class="active"':'') . '>';
             // } else {
 
-                if($page->title == 'Home') $href = '/';
+                if($page->title == 'Home') $href = route('home');
                 $this->html .= '<a itemprop="url" href="' . $href . '">';
 
                 // if($page->title == 'Blog' && $aRequestPath[0] == 'blog') {

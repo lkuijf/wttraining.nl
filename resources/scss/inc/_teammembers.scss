@@ -15,7 +15,7 @@
                 aspect-ratio: 1/1;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
                 @media (max-width: $sbp4_mobile) {
-                    width: 90%;
+                    // width: 90%;
                     aspect-ratio: 1/1;
                 }
                 object-fit: cover;
@@ -26,6 +26,10 @@
                 &:first-of-type {
                     font-weight: bold;
                     padding-top: 15px;
+                }
+                @media (max-width: $sbp4_mobile) {
+                    font-size: 0.8em;
+                    line-height: 1.5em;
                 }
             }
         }

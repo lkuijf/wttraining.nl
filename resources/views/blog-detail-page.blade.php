@@ -21,6 +21,7 @@
         <div class="inner">
             <article class="detailArticle">
                 {!! $data['blog_text'] !!}
+                <p><a href="/blog" class="toBlogBtn">Naar blog overzicht</a></p>
             </article>
         </div>
     </div>

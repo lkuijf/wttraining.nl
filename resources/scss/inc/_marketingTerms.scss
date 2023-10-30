@@ -23,8 +23,9 @@
             height: 525px;
         }
         @media (max-width: $sbp4_mobile) {
-            grid-template-columns: repeat(2, 175px);
-            height: 700px;
+            grid-template-columns: repeat(2, 110px);
+            height: 330px;
+            width: 210px;
         }
         .mTermCell {
             position: relative;
@@ -54,6 +55,12 @@
                     gap: 20px;
                     left: -75px;
                 }
+                @media (max-width: $sbp4_mobile) {
+                    width: 100px;
+                    height: 100px;
+                    gap: 10px;
+                    left: -100px;
+                }
                 h3 {
                     font-size: 1.5em;
                     @media (max-width: $sbp_marketingTerms1) {font-size: 1.2em;}
@@ -80,12 +87,18 @@
                             height: 80px;
                             margin: 35px;
                         }
+                        @media (max-width: $sbp4_mobile) {
+                            width: 50px;
+                            height: 50px;
+                            margin: 25px;
+                        }
                     }
                     &:last-child {
                         div {
                             width: 330px;
                             @media (max-width: $sbp_marketingTerms1) {width: 250px;}
                             @media (max-width: $sbp_marketingTerms2) {width: 160px;}
+                            @media (max-width: $sbp4_mobile) {width: 100px;}
                         }
                     }
                 }
@@ -102,7 +115,8 @@
                         left: -75px;
                     }
                     @media (max-width: $sbp4_mobile) {
-                        width: 325px;
+                        width: 100px !important;
+                        left: -100px;
                     }
                 }
             }
@@ -129,7 +143,8 @@
                             height: 325px;
                         }
                         @media (max-width: $sbp4_mobile) {
-                            height: 325px;
+                            width: 100px;
+                            height: 210px;
                         }
                     }
                     > div {
@@ -138,6 +153,7 @@
                                 width: 210px;
                                 @media (max-width: $sbp_marketingTerms1) {width: 170px;}
                                 @media (max-width: $sbp_marketingTerms2) {width: 130px;}
+                                @media (max-width: $sbp4_mobile) {width: 80px;}
                             }
                         }
                     }
@@ -154,13 +170,14 @@
                             height: 325px;
                         }
                         @media (max-width: $sbp4_mobile) {
-                            height: 325px;
+                            height: 210px;
                         }
                     }
                     > div {
                         &:last-child {
                             div {
                                 @media (max-width: $sbp2_laptop) {width: 130px;padding-top: 20px;}
+                                @media (max-width: $sbp4_mobile) {width: 80px;padding-top: 0;}
                             }
                         }
                     }
@@ -181,7 +198,7 @@
                             height: 325px;
                         }
                         @media (max-width: $sbp4_mobile) {
-                            height: 325px;
+                            height: 210px;
                         }
                     }
                     > div {
@@ -190,6 +207,7 @@
                                 width: 210px;
                                 @media (max-width: $sbp_marketingTerms1) {width: 170px;}
                                 @media (max-width: $sbp_marketingTerms2) {width: 130px;}
+                                @media (max-width: $sbp4_mobile) {width: 80px;}
                             }
                         }
                     }
@@ -208,15 +226,25 @@
                             z-index: 9;
                         }
                         @media (max-width: $sbp4_mobile) {
-                            height: 325px;
-                            top: -175px;
+                            height: 210px;
+                            top: -110px;
                         }
                     }
                     > div {
                         &:last-child {
                             div {
                                 @media (max-width: $sbp2_laptop) {width: 130px;padding-top: 20px;}
+                                @media (max-width: $sbp4_mobile) {width: 80px;padding-top:0;}
                             }
+                        }
+                    }
+                }
+            }
+            &:nth-child(5) {
+                .mTermBox {
+                    &:hover {
+                        @media (max-width: $sbp4_mobile) {
+                            width: 210px !important;
                         }
                     }
                 }
@@ -240,8 +268,8 @@
                             top: -175px;
                         }
                         @media (max-width: $sbp4_mobile) {
-                            height: 325px;
-                            top: -175px;
+                            height: 210px;
+                            top: -110px;
                         }
                     }
                     > div {
@@ -250,6 +278,7 @@
                                 width: 210px;
                                 @media (max-width: $sbp_marketingTerms1) {width: 170px;}
                                 @media (max-width: $sbp_marketingTerms2) {width: 130px;}
+                                @media (max-width: $sbp4_mobile) {width: 80px;padding-top:0;}
                             }
                         }
                     }
