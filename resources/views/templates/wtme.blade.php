@@ -80,12 +80,12 @@
     {{-- {!! $data['html_menu'] !!} --}}
 
     <div class="contentWrapper">
-        <p>&nbsp</p>
+        {{-- <p>&nbsp</p>
         <p>&nbsp</p>
         <p>&nbsp</p>
         <p class="p_none">p_none</p>
         <p class="p_coarse">p_coarse</p>
-        <p class="p_fine">p_fine</p>
+        <p class="p_fine">p_fine</p> --}}
         @yield('content')
         @yield('subscriptionForm')
         @include('snippets.subscription-form')
