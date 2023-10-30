@@ -91,6 +91,22 @@ nav ul {
     list-style-type: none;
 }
 
+@media (pointer: none) {
+    .p_none {
+        color: red;
+    }
+}
+@media (pointer: coarse) {
+    .p_coarse {
+        color: red;
+    }
+}
+@media (pointer: fine) {
+    .p_fine {
+        color: red;
+    }
+}
+
 @font-face {
     font-family: 'wt_media_events';
     src: url('../fontello/font/wt_media_events.eot');
