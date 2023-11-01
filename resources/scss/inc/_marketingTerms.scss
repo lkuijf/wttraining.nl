@@ -26,6 +26,7 @@
             grid-template-columns: repeat(2, 110px);
             height: 330px;
             width: 210px;
+            display: none; // to few space on mobile, do not display it... jammer dan.
         }
         .mTermCell {
             position: relative;

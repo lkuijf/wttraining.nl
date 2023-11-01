@@ -93,7 +93,7 @@
                 }
                 &.phone {
                     background-color: $colorWTM;
-                    color: $colorBlack;
+                    color: $colorWhite;
                     width: 50px;
                     &:before {
                         font-family: "wt_media_events";
@@ -102,8 +102,11 @@
                         display: block;
                         width: 50px;
                     }
-                    &:hover:before {
-                        color: $colorWhite;
+                    // &:hover:before {
+                    //     color: $colorBlack;
+                    // }
+                    &:hover {
+                        background-color: $colorWTMdark;
                     }
                     span {
                         visibility: hidden;
