@@ -13,10 +13,10 @@
                                         <div class="outerFlip">
                                             <div class="innerFlip">
                                                 <div class="flipFront">
-                                                    @if (isset($case->gallery[0]) && isset($case->gallery[0]['sizes']))
-                                                        <img src="{{ $case->gallery[0]['sizes']['medium_large'] }}" alt="{{ $case->gallery[0]['alt'] }}">
+                                                    @if (isset($case->card_image[0]) && isset($case->card_image[0]['sizes']))
+                                                        <img src="{{ $case->card_image[0]['sizes']['medium_large'] }}" alt="{{ $case->card_image[0]['alt'] }}">
                                                     @else
-                                                        <img src="{{ $case->gallery[0]['url'] }}" alt="{{ $case->gallery[0]['alt'] }}">
+                                                        <img src="{{ $case->card_image[0]['url'] }}" alt="{{ $case->card_image[0]['alt'] }}">
                                                     @endif
                                                 </div>
                                                 <div class="flipBack">

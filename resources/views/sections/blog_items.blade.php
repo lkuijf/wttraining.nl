@@ -1,10 +1,10 @@
 <div class="blogWrap">
     @foreach ($blog_items as $blogItem)
         <article>
-            @if (isset($blogItem->gallery[0]) && isset($blogItem->gallery[0]['sizes']) && $blogItem->gallery[0]['sizes'])
-                <img src="{{ $blogItem->gallery[0]['sizes']['medium_large'] }}" alt="{{ $blogItem->gallery[0]['alt'] }}">
+            @if (isset($blogItem->card_image[0]) && isset($blogItem->card_image[0]['sizes']) && $blogItem->card_image[0]['sizes'])
+                <img src="{{ $blogItem->card_image[0]['sizes']['medium_large'] }}" alt="{{ $blogItem->card_image[0]['alt'] }}">
             @else
-                <img src="{{ $blogItem->gallery[0]['url'] }}" alt="{{ $blogItem->gallery[0]['alt'] }}">
+                <img src="{{ $blogItem->card_image[0]['url'] }}" alt="{{ $blogItem->card_image[0]['alt'] }}">
             @endif
             <div>
                 {{-- <p class="date">{{ date('d.m', strtotime($blogItem->date)) }}<span>&nbsp;</span></p> --}}
