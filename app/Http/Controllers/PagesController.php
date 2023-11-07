@@ -862,7 +862,7 @@ class PagesController extends Controller
         }
         return $allSections;
     }
-    public function getCustomPostData($associations, $postType, $imageAttribute) {
+    public function getCustomPostData($associations, $postType, $imageAttribute1, $imageAttribute2 = false) {
         // foreach($associations as $k => &$item) {
         //     $cPost = new CustomPostApi($postType, $item->id, false);
         //     $customP = $cPost->get();
@@ -885,8 +885,11 @@ class PagesController extends Controller
         $customPosts = $cPosts->get();
         if($customPosts && count($customPosts)) {
             foreach($customPosts as $i => $cP) {
-                if(isset($cP->{$imageAttribute})) {
-                    $customPosts[$i]->{$imageAttribute} = $this->getMediaGallery($cP->{$imageAttribute});
+                if($imageAttribute1 && isset($cP->{$imageAttribute1})) {
+                    $customPosts[$i]->{$imageAttribute1} = $this->getMediaGallery($cP->{$imageAttribute1});
+                }
+                if($imageAttribute2 && isset($cP->{$imageAttribute2})) {
+                    $customPosts[$i]->{$imageAttribute2} = $this->getMediaGallery($cP->{$imageAttribute2});
                 }
             }
         }
@@ -976,10 +979,10 @@ class PagesController extends Controller
                 $sec->team_specialists_associations = $this->getCustomPostData($sec->team_specialists_associations, $postType = 'teammember', $imageAttribute = 'image');
             }
             if($sec->_type == 'blog_items' && count($sec->blog_associations)) {
-                $sec->blog_associations = $this->getCustomPostData($sec->blog_associations, $postType = 'blog', $imageAttribute = 'gallery');
+                $sec->blog_associations = $this->getCustomPostData($sec->blog_associations, $postType = 'blog', $imageAttribute = 'gallery', 'card_image');
             }
             if($sec->_type == 'case_items' && count($sec->case_associations)) {
-                $sec->case_associations = $this->getCustomPostData($sec->case_associations, $postType = 'case', $imageAttribute = 'gallery');
+                $sec->case_associations = $this->getCustomPostData($sec->case_associations, $postType = 'case', $imageAttribute = 'gallery', 'card_image');
             }
             if($sec->_type == 'partner_items' && count($sec->partner_associations)) {
                 $sec->partner_associations = $this->getCustomPostData($sec->partner_associations, $postType = 'partner', $imageAttribute = 'image');
