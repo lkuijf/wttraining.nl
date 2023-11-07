@@ -126,6 +126,7 @@ class PagesController extends Controller
             $blogArts = $blogItems->getItems();
             foreach($blogArts as &$blog) {
                 $blog->gallery = $this->getMediaGallery($blog->gallery);
+                $blog->card_image = $this->getMediaGallery($blog->card_image);
             }
         }
 
