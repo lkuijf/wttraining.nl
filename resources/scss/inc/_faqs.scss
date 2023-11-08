@@ -11,7 +11,10 @@
         margin-bottom: 30px;
         cursor: pointer;
         h3 {
-            font-size: 1em;
+            font-size: $fontSize;
+            @media (max-width: $sbp3_tablet) {
+                font-size: $fontSizeMobile;
+            }
             margin: 0;
         }
         .answer {
