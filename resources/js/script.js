@@ -330,11 +330,13 @@ window.initTrainingsSwiper = initTrainingsSwiper; // Prevents removal from tree-
 function setArticlesClickable() {
     if(articles.length) {
         articles.forEach(item => {
-            let link = item.querySelector('a');
-            if(link) {
-                item.addEventListener('click', () => {
-                    window.location = link.getAttribute("href");
-                });
+            if(!item.classList.contains('detailArticle')) {
+                let link = item.querySelector('a');
+                if(link) {
+                    item.addEventListener('click', () => {
+                        window.location = link.getAttribute("href");
+                    });
+                }
             }
         });
     }
