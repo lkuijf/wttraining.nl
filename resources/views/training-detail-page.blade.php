@@ -87,4 +87,3 @@
     {{-- <script src="{{ asset('js/fslightbox.js') }}"></script> --}}
     {{-- <script src="{{ asset('js/lightbox.min.js') }}"></script> --}}
 @endsection
-{{-- asdf --}}
